@@ -1,0 +1,83 @@
+.hljs-theme-docco pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-docco code.hljs {
+  padding: 3px 5px
+}
+/*
+Docco style used in http://jashkenas.github.com/docco/ converted by Simon Madine (@thingsinjars)
+*/
+.hljs-theme-docco .hljs {
+  color: #000;
+  background: #f8f8ff
+}
+.hljs-theme-docco .hljs-comment,
+.hljs-theme-docco .hljs-quote {
+  color: #408080;
+  font-style: italic
+}
+.hljs-theme-docco .hljs-keyword,
+.hljs-theme-docco .hljs-selector-tag,
+.hljs-theme-docco .hljs-literal,
+.hljs-theme-docco .hljs-subst {
+  color: #954121
+}
+.hljs-theme-docco .hljs-number {
+  color: #40a070
+}
+.hljs-theme-docco .hljs-string,
+.hljs-theme-docco .hljs-doctag {
+  color: #219161
+}
+.hljs-theme-docco .hljs-selector-id,
+.hljs-theme-docco .hljs-selector-class,
+.hljs-theme-docco .hljs-section,
+.hljs-theme-docco .hljs-type {
+  color: #19469d
+}
+.hljs-theme-docco .hljs-params {
+  color: #00f
+}
+.hljs-theme-docco .hljs-title {
+  color: #458;
+  font-weight: bold
+}
+.hljs-theme-docco .hljs-tag,
+.hljs-theme-docco .hljs-name,
+.hljs-theme-docco .hljs-attribute {
+  color: #000080;
+  font-weight: normal
+}
+.hljs-theme-docco .hljs-variable,
+.hljs-theme-docco .hljs-template-variable {
+  color: #008080
+}
+.hljs-theme-docco .hljs-regexp,
+.hljs-theme-docco .hljs-link {
+  color: #b68
+}
+.hljs-theme-docco .hljs-symbol,
+.hljs-theme-docco .hljs-bullet {
+  color: #990073
+}
+.hljs-theme-docco .hljs-built_in {
+  color: #0086b3
+}
+.hljs-theme-docco .hljs-meta {
+  color: #999;
+  font-weight: bold
+}
+.hljs-theme-docco .hljs-deletion {
+  background: #fdd
+}
+.hljs-theme-docco .hljs-addition {
+  background: #dfd
+}
+.hljs-theme-docco .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-docco .hljs-strong {
+  font-weight: bold
+}

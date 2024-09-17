@@ -1,0 +1,69 @@
+.hljs-theme-kimbie-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-kimbie-light code.hljs {
+  padding: 3px 5px
+}
+/*
+    Name:     Kimbie (light)
+    Author:   Jan T. Sott
+    License:  Creative Commons Attribution-ShareAlike 4.0 Unported License
+    URL:      https://github.com/idleberg/Kimbie-highlight.js
+*/
+.hljs-theme-kimbie-light .hljs {
+  background: #fbebd4;
+  color: #84613d
+}
+/* Kimbie Comment */
+.hljs-theme-kimbie-light .hljs-comment,
+.hljs-theme-kimbie-light .hljs-quote {
+  color: #a57a4c
+}
+/* Kimbie Red */
+.hljs-theme-kimbie-light .hljs-variable,
+.hljs-theme-kimbie-light .hljs-template-variable,
+.hljs-theme-kimbie-light .hljs-tag,
+.hljs-theme-kimbie-light .hljs-name,
+.hljs-theme-kimbie-light .hljs-selector-id,
+.hljs-theme-kimbie-light .hljs-selector-class,
+.hljs-theme-kimbie-light .hljs-regexp,
+.hljs-theme-kimbie-light .hljs-meta {
+  color: #dc3958
+}
+/* Kimbie Orange */
+.hljs-theme-kimbie-light .hljs-number,
+.hljs-theme-kimbie-light .hljs-built_in,
+.hljs-theme-kimbie-light .hljs-literal,
+.hljs-theme-kimbie-light .hljs-type,
+.hljs-theme-kimbie-light .hljs-params,
+.hljs-theme-kimbie-light .hljs-deletion,
+.hljs-theme-kimbie-light .hljs-link {
+  color: #f79a32
+}
+/* Kimbie Green */
+.hljs-theme-kimbie-light .hljs-string,
+.hljs-theme-kimbie-light .hljs-symbol,
+.hljs-theme-kimbie-light .hljs-bullet,
+.hljs-theme-kimbie-light .hljs-addition {
+  color: #889b4a
+}
+/* Kimbie Purple */
+.hljs-theme-kimbie-light .hljs-keyword,
+.hljs-theme-kimbie-light .hljs-selector-tag,
+.hljs-theme-kimbie-light .hljs-function {
+  color: #98676a
+}
+/* Kimbie Yellow */
+.hljs-theme-kimbie-light .hljs-title,
+.hljs-theme-kimbie-light .hljs-section,
+.hljs-theme-kimbie-light .hljs-attribute {
+  color: #f06431
+}
+.hljs-theme-kimbie-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-kimbie-light .hljs-strong {
+  font-weight: bold
+}

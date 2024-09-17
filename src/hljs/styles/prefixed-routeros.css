@@ -1,0 +1,86 @@
+.hljs-theme-routeros pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-routeros code.hljs {
+  padding: 3px 5px
+}
+/*
+
+ highlight.js style for MikroTik RouterOS script
+
+*/
+.hljs-theme-routeros .hljs {
+  color: #444;
+  background: #F0F0F0
+}
+/* Base color: saturation 0; */
+.hljs-theme-routeros .hljs-subst {
+  color: #444
+}
+.hljs-theme-routeros .hljs-comment {
+  color: #888888
+}
+.hljs-theme-routeros .hljs-keyword,
+.hljs-theme-routeros .hljs-selector-tag,
+.hljs-theme-routeros .hljs-meta .hljs-keyword,
+.hljs-theme-routeros .hljs-doctag,
+.hljs-theme-routeros .hljs-name {
+  font-weight: bold
+}
+.hljs-theme-routeros .hljs-attribute {
+  color: #0E9A00
+}
+.hljs-theme-routeros .hljs-function {
+  color: #99069A
+}
+/* User color: hue: 0 */
+.hljs-theme-routeros .hljs-type,
+.hljs-theme-routeros .hljs-string,
+.hljs-theme-routeros .hljs-number,
+.hljs-theme-routeros .hljs-selector-id,
+.hljs-theme-routeros .hljs-selector-class,
+.hljs-theme-routeros .hljs-quote,
+.hljs-theme-routeros .hljs-template-tag,
+.hljs-theme-routeros .hljs-deletion {
+  color: #880000
+}
+.hljs-theme-routeros .hljs-title,
+.hljs-theme-routeros .hljs-section {
+  color: #880000;
+  font-weight: bold
+}
+.hljs-theme-routeros .hljs-regexp,
+.hljs-theme-routeros .hljs-symbol,
+.hljs-theme-routeros .hljs-variable,
+.hljs-theme-routeros .hljs-template-variable,
+.hljs-theme-routeros .hljs-link,
+.hljs-theme-routeros .hljs-selector-attr,
+.hljs-theme-routeros .hljs-selector-pseudo {
+  color: #BC6060
+}
+/* Language color: hue: 90; */
+.hljs-theme-routeros .hljs-literal {
+  color: #78A960
+}
+.hljs-theme-routeros .hljs-built_in,
+.hljs-theme-routeros .hljs-bullet,
+.hljs-theme-routeros .hljs-code,
+.hljs-theme-routeros .hljs-addition {
+  color: #0C9A9A
+}
+/* Meta color: hue: 200 */
+.hljs-theme-routeros .hljs-meta {
+  color: #1f7199
+}
+.hljs-theme-routeros .hljs-meta .hljs-string {
+  color: #4d99bf
+}
+/* Misc effects */
+.hljs-theme-routeros .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-routeros .hljs-strong {
+  font-weight: bold
+}

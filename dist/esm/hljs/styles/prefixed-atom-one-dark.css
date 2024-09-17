@@ -1,0 +1,90 @@
+.hljs-theme-atom-one-dark pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-atom-one-dark code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
+
+*/
+.hljs-theme-atom-one-dark .hljs {
+  color: #abb2bf;
+  background: #282c34
+}
+.hljs-theme-atom-one-dark .hljs-comment,
+.hljs-theme-atom-one-dark .hljs-quote {
+  color: #5c6370;
+  font-style: italic
+}
+.hljs-theme-atom-one-dark .hljs-doctag,
+.hljs-theme-atom-one-dark .hljs-keyword,
+.hljs-theme-atom-one-dark .hljs-formula {
+  color: #c678dd
+}
+.hljs-theme-atom-one-dark .hljs-section,
+.hljs-theme-atom-one-dark .hljs-name,
+.hljs-theme-atom-one-dark .hljs-selector-tag,
+.hljs-theme-atom-one-dark .hljs-deletion,
+.hljs-theme-atom-one-dark .hljs-subst {
+  color: #e06c75
+}
+.hljs-theme-atom-one-dark .hljs-literal {
+  color: #56b6c2
+}
+.hljs-theme-atom-one-dark .hljs-string,
+.hljs-theme-atom-one-dark .hljs-regexp,
+.hljs-theme-atom-one-dark .hljs-addition,
+.hljs-theme-atom-one-dark .hljs-attribute,
+.hljs-theme-atom-one-dark .hljs-meta .hljs-string {
+  color: #98c379
+}
+.hljs-theme-atom-one-dark .hljs-attr,
+.hljs-theme-atom-one-dark .hljs-variable,
+.hljs-theme-atom-one-dark .hljs-template-variable,
+.hljs-theme-atom-one-dark .hljs-type,
+.hljs-theme-atom-one-dark .hljs-selector-class,
+.hljs-theme-atom-one-dark .hljs-selector-attr,
+.hljs-theme-atom-one-dark .hljs-selector-pseudo,
+.hljs-theme-atom-one-dark .hljs-number {
+  color: #d19a66
+}
+.hljs-theme-atom-one-dark .hljs-symbol,
+.hljs-theme-atom-one-dark .hljs-bullet,
+.hljs-theme-atom-one-dark .hljs-link,
+.hljs-theme-atom-one-dark .hljs-meta,
+.hljs-theme-atom-one-dark .hljs-selector-id,
+.hljs-theme-atom-one-dark .hljs-title {
+  color: #61aeee
+}
+.hljs-theme-atom-one-dark .hljs-built_in,
+.hljs-theme-atom-one-dark .hljs-title.class_,
+.hljs-theme-atom-one-dark .hljs-class .hljs-title {
+  color: #e6c07b
+}
+.hljs-theme-atom-one-dark .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-atom-one-dark .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-atom-one-dark .hljs-link {
+  text-decoration: underline
+}

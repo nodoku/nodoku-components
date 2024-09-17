@@ -1,0 +1,66 @@
+.hljs-theme-color-brewer pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-color-brewer code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Colorbrewer theme
+Original: https://github.com/mbostock/colorbrewer-theme (c) Mike Bostock <mike@ocks.org>
+Ported by Fabrício Tavares de Oliveira
+
+*/
+.hljs-theme-color-brewer .hljs {
+  color: #000;
+  background: #fff
+}
+.hljs-theme-color-brewer .hljs-subst {
+  /* default */
+  
+}
+.hljs-theme-color-brewer .hljs-string,
+.hljs-theme-color-brewer .hljs-meta,
+.hljs-theme-color-brewer .hljs-symbol,
+.hljs-theme-color-brewer .hljs-template-tag,
+.hljs-theme-color-brewer .hljs-template-variable,
+.hljs-theme-color-brewer .hljs-addition {
+  color: #756bb1
+}
+.hljs-theme-color-brewer .hljs-comment,
+.hljs-theme-color-brewer .hljs-quote {
+  color: #636363
+}
+.hljs-theme-color-brewer .hljs-number,
+.hljs-theme-color-brewer .hljs-regexp,
+.hljs-theme-color-brewer .hljs-literal,
+.hljs-theme-color-brewer .hljs-bullet,
+.hljs-theme-color-brewer .hljs-link {
+  color: #31a354
+}
+.hljs-theme-color-brewer .hljs-deletion,
+.hljs-theme-color-brewer .hljs-variable {
+  color: #88f
+}
+.hljs-theme-color-brewer .hljs-keyword,
+.hljs-theme-color-brewer .hljs-selector-tag,
+.hljs-theme-color-brewer .hljs-title,
+.hljs-theme-color-brewer .hljs-section,
+.hljs-theme-color-brewer .hljs-built_in,
+.hljs-theme-color-brewer .hljs-doctag,
+.hljs-theme-color-brewer .hljs-type,
+.hljs-theme-color-brewer .hljs-tag,
+.hljs-theme-color-brewer .hljs-name,
+.hljs-theme-color-brewer .hljs-selector-id,
+.hljs-theme-color-brewer .hljs-selector-class,
+.hljs-theme-color-brewer .hljs-strong {
+  color: #3182bd
+}
+.hljs-theme-color-brewer .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-color-brewer .hljs-attribute {
+  color: #e6550d
+}

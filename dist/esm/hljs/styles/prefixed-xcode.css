@@ -1,0 +1,90 @@
+.hljs-theme-xcode pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-xcode code.hljs {
+  padding: 3px 5px
+}
+/*
+
+XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
+
+*/
+.hljs-theme-xcode .hljs {
+  background: #fff;
+  color: black
+}
+/* Gray DOCTYPE selectors like WebKit */
+.hljs-theme-xcode .xml .hljs-meta {
+  color: #c0c0c0
+}
+.hljs-theme-xcode .hljs-comment,
+.hljs-theme-xcode .hljs-quote {
+  color: #007400
+}
+.hljs-theme-xcode .hljs-tag,
+.hljs-theme-xcode .hljs-attribute,
+.hljs-theme-xcode .hljs-keyword,
+.hljs-theme-xcode .hljs-selector-tag,
+.hljs-theme-xcode .hljs-literal,
+.hljs-theme-xcode .hljs-name {
+  color: #aa0d91
+}
+.hljs-theme-xcode .hljs-variable,
+.hljs-theme-xcode .hljs-template-variable {
+  color: #3F6E74
+}
+.hljs-theme-xcode .hljs-code,
+.hljs-theme-xcode .hljs-string,
+.hljs-theme-xcode .hljs-meta .hljs-string {
+  color: #c41a16
+}
+.hljs-theme-xcode .hljs-regexp,
+.hljs-theme-xcode .hljs-link {
+  color: #0E0EFF
+}
+.hljs-theme-xcode .hljs-title,
+.hljs-theme-xcode .hljs-symbol,
+.hljs-theme-xcode .hljs-bullet,
+.hljs-theme-xcode .hljs-number {
+  color: #1c00cf
+}
+.hljs-theme-xcode .hljs-section,
+.hljs-theme-xcode .hljs-meta {
+  color: #643820
+}
+.hljs-theme-xcode .hljs-title.class_,
+.hljs-theme-xcode .hljs-class .hljs-title,
+.hljs-theme-xcode .hljs-type,
+.hljs-theme-xcode .hljs-built_in,
+.hljs-theme-xcode .hljs-params {
+  color: #5c2699
+}
+.hljs-theme-xcode .hljs-attr {
+  color: #836C28
+}
+.hljs-theme-xcode .hljs-subst {
+  color: #000
+}
+.hljs-theme-xcode .hljs-formula {
+  background-color: #eee;
+  font-style: italic
+}
+.hljs-theme-xcode .hljs-addition {
+  background-color: #baeeba
+}
+.hljs-theme-xcode .hljs-deletion {
+  background-color: #ffc8bd
+}
+.hljs-theme-xcode .hljs-selector-id,
+.hljs-theme-xcode .hljs-selector-class {
+  color: #9b703f
+}
+.hljs-theme-xcode .hljs-doctag,
+.hljs-theme-xcode .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-xcode .hljs-emphasis {
+  font-style: italic
+}

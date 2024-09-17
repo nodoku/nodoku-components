@@ -1,0 +1,90 @@
+.hljs-theme-gradient-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-gradient-light code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Gradient Light (c) Samia Ali <samiaab1990@gmail.com>
+
+*/
+.hljs-theme-gradient-light .hljs {
+  background-color: #f9ccff;
+  background-image: linear-gradient(295deg, #f9ccff 0%, #e6bbf9 11%, #9ec6f9 32%, #55e6ee 60%, #91f5d1 74%, #f9ffbf 98%);
+  color: #250482
+}
+.hljs-theme-gradient-light .hljs-subtr {
+  color: #01958B
+}
+.hljs-theme-gradient-light .hljs-doctag,
+.hljs-theme-gradient-light .hljs-meta,
+.hljs-theme-gradient-light .hljs-comment,
+.hljs-theme-gradient-light .hljs-quote {
+  color: #CB7200
+}
+.hljs-theme-gradient-light .hljs-selector-tag,
+.hljs-theme-gradient-light .hljs-selector-id,
+.hljs-theme-gradient-light .hljs-template-tag,
+.hljs-theme-gradient-light .hljs-regexp,
+.hljs-theme-gradient-light .hljs-attr,
+.hljs-theme-gradient-light .hljs-tag {
+  color: #07BD5F
+}
+.hljs-theme-gradient-light .hljs-params,
+.hljs-theme-gradient-light .hljs-selector-class,
+.hljs-theme-gradient-light .hljs-bullet {
+  color: #43449F
+}
+.hljs-theme-gradient-light .hljs-keyword,
+.hljs-theme-gradient-light .hljs-section,
+.hljs-theme-gradient-light .hljs-meta .hljs-keyword,
+.hljs-theme-gradient-light .hljs-symbol,
+.hljs-theme-gradient-light .hljs-type {
+  color: #7D2801
+}
+.hljs-theme-gradient-light .hljs-addition,
+.hljs-theme-gradient-light .hljs-number,
+.hljs-theme-gradient-light .hljs-link {
+  color: #7F0096
+}
+.hljs-theme-gradient-light .hljs-string {
+  color: #2681ab
+}
+.hljs-theme-gradient-light .hljs-attribute,
+.hljs-theme-gradient-light .hljs-addition {
+  color: #296562
+}
+.hljs-theme-gradient-light .hljs-variable,
+.hljs-theme-gradient-light .hljs-template-variable {
+  color: #025C8F
+}
+.hljs-theme-gradient-light .hljs-built_in,
+.hljs-theme-gradient-light .hljs-formula,
+.hljs-theme-gradient-light .hljs-name,
+.hljs-theme-gradient-light .hljs-title,
+.hljs-theme-gradient-light .hljs-class,
+.hljs-theme-gradient-light .hljs-function {
+  color: #529117
+}
+.hljs-theme-gradient-light .hljs-selector-pseudo,
+.hljs-theme-gradient-light .hljs-deletion,
+.hljs-theme-gradient-light .hljs-literal {
+  color: #AD13FF
+}
+.hljs-theme-gradient-light .hljs-emphasis,
+.hljs-theme-gradient-light .hljs-quote {
+  font-style: italic
+}
+.hljs-theme-gradient-light .hljs-params,
+.hljs-theme-gradient-light .hljs-selector-class,
+.hljs-theme-gradient-light .hljs-strong,
+.hljs-theme-gradient-light .hljs-selector-tag,
+.hljs-theme-gradient-light .hljs-selector-id,
+.hljs-theme-gradient-light .hljs-template-tag,
+.hljs-theme-gradient-light .hljs-section,
+.hljs-theme-gradient-light .hljs-keyword {
+  font-weight: bold
+}

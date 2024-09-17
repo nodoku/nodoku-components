@@ -1,0 +1,68 @@
+.hljs-theme-tomorrow-night-bright pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-tomorrow-night-bright code.hljs {
+  padding: 3px 5px
+}
+/* Tomorrow Night Bright Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Tomorrow Comment */
+.hljs-theme-tomorrow-night-bright .hljs-comment,
+.hljs-theme-tomorrow-night-bright .hljs-quote {
+  color: #969896
+}
+/* Tomorrow Red */
+.hljs-theme-tomorrow-night-bright .hljs-variable,
+.hljs-theme-tomorrow-night-bright .hljs-template-variable,
+.hljs-theme-tomorrow-night-bright .hljs-tag,
+.hljs-theme-tomorrow-night-bright .hljs-name,
+.hljs-theme-tomorrow-night-bright .hljs-selector-id,
+.hljs-theme-tomorrow-night-bright .hljs-selector-class,
+.hljs-theme-tomorrow-night-bright .hljs-regexp,
+.hljs-theme-tomorrow-night-bright .hljs-deletion {
+  color: #d54e53
+}
+/* Tomorrow Orange */
+.hljs-theme-tomorrow-night-bright .hljs-number,
+.hljs-theme-tomorrow-night-bright .hljs-built_in,
+.hljs-theme-tomorrow-night-bright .hljs-literal,
+.hljs-theme-tomorrow-night-bright .hljs-type,
+.hljs-theme-tomorrow-night-bright .hljs-params,
+.hljs-theme-tomorrow-night-bright .hljs-meta,
+.hljs-theme-tomorrow-night-bright .hljs-link {
+  color: #e78c45
+}
+/* Tomorrow Yellow */
+.hljs-theme-tomorrow-night-bright .hljs-attribute {
+  color: #e7c547
+}
+/* Tomorrow Green */
+.hljs-theme-tomorrow-night-bright .hljs-string,
+.hljs-theme-tomorrow-night-bright .hljs-symbol,
+.hljs-theme-tomorrow-night-bright .hljs-bullet,
+.hljs-theme-tomorrow-night-bright .hljs-addition {
+  color: #b9ca4a
+}
+/* Tomorrow Blue */
+.hljs-theme-tomorrow-night-bright .hljs-title,
+.hljs-theme-tomorrow-night-bright .hljs-section {
+  color: #7aa6da
+}
+/* Tomorrow Purple */
+.hljs-theme-tomorrow-night-bright .hljs-keyword,
+.hljs-theme-tomorrow-night-bright .hljs-selector-tag {
+  color: #c397d8
+}
+.hljs-theme-tomorrow-night-bright .hljs {
+  background: black;
+  color: #eaeaea
+}
+.hljs-theme-tomorrow-night-bright .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-tomorrow-night-bright .hljs-strong {
+  font-weight: bold
+}

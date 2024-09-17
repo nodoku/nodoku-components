@@ -1,0 +1,63 @@
+.hljs-theme-brown-paper pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-brown-paper code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Brown Paper style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
+
+*/
+.hljs-theme-brown-paper .hljs {
+  color: #363c69;
+  background: #b7a68e url(./brown-papersq.png)
+}
+.hljs-theme-brown-paper .hljs-keyword,
+.hljs-theme-brown-paper .hljs-selector-tag,
+.hljs-theme-brown-paper .hljs-literal {
+  color: #005599;
+  font-weight: bold
+}
+.hljs-theme-brown-paper .hljs-subst {
+  /* default */
+  
+}
+.hljs-theme-brown-paper .hljs-string,
+.hljs-theme-brown-paper .hljs-title,
+.hljs-theme-brown-paper .hljs-section,
+.hljs-theme-brown-paper .hljs-type,
+.hljs-theme-brown-paper .hljs-attribute,
+.hljs-theme-brown-paper .hljs-symbol,
+.hljs-theme-brown-paper .hljs-bullet,
+.hljs-theme-brown-paper .hljs-built_in,
+.hljs-theme-brown-paper .hljs-addition,
+.hljs-theme-brown-paper .hljs-variable,
+.hljs-theme-brown-paper .hljs-template-tag,
+.hljs-theme-brown-paper .hljs-template-variable,
+.hljs-theme-brown-paper .hljs-link,
+.hljs-theme-brown-paper .hljs-name {
+  color: #2c009f
+}
+.hljs-theme-brown-paper .hljs-comment,
+.hljs-theme-brown-paper .hljs-quote,
+.hljs-theme-brown-paper .hljs-meta,
+.hljs-theme-brown-paper .hljs-deletion {
+  color: #802022
+}
+.hljs-theme-brown-paper .hljs-keyword,
+.hljs-theme-brown-paper .hljs-selector-tag,
+.hljs-theme-brown-paper .hljs-literal,
+.hljs-theme-brown-paper .hljs-doctag,
+.hljs-theme-brown-paper .hljs-title,
+.hljs-theme-brown-paper .hljs-section,
+.hljs-theme-brown-paper .hljs-type,
+.hljs-theme-brown-paper .hljs-name,
+.hljs-theme-brown-paper .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-brown-paper .hljs-emphasis {
+  font-style: italic
+}

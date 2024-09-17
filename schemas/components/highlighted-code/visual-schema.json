@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "light": {
+      "type": "string"
+    },
+    "dark": {
+      "type": "string"
+    },
+
+    "lightDisplay": {
+      "type": "string",
+      "enum": [
+        "light:block",
+        "light:inline-block"
+      ]
+    },
+
+    "darkDisplay":  {
+      "type": "string",
+      "enum": [
+        "dark:block",
+        "dark:inline-block"
+      ]
+    },
+
+    "codeContainer": {
+      "$ref": "../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    },
+    "preContainer": {
+      "$ref": "../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+    }
+
+  },
+  "additionalProperties": false
+}

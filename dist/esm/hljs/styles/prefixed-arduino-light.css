@@ -1,0 +1,78 @@
+.hljs-theme-arduino-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-arduino-light code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
+
+*/
+.hljs-theme-arduino-light .hljs {
+  background: white;
+  color: #434f54
+}
+.hljs-theme-arduino-light .hljs-subst {
+  color: #434f54
+}
+.hljs-theme-arduino-light .hljs-keyword,
+.hljs-theme-arduino-light .hljs-attribute,
+.hljs-theme-arduino-light .hljs-selector-tag,
+.hljs-theme-arduino-light .hljs-doctag,
+.hljs-theme-arduino-light .hljs-name {
+  color: #00979D
+}
+.hljs-theme-arduino-light .hljs-built_in,
+.hljs-theme-arduino-light .hljs-literal,
+.hljs-theme-arduino-light .hljs-bullet,
+.hljs-theme-arduino-light .hljs-code,
+.hljs-theme-arduino-light .hljs-addition {
+  color: #D35400
+}
+.hljs-theme-arduino-light .hljs-regexp,
+.hljs-theme-arduino-light .hljs-symbol,
+.hljs-theme-arduino-light .hljs-variable,
+.hljs-theme-arduino-light .hljs-template-variable,
+.hljs-theme-arduino-light .hljs-link,
+.hljs-theme-arduino-light .hljs-selector-attr,
+.hljs-theme-arduino-light .hljs-selector-pseudo {
+  color: #00979D
+}
+.hljs-theme-arduino-light .hljs-type,
+.hljs-theme-arduino-light .hljs-string,
+.hljs-theme-arduino-light .hljs-selector-id,
+.hljs-theme-arduino-light .hljs-selector-class,
+.hljs-theme-arduino-light .hljs-quote,
+.hljs-theme-arduino-light .hljs-template-tag,
+.hljs-theme-arduino-light .hljs-deletion {
+  color: #005C5F
+}
+.hljs-theme-arduino-light .hljs-comment {
+  color: rgba(149,165,166,.8)
+}
+.hljs-theme-arduino-light .hljs-meta .hljs-keyword {
+  color: #728E00
+}
+.hljs-theme-arduino-light .hljs-meta {
+  color: #434f54
+}
+.hljs-theme-arduino-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-arduino-light .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-arduino-light .hljs-function {
+  color: #728E00
+}
+.hljs-theme-arduino-light .hljs-title,
+.hljs-theme-arduino-light .hljs-section {
+  color: #880000;
+  font-weight: bold
+}
+.hljs-theme-arduino-light .hljs-number {
+  color: #8A7B52
+}

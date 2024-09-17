@@ -1,0 +1,275 @@
+.hljs-theme-nord pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-nord code.hljs {
+  padding: 3px 5px
+}
+/*
+ * Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (c) 2017-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    Nord highlight.js
+ * Version:    0.1.0
+ * Repository: https://github.com/arcticicestudio/nord-highlightjs
+ * License:    MIT
+ * References:
+ *   https://github.com/arcticicestudio/nord
+ */
+/*
+
+Polar Night
+
+#2E3440
+#3B4252
+#434C5E
+#4C566A
+
+Snow Storm
+
+#D8DEE9
+#E5E9F0
+#ECEFF4
+
+Frost
+
+#8FBCBB
+#88C0D0
+#81A1C1
+#5E81AC
+
+Aurora
+
+#BF616A
+#D08770
+#EBCB8B
+#A3BE8C
+#B48EAD
+
+*/
+.hljs-theme-nord .hljs {
+  background: #2E3440
+}
+.hljs-theme-nord .hljs,
+.hljs-theme-nord .hljs-subst {
+  color: #D8DEE9
+}
+.hljs-theme-nord .hljs-selector-tag {
+  color: #81A1C1
+}
+.hljs-theme-nord .hljs-selector-id {
+  color: #8FBCBB;
+  font-weight: bold
+}
+.hljs-theme-nord .hljs-selector-class {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-selector-attr {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-property {
+  color: #88C0D0
+}
+.hljs-theme-nord .hljs-selector-pseudo {
+  color: #88C0D0
+}
+.hljs-theme-nord .hljs-addition {
+  background-color: rgba(163, 190, 140, 0.5)
+}
+.hljs-theme-nord .hljs-deletion {
+  background-color: rgba(191, 97, 106, 0.5)
+}
+.hljs-theme-nord .hljs-built_in,
+.hljs-theme-nord .hljs-type {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-class {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-function {
+  color: #88C0D0
+}
+.hljs-theme-nord .hljs-title.hljs-function,
+.hljs-theme-nord .hljs-function > .hljs-title {
+  color: #88C0D0
+}
+.hljs-theme-nord .hljs-keyword,
+.hljs-theme-nord .hljs-literal,
+.hljs-theme-nord .hljs-symbol {
+  color: #81A1C1
+}
+.hljs-theme-nord .hljs-number {
+  color: #B48EAD
+}
+.hljs-theme-nord .hljs-regexp {
+  color: #EBCB8B
+}
+.hljs-theme-nord .hljs-string {
+  color: #A3BE8C
+}
+.hljs-theme-nord .hljs-title {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-params {
+  color: #D8DEE9
+}
+.hljs-theme-nord .hljs-bullet {
+  color: #81A1C1
+}
+.hljs-theme-nord .hljs-code {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-nord .hljs-formula {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-nord .hljs-link:hover {
+  text-decoration: underline
+}
+.hljs-theme-nord .hljs-quote {
+  color: #4C566A
+}
+.hljs-theme-nord .hljs-comment {
+  color: #4C566A
+}
+.hljs-theme-nord .hljs-doctag {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-meta,
+.hljs-theme-nord .hljs-meta .hljs-keyword {
+  color: #5E81AC
+}
+.hljs-theme-nord .hljs-meta .hljs-string {
+  color: #A3BE8C
+}
+.hljs-theme-nord .hljs-attr {
+  color: #8FBCBB
+}
+.hljs-theme-nord .hljs-attribute {
+  color: #D8DEE9
+}
+.hljs-theme-nord .hljs-name {
+  color: #81A1C1
+}
+.hljs-theme-nord .hljs-section {
+  color: #88C0D0
+}
+.hljs-theme-nord .hljs-tag {
+  color: #81A1C1
+}
+.hljs-theme-nord .hljs-variable {
+  color: #D8DEE9
+}
+.hljs-theme-nord .hljs-template-variable {
+  color: #D8DEE9
+}
+.hljs-theme-nord .hljs-template-tag {
+  color: #5E81AC
+}
+/* per language customizations */
+.hljs-theme-nord .language-abnf .hljs-attribute {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-abnf .hljs-symbol {
+  color: #EBCB8B
+}
+.hljs-theme-nord .language-apache .hljs-attribute {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-apache .hljs-section {
+  color: #81A1C1
+}
+.hljs-theme-nord .language-arduino .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-aspectj .hljs-meta {
+  color: #D08770
+}
+.hljs-theme-nord .language-aspectj > .hljs-title {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-bnf .hljs-attribute {
+  color: #8FBCBB
+}
+.hljs-theme-nord .language-clojure .hljs-name {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-clojure .hljs-symbol {
+  color: #EBCB8B
+}
+.hljs-theme-nord .language-coq .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-cpp .hljs-meta .hljs-string {
+  color: #8FBCBB
+}
+.hljs-theme-nord .language-css .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-css .hljs-keyword {
+  color: #D08770
+}
+.hljs-theme-nord .language-diff .hljs-meta {
+  color: #8FBCBB
+}
+.hljs-theme-nord .language-ebnf .hljs-attribute {
+  color: #8FBCBB
+}
+.hljs-theme-nord .language-glsl .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-groovy .hljs-meta:not(:first-child) {
+  color: #D08770
+}
+.hljs-theme-nord .language-haxe .hljs-meta {
+  color: #D08770
+}
+.hljs-theme-nord .language-java .hljs-meta {
+  color: #D08770
+}
+.hljs-theme-nord .language-ldif .hljs-attribute {
+  color: #8FBCBB
+}
+.hljs-theme-nord .language-lisp .hljs-name {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-lua .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-moonscript .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-nginx .hljs-attribute {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-nginx .hljs-section {
+  color: #5E81AC
+}
+.hljs-theme-nord .language-pf .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-processing .hljs-built_in {
+  color: #88C0D0
+}
+.hljs-theme-nord .language-scss .hljs-keyword {
+  color: #81A1C1
+}
+.hljs-theme-nord .language-stylus .hljs-keyword {
+  color: #81A1C1
+}
+.hljs-theme-nord .language-swift .hljs-meta {
+  color: #D08770
+}
+.hljs-theme-nord .language-vim .hljs-built_in {
+  color: #88C0D0;
+  font-style: italic
+}
+.hljs-theme-nord .language-yaml .hljs-meta {
+  color: #D08770
+}

@@ -1,0 +1,60 @@
+.hljs-theme-androidstudio pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-androidstudio code.hljs {
+  padding: 3px 5px
+}
+/*
+Date: 24 Fev 2015
+Author: Pedro Oliveira <kanytu@gmail . com>
+*/
+.hljs-theme-androidstudio .hljs {
+  color: #a9b7c6;
+  background: #282b2e
+}
+.hljs-theme-androidstudio .hljs-number,
+.hljs-theme-androidstudio .hljs-literal,
+.hljs-theme-androidstudio .hljs-symbol,
+.hljs-theme-androidstudio .hljs-bullet {
+  color: #6897BB
+}
+.hljs-theme-androidstudio .hljs-keyword,
+.hljs-theme-androidstudio .hljs-selector-tag,
+.hljs-theme-androidstudio .hljs-deletion {
+  color: #cc7832
+}
+.hljs-theme-androidstudio .hljs-variable,
+.hljs-theme-androidstudio .hljs-template-variable,
+.hljs-theme-androidstudio .hljs-link {
+  color: #629755
+}
+.hljs-theme-androidstudio .hljs-comment,
+.hljs-theme-androidstudio .hljs-quote {
+  color: #808080
+}
+.hljs-theme-androidstudio .hljs-meta {
+  color: #bbb529
+}
+.hljs-theme-androidstudio .hljs-string,
+.hljs-theme-androidstudio .hljs-attribute,
+.hljs-theme-androidstudio .hljs-addition {
+  color: #6A8759
+}
+.hljs-theme-androidstudio .hljs-section,
+.hljs-theme-androidstudio .hljs-title,
+.hljs-theme-androidstudio .hljs-type {
+  color: #ffc66d
+}
+.hljs-theme-androidstudio .hljs-name,
+.hljs-theme-androidstudio .hljs-selector-id,
+.hljs-theme-androidstudio .hljs-selector-class {
+  color: #e8bf6a
+}
+.hljs-theme-androidstudio .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-androidstudio .hljs-strong {
+  font-weight: bold
+}

@@ -1,0 +1,62 @@
+.hljs-theme-dark pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-dark code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+.hljs-theme-dark .hljs {
+  color: #ddd;
+  background: #303030
+}
+.hljs-theme-dark .hljs-keyword,
+.hljs-theme-dark .hljs-selector-tag,
+.hljs-theme-dark .hljs-literal,
+.hljs-theme-dark .hljs-section,
+.hljs-theme-dark .hljs-link {
+  color: white
+}
+.hljs-theme-dark .hljs-subst {
+  /* default */
+  
+}
+.hljs-theme-dark .hljs-string,
+.hljs-theme-dark .hljs-title,
+.hljs-theme-dark .hljs-name,
+.hljs-theme-dark .hljs-type,
+.hljs-theme-dark .hljs-attribute,
+.hljs-theme-dark .hljs-symbol,
+.hljs-theme-dark .hljs-bullet,
+.hljs-theme-dark .hljs-built_in,
+.hljs-theme-dark .hljs-addition,
+.hljs-theme-dark .hljs-variable,
+.hljs-theme-dark .hljs-template-tag,
+.hljs-theme-dark .hljs-template-variable {
+  color: #d88
+}
+.hljs-theme-dark .hljs-comment,
+.hljs-theme-dark .hljs-quote,
+.hljs-theme-dark .hljs-deletion,
+.hljs-theme-dark .hljs-meta {
+  color: #979797
+}
+.hljs-theme-dark .hljs-keyword,
+.hljs-theme-dark .hljs-selector-tag,
+.hljs-theme-dark .hljs-literal,
+.hljs-theme-dark .hljs-title,
+.hljs-theme-dark .hljs-section,
+.hljs-theme-dark .hljs-doctag,
+.hljs-theme-dark .hljs-type,
+.hljs-theme-dark .hljs-name,
+.hljs-theme-dark .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-dark .hljs-emphasis {
+  font-style: italic
+}

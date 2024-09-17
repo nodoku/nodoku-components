@@ -1,0 +1,76 @@
+.hljs-theme-qtcreator-dark pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-qtcreator-dark code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Qt Creator dark color scheme
+
+*/
+.hljs-theme-qtcreator-dark .hljs {
+  color: #aaaaaa;
+  background: #000000
+}
+.hljs-theme-qtcreator-dark .hljs-strong,
+.hljs-theme-qtcreator-dark .hljs-emphasis {
+  color: #a8a8a2
+}
+.hljs-theme-qtcreator-dark .hljs-bullet,
+.hljs-theme-qtcreator-dark .hljs-quote,
+.hljs-theme-qtcreator-dark .hljs-number,
+.hljs-theme-qtcreator-dark .hljs-regexp,
+.hljs-theme-qtcreator-dark .hljs-literal {
+  color: #ff55ff
+}
+.hljs-theme-qtcreator-dark .hljs-code
+.hljs-selector-class {
+  color: #aaaaff
+}
+.hljs-theme-qtcreator-dark .hljs-emphasis,
+.hljs-theme-qtcreator-dark .hljs-stronge,
+.hljs-theme-qtcreator-dark .hljs-type {
+  font-style: italic
+}
+.hljs-theme-qtcreator-dark .hljs-keyword,
+.hljs-theme-qtcreator-dark .hljs-selector-tag,
+.hljs-theme-qtcreator-dark .hljs-function,
+.hljs-theme-qtcreator-dark .hljs-section,
+.hljs-theme-qtcreator-dark .hljs-symbol,
+.hljs-theme-qtcreator-dark .hljs-name {
+  color: #ffff55
+}
+.hljs-theme-qtcreator-dark .hljs-subst,
+.hljs-theme-qtcreator-dark .hljs-tag,
+.hljs-theme-qtcreator-dark .hljs-title {
+  color: #aaaaaa
+}
+.hljs-theme-qtcreator-dark .hljs-attribute {
+  color: #ff5555
+}
+.hljs-theme-qtcreator-dark .hljs-variable,
+.hljs-theme-qtcreator-dark .hljs-params,
+.hljs-theme-qtcreator-dark .hljs-title.class_,
+.hljs-theme-qtcreator-dark .hljs-class .hljs-title {
+  color: #8888ff
+}
+.hljs-theme-qtcreator-dark .hljs-string,
+.hljs-theme-qtcreator-dark .hljs-selector-id,
+.hljs-theme-qtcreator-dark .hljs-selector-attr,
+.hljs-theme-qtcreator-dark .hljs-selector-pseudo,
+.hljs-theme-qtcreator-dark .hljs-type,
+.hljs-theme-qtcreator-dark .hljs-built_in,
+.hljs-theme-qtcreator-dark .hljs-template-tag,
+.hljs-theme-qtcreator-dark .hljs-template-variable,
+.hljs-theme-qtcreator-dark .hljs-addition,
+.hljs-theme-qtcreator-dark .hljs-link {
+  color: #ff55ff
+}
+.hljs-theme-qtcreator-dark .hljs-comment,
+.hljs-theme-qtcreator-dark .hljs-meta,
+.hljs-theme-qtcreator-dark .hljs-deletion {
+  color: #55ffff
+}

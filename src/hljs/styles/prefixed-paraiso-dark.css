@@ -1,0 +1,67 @@
+.hljs-theme-paraiso-dark pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-paraiso-dark code.hljs {
+  padding: 3px 5px
+}
+/*
+    Paraíso (dark)
+    Created by Jan T. Sott (http://github.com/idleberg)
+    Inspired by the art of Rubens LP (http://www.rubenslp.com.br)
+*/
+.hljs-theme-paraiso-dark .hljs {
+  background: #2f1e2e;
+  color: #a39e9b
+}
+/* Paraíso Comment */
+.hljs-theme-paraiso-dark .hljs-comment,
+.hljs-theme-paraiso-dark .hljs-quote {
+  color: #8d8687
+}
+/* Paraíso Red */
+.hljs-theme-paraiso-dark .hljs-variable,
+.hljs-theme-paraiso-dark .hljs-template-variable,
+.hljs-theme-paraiso-dark .hljs-tag,
+.hljs-theme-paraiso-dark .hljs-name,
+.hljs-theme-paraiso-dark .hljs-selector-id,
+.hljs-theme-paraiso-dark .hljs-selector-class,
+.hljs-theme-paraiso-dark .hljs-regexp,
+.hljs-theme-paraiso-dark .hljs-link,
+.hljs-theme-paraiso-dark .hljs-meta {
+  color: #ef6155
+}
+/* Paraíso Orange */
+.hljs-theme-paraiso-dark .hljs-number,
+.hljs-theme-paraiso-dark .hljs-built_in,
+.hljs-theme-paraiso-dark .hljs-literal,
+.hljs-theme-paraiso-dark .hljs-type,
+.hljs-theme-paraiso-dark .hljs-params,
+.hljs-theme-paraiso-dark .hljs-deletion {
+  color: #f99b15
+}
+/* Paraíso Yellow */
+.hljs-theme-paraiso-dark .hljs-title,
+.hljs-theme-paraiso-dark .hljs-section,
+.hljs-theme-paraiso-dark .hljs-attribute {
+  color: #fec418
+}
+/* Paraíso Green */
+.hljs-theme-paraiso-dark .hljs-string,
+.hljs-theme-paraiso-dark .hljs-symbol,
+.hljs-theme-paraiso-dark .hljs-bullet,
+.hljs-theme-paraiso-dark .hljs-addition {
+  color: #48b685
+}
+/* Paraíso Purple */
+.hljs-theme-paraiso-dark .hljs-keyword,
+.hljs-theme-paraiso-dark .hljs-selector-tag {
+  color: #815ba4
+}
+.hljs-theme-paraiso-dark .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-paraiso-dark .hljs-strong {
+  font-weight: bold
+}

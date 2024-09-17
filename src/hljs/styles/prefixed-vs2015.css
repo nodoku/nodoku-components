@@ -1,0 +1,100 @@
+.hljs-theme-vs2015 pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-vs2015 code.hljs {
+  padding: 3px 5px
+}
+/*
+ * Visual Studio 2015 dark style
+ * Author: Nicolas LLOBERA <nllobera@gmail.com>
+ */
+.hljs-theme-vs2015 .hljs {
+  background: #1E1E1E;
+  color: #DCDCDC
+}
+.hljs-theme-vs2015 .hljs-keyword,
+.hljs-theme-vs2015 .hljs-literal,
+.hljs-theme-vs2015 .hljs-symbol,
+.hljs-theme-vs2015 .hljs-name {
+  color: #569CD6
+}
+.hljs-theme-vs2015 .hljs-link {
+  color: #569CD6;
+  text-decoration: underline
+}
+.hljs-theme-vs2015 .hljs-built_in,
+.hljs-theme-vs2015 .hljs-type {
+  color: #4EC9B0
+}
+.hljs-theme-vs2015 .hljs-number,
+.hljs-theme-vs2015 .hljs-class {
+  color: #B8D7A3
+}
+.hljs-theme-vs2015 .hljs-string,
+.hljs-theme-vs2015 .hljs-meta .hljs-string {
+  color: #D69D85
+}
+.hljs-theme-vs2015 .hljs-regexp,
+.hljs-theme-vs2015 .hljs-template-tag {
+  color: #9A5334
+}
+.hljs-theme-vs2015 .hljs-subst,
+.hljs-theme-vs2015 .hljs-function,
+.hljs-theme-vs2015 .hljs-title,
+.hljs-theme-vs2015 .hljs-params,
+.hljs-theme-vs2015 .hljs-formula {
+  color: #DCDCDC
+}
+.hljs-theme-vs2015 .hljs-comment,
+.hljs-theme-vs2015 .hljs-quote {
+  color: #57A64A;
+  font-style: italic
+}
+.hljs-theme-vs2015 .hljs-doctag {
+  color: #608B4E
+}
+.hljs-theme-vs2015 .hljs-meta,
+.hljs-theme-vs2015 .hljs-meta .hljs-keyword,
+.hljs-theme-vs2015 .hljs-tag {
+  color: #9B9B9B
+}
+.hljs-theme-vs2015 .hljs-variable,
+.hljs-theme-vs2015 .hljs-template-variable {
+  color: #BD63C5
+}
+.hljs-theme-vs2015 .hljs-attr,
+.hljs-theme-vs2015 .hljs-attribute {
+  color: #9CDCFE
+}
+.hljs-theme-vs2015 .hljs-section {
+  color: gold
+}
+.hljs-theme-vs2015 .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-vs2015 .hljs-strong {
+  font-weight: bold
+}
+/*.hljs-code {
+  font-family:'Monospace';
+}*/
+.hljs-theme-vs2015 .hljs-bullet,
+.hljs-theme-vs2015 .hljs-selector-tag,
+.hljs-theme-vs2015 .hljs-selector-id,
+.hljs-theme-vs2015 .hljs-selector-class,
+.hljs-theme-vs2015 .hljs-selector-attr,
+.hljs-theme-vs2015 .hljs-selector-pseudo {
+  color: #D7BA7D
+}
+.hljs-theme-vs2015 .hljs-addition {
+  background-color: #144212;
+  display: inline-block;
+  width: 100%
+}
+.hljs-theme-vs2015 .hljs-deletion {
+  background-color: #600;
+  display: inline-block;
+  width: 100%
+}

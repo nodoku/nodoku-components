@@ -1,0 +1,79 @@
+.hljs-theme-xt256 pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-xt256 code.hljs {
+  padding: 3px 5px
+}
+/*
+  xt256.css
+
+  Contact: initbar [at] protonmail [dot] ch
+         : github.com/initbar
+*/
+.hljs-theme-xt256 .hljs {
+  color: #eaeaea;
+  background: #000
+}
+.hljs-theme-xt256 .hljs-subst {
+  color: #eaeaea
+}
+.hljs-theme-xt256 .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-xt256 .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-xt256 .hljs-type {
+  color: #eaeaea
+}
+.hljs-theme-xt256 .hljs-params {
+  color: #da0000
+}
+.hljs-theme-xt256 .hljs-literal,
+.hljs-theme-xt256 .hljs-number,
+.hljs-theme-xt256 .hljs-name {
+  color: #ff0000;
+  font-weight: bolder
+}
+.hljs-theme-xt256 .hljs-comment {
+  color: #969896
+}
+.hljs-theme-xt256 .hljs-selector-id,
+.hljs-theme-xt256 .hljs-quote {
+  color: #00ffff
+}
+.hljs-theme-xt256 .hljs-template-variable,
+.hljs-theme-xt256 .hljs-variable,
+.hljs-theme-xt256 .hljs-title {
+  color: #00ffff;
+  font-weight: bold
+}
+.hljs-theme-xt256 .hljs-selector-class,
+.hljs-theme-xt256 .hljs-keyword,
+.hljs-theme-xt256 .hljs-symbol {
+  color: #fff000
+}
+.hljs-theme-xt256 .hljs-string,
+.hljs-theme-xt256 .hljs-bullet {
+  color: #00ff00
+}
+.hljs-theme-xt256 .hljs-tag,
+.hljs-theme-xt256 .hljs-section {
+  color: #000fff
+}
+.hljs-theme-xt256 .hljs-selector-tag {
+  color: #000fff;
+  font-weight: bold
+}
+.hljs-theme-xt256 .hljs-attribute,
+.hljs-theme-xt256 .hljs-built_in,
+.hljs-theme-xt256 .hljs-regexp,
+.hljs-theme-xt256 .hljs-link {
+  color: #ff00ff
+}
+.hljs-theme-xt256 .hljs-meta {
+  color: #fff;
+  font-weight: bolder
+}

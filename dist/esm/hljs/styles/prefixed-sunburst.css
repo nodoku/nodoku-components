@@ -1,0 +1,89 @@
+.hljs-theme-sunburst pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-sunburst code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+.hljs-theme-sunburst .hljs {
+  background: #000;
+  color: #f8f8f8
+}
+.hljs-theme-sunburst .hljs-comment,
+.hljs-theme-sunburst .hljs-quote {
+  color: #aeaeae;
+  font-style: italic
+}
+.hljs-theme-sunburst .hljs-keyword,
+.hljs-theme-sunburst .hljs-selector-tag,
+.hljs-theme-sunburst .hljs-type {
+  color: #e28964
+}
+.hljs-theme-sunburst .hljs-string {
+  color: #65b042
+}
+.hljs-theme-sunburst .hljs-subst {
+  color: #daefa3
+}
+.hljs-theme-sunburst .hljs-regexp,
+.hljs-theme-sunburst .hljs-link {
+  color: #e9c062
+}
+.hljs-theme-sunburst .hljs-title,
+.hljs-theme-sunburst .hljs-section,
+.hljs-theme-sunburst .hljs-tag,
+.hljs-theme-sunburst .hljs-name {
+  color: #89bdff
+}
+.hljs-theme-sunburst .hljs-title.class_,
+.hljs-theme-sunburst .hljs-class .hljs-title,
+.hljs-theme-sunburst .hljs-doctag {
+  text-decoration: underline
+}
+.hljs-theme-sunburst .hljs-symbol,
+.hljs-theme-sunburst .hljs-bullet,
+.hljs-theme-sunburst .hljs-number {
+  color: #3387cc
+}
+.hljs-theme-sunburst .hljs-params,
+.hljs-theme-sunburst .hljs-variable,
+.hljs-theme-sunburst .hljs-template-variable {
+  color: #3e87e3
+}
+.hljs-theme-sunburst .hljs-attribute {
+  color: #cda869
+}
+.hljs-theme-sunburst .hljs-meta {
+  color: #8996a8
+}
+.hljs-theme-sunburst .hljs-formula {
+  background-color: #0e2231;
+  color: #f8f8f8;
+  font-style: italic
+}
+.hljs-theme-sunburst .hljs-addition {
+  background-color: #253b22;
+  color: #f8f8f8
+}
+.hljs-theme-sunburst .hljs-deletion {
+  background-color: #420e09;
+  color: #f8f8f8
+}
+.hljs-theme-sunburst .hljs-selector-class {
+  color: #9b703f
+}
+.hljs-theme-sunburst .hljs-selector-id {
+  color: #8b98ab
+}
+.hljs-theme-sunburst .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-sunburst .hljs-strong {
+  font-weight: bold
+}

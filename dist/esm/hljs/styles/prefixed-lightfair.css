@@ -1,0 +1,81 @@
+.hljs-theme-lightfair pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-lightfair code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Lightfair style (c) Tristian Kelly <tristian.kelly560@gmail.com>
+
+*/
+.hljs-theme-lightfair .hljs {
+  color: #444;
+  background: #fff
+}
+.hljs-theme-lightfair .hljs-name {
+  color: #01a3a3
+}
+.hljs-theme-lightfair .hljs-tag,
+.hljs-theme-lightfair .hljs-meta {
+  color: #778899
+}
+.hljs-theme-lightfair .hljs-subst {
+  /* default */
+  
+}
+.hljs-theme-lightfair .hljs-comment {
+  color: #888888
+}
+.hljs-theme-lightfair .hljs-keyword,
+.hljs-theme-lightfair .hljs-attribute,
+.hljs-theme-lightfair .hljs-selector-tag,
+.hljs-theme-lightfair .hljs-meta .hljs-keyword,
+.hljs-theme-lightfair .hljs-doctag,
+.hljs-theme-lightfair .hljs-name {
+  font-weight: bold
+}
+.hljs-theme-lightfair .hljs-type,
+.hljs-theme-lightfair .hljs-string,
+.hljs-theme-lightfair .hljs-number,
+.hljs-theme-lightfair .hljs-selector-id,
+.hljs-theme-lightfair .hljs-selector-class,
+.hljs-theme-lightfair .hljs-quote,
+.hljs-theme-lightfair .hljs-template-tag,
+.hljs-theme-lightfair .hljs-deletion {
+  color: #4286f4
+}
+.hljs-theme-lightfair .hljs-title,
+.hljs-theme-lightfair .hljs-section {
+  color: #4286f4;
+  font-weight: bold
+}
+.hljs-theme-lightfair .hljs-regexp,
+.hljs-theme-lightfair .hljs-symbol,
+.hljs-theme-lightfair .hljs-variable,
+.hljs-theme-lightfair .hljs-template-variable,
+.hljs-theme-lightfair .hljs-link,
+.hljs-theme-lightfair .hljs-selector-attr,
+.hljs-theme-lightfair .hljs-selector-pseudo {
+  color: #BC6060
+}
+.hljs-theme-lightfair .hljs-literal {
+  color: #62bcbc
+}
+.hljs-theme-lightfair .hljs-built_in,
+.hljs-theme-lightfair .hljs-bullet,
+.hljs-theme-lightfair .hljs-code,
+.hljs-theme-lightfair .hljs-addition {
+  color: #25c6c6
+}
+.hljs-theme-lightfair .hljs-meta .hljs-string {
+  color: #4d99bf
+}
+.hljs-theme-lightfair .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-lightfair .hljs-strong {
+  font-weight: bold
+}

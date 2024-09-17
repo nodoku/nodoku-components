@@ -1,0 +1,79 @@
+.hljs-theme-googlecode pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-googlecode code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
+
+*/
+.hljs-theme-googlecode .hljs {
+  background: white;
+  color: black
+}
+.hljs-theme-googlecode .hljs-comment,
+.hljs-theme-googlecode .hljs-quote {
+  color: #800
+}
+.hljs-theme-googlecode .hljs-keyword,
+.hljs-theme-googlecode .hljs-selector-tag,
+.hljs-theme-googlecode .hljs-section,
+.hljs-theme-googlecode .hljs-title,
+.hljs-theme-googlecode .hljs-name {
+  color: #008
+}
+.hljs-theme-googlecode .hljs-variable,
+.hljs-theme-googlecode .hljs-template-variable {
+  color: #660
+}
+.hljs-theme-googlecode .hljs-string,
+.hljs-theme-googlecode .hljs-selector-attr,
+.hljs-theme-googlecode .hljs-selector-pseudo,
+.hljs-theme-googlecode .hljs-regexp {
+  color: #080
+}
+.hljs-theme-googlecode .hljs-literal,
+.hljs-theme-googlecode .hljs-symbol,
+.hljs-theme-googlecode .hljs-bullet,
+.hljs-theme-googlecode .hljs-meta,
+.hljs-theme-googlecode .hljs-number,
+.hljs-theme-googlecode .hljs-link {
+  color: #066
+}
+.hljs-theme-googlecode .hljs-title,
+.hljs-theme-googlecode .hljs-doctag,
+.hljs-theme-googlecode .hljs-type,
+.hljs-theme-googlecode .hljs-attr,
+.hljs-theme-googlecode .hljs-built_in,
+.hljs-theme-googlecode .hljs-params {
+  color: #606
+}
+.hljs-theme-googlecode .hljs-attribute,
+.hljs-theme-googlecode .hljs-subst {
+  color: #000
+}
+.hljs-theme-googlecode .hljs-formula {
+  background-color: #eee;
+  font-style: italic
+}
+.hljs-theme-googlecode .hljs-selector-id,
+.hljs-theme-googlecode .hljs-selector-class {
+  color: #9B703F
+}
+.hljs-theme-googlecode .hljs-addition {
+  background-color: #baeeba
+}
+.hljs-theme-googlecode .hljs-deletion {
+  background-color: #ffc8bd
+}
+.hljs-theme-googlecode .hljs-doctag,
+.hljs-theme-googlecode .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-googlecode .hljs-emphasis {
+  font-style: italic
+}

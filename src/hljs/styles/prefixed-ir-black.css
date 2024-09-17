@@ -1,0 +1,66 @@
+.hljs-theme-ir-black pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-ir-black code.hljs {
+  padding: 3px 5px
+}
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+.hljs-theme-ir-black .hljs {
+  background: #000;
+  color: #f8f8f8
+}
+.hljs-theme-ir-black .hljs-comment,
+.hljs-theme-ir-black .hljs-quote,
+.hljs-theme-ir-black .hljs-meta {
+  color: #7c7c7c
+}
+.hljs-theme-ir-black .hljs-keyword,
+.hljs-theme-ir-black .hljs-selector-tag,
+.hljs-theme-ir-black .hljs-tag,
+.hljs-theme-ir-black .hljs-name {
+  color: #96cbfe
+}
+.hljs-theme-ir-black .hljs-attribute,
+.hljs-theme-ir-black .hljs-selector-id {
+  color: #ffffb6
+}
+.hljs-theme-ir-black .hljs-string,
+.hljs-theme-ir-black .hljs-selector-attr,
+.hljs-theme-ir-black .hljs-selector-pseudo,
+.hljs-theme-ir-black .hljs-addition {
+  color: #a8ff60
+}
+.hljs-theme-ir-black .hljs-subst {
+  color: #daefa3
+}
+.hljs-theme-ir-black .hljs-regexp,
+.hljs-theme-ir-black .hljs-link {
+  color: #e9c062
+}
+.hljs-theme-ir-black .hljs-title,
+.hljs-theme-ir-black .hljs-section,
+.hljs-theme-ir-black .hljs-type,
+.hljs-theme-ir-black .hljs-doctag {
+  color: #ffffb6
+}
+.hljs-theme-ir-black .hljs-symbol,
+.hljs-theme-ir-black .hljs-bullet,
+.hljs-theme-ir-black .hljs-variable,
+.hljs-theme-ir-black .hljs-template-variable,
+.hljs-theme-ir-black .hljs-literal {
+  color: #c6c5fe
+}
+.hljs-theme-ir-black .hljs-number,
+.hljs-theme-ir-black .hljs-deletion {
+  color: #ff73fd
+}
+.hljs-theme-ir-black .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-ir-black .hljs-strong {
+  font-weight: bold
+}

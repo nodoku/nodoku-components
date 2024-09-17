@@ -1,0 +1,45 @@
+.hljs-theme-ascetic pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-ascetic code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+.hljs-theme-ascetic .hljs {
+  background: white;
+  color: black
+}
+.hljs-theme-ascetic .hljs-string,
+.hljs-theme-ascetic .hljs-variable,
+.hljs-theme-ascetic .hljs-template-variable,
+.hljs-theme-ascetic .hljs-symbol,
+.hljs-theme-ascetic .hljs-bullet,
+.hljs-theme-ascetic .hljs-section,
+.hljs-theme-ascetic .hljs-addition,
+.hljs-theme-ascetic .hljs-attribute,
+.hljs-theme-ascetic .hljs-link {
+  color: #888
+}
+.hljs-theme-ascetic .hljs-comment,
+.hljs-theme-ascetic .hljs-quote,
+.hljs-theme-ascetic .hljs-meta,
+.hljs-theme-ascetic .hljs-deletion {
+  color: #ccc
+}
+.hljs-theme-ascetic .hljs-keyword,
+.hljs-theme-ascetic .hljs-selector-tag,
+.hljs-theme-ascetic .hljs-section,
+.hljs-theme-ascetic .hljs-name,
+.hljs-theme-ascetic .hljs-type,
+.hljs-theme-ascetic .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-ascetic .hljs-emphasis {
+  font-style: italic
+}

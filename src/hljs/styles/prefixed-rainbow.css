@@ -1,0 +1,77 @@
+.hljs-theme-rainbow pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-rainbow code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Style with support for rainbow parens
+
+*/
+.hljs-theme-rainbow .hljs {
+  background: #474949;
+  color: #d1d9e1
+}
+.hljs-theme-rainbow .hljs-comment,
+.hljs-theme-rainbow .hljs-quote {
+  color: #969896;
+  font-style: italic
+}
+.hljs-theme-rainbow .hljs-keyword,
+.hljs-theme-rainbow .hljs-selector-tag,
+.hljs-theme-rainbow .hljs-literal,
+.hljs-theme-rainbow .hljs-type,
+.hljs-theme-rainbow .hljs-addition {
+  color: #cc99cc
+}
+.hljs-theme-rainbow .hljs-number,
+.hljs-theme-rainbow .hljs-selector-attr,
+.hljs-theme-rainbow .hljs-selector-pseudo {
+  color: #f99157
+}
+.hljs-theme-rainbow .hljs-string,
+.hljs-theme-rainbow .hljs-doctag,
+.hljs-theme-rainbow .hljs-regexp {
+  color: #8abeb7
+}
+.hljs-theme-rainbow .hljs-title,
+.hljs-theme-rainbow .hljs-name,
+.hljs-theme-rainbow .hljs-section,
+.hljs-theme-rainbow .hljs-built_in {
+  color: #b5bd68
+}
+.hljs-theme-rainbow .hljs-variable,
+.hljs-theme-rainbow .hljs-template-variable,
+.hljs-theme-rainbow .hljs-selector-id,
+.hljs-theme-rainbow .hljs-title.class_,
+.hljs-theme-rainbow .hljs-class .hljs-title {
+  color: #ffcc66
+}
+.hljs-theme-rainbow .hljs-section,
+.hljs-theme-rainbow .hljs-name,
+.hljs-theme-rainbow .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-rainbow .hljs-symbol,
+.hljs-theme-rainbow .hljs-bullet,
+.hljs-theme-rainbow .hljs-subst,
+.hljs-theme-rainbow .hljs-meta,
+.hljs-theme-rainbow .hljs-link {
+  color: #f99157
+}
+.hljs-theme-rainbow .hljs-deletion {
+  color: #dc322f
+}
+.hljs-theme-rainbow .hljs-formula {
+  background: #eee8d5
+}
+.hljs-theme-rainbow .hljs-attr,
+.hljs-theme-rainbow .hljs-attribute {
+  color: #81a2be
+}
+.hljs-theme-rainbow .hljs-emphasis {
+  font-style: italic
+}

@@ -1,0 +1,72 @@
+.hljs-theme-gml pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-gml code.hljs {
+  padding: 3px 5px
+}
+/*
+
+GML Theme - Meseta <meseta@gmail.com>
+
+*/
+.hljs-theme-gml .hljs {
+  background: #222222;
+  color: #C0C0C0
+}
+.hljs-theme-gml .hljs-keyword {
+  color: #FFB871;
+  font-weight: bold
+}
+.hljs-theme-gml .hljs-built_in {
+  color: #FFB871
+}
+.hljs-theme-gml .hljs-literal {
+  color: #FF8080
+}
+.hljs-theme-gml .hljs-symbol {
+  color: #58E55A
+}
+.hljs-theme-gml .hljs-comment {
+  color: #5B995B
+}
+.hljs-theme-gml .hljs-string {
+  color: #FFFF00
+}
+.hljs-theme-gml .hljs-number {
+  color: #FF8080
+}
+.hljs-theme-gml .hljs-attribute,
+.hljs-theme-gml .hljs-selector-tag,
+.hljs-theme-gml .hljs-doctag,
+.hljs-theme-gml .hljs-name,
+.hljs-theme-gml .hljs-bullet,
+.hljs-theme-gml .hljs-code,
+.hljs-theme-gml .hljs-addition,
+.hljs-theme-gml .hljs-regexp,
+.hljs-theme-gml .hljs-variable,
+.hljs-theme-gml .hljs-template-variable,
+.hljs-theme-gml .hljs-link,
+.hljs-theme-gml .hljs-selector-attr,
+.hljs-theme-gml .hljs-selector-pseudo,
+.hljs-theme-gml .hljs-type,
+.hljs-theme-gml .hljs-selector-id,
+.hljs-theme-gml .hljs-selector-class,
+.hljs-theme-gml .hljs-quote,
+.hljs-theme-gml .hljs-template-tag,
+.hljs-theme-gml .hljs-deletion,
+.hljs-theme-gml .hljs-title,
+.hljs-theme-gml .hljs-section,
+.hljs-theme-gml .hljs-function,
+.hljs-theme-gml .hljs-meta .hljs-keyword,
+.hljs-theme-gml .hljs-meta,
+.hljs-theme-gml .hljs-subst {
+  color: #C0C0C0
+}
+.hljs-theme-gml .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-gml .hljs-strong {
+  font-weight: bold
+}

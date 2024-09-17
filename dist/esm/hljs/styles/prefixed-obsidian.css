@@ -1,0 +1,79 @@
+.hljs-theme-obsidian pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-obsidian code.hljs {
+  padding: 3px 5px
+}
+/**
+ * Obsidian style
+ * ported by Alexander Marenin (http://github.com/ioncreature)
+ */
+.hljs-theme-obsidian .hljs {
+  color: #e0e2e4;
+  background: #282b2e
+}
+.hljs-theme-obsidian .hljs-keyword,
+.hljs-theme-obsidian .hljs-selector-tag,
+.hljs-theme-obsidian .hljs-literal,
+.hljs-theme-obsidian .hljs-selector-id {
+  color: #93c763
+}
+.hljs-theme-obsidian .hljs-number {
+  color: #ffcd22
+}
+.hljs-theme-obsidian .hljs-attribute {
+  color: #668bb0
+}
+.hljs-theme-obsidian .hljs-regexp,
+.hljs-theme-obsidian .hljs-link {
+  color: #d39745
+}
+.hljs-theme-obsidian .hljs-meta {
+  color: #557182
+}
+.hljs-theme-obsidian .hljs-tag,
+.hljs-theme-obsidian .hljs-name,
+.hljs-theme-obsidian .hljs-bullet,
+.hljs-theme-obsidian .hljs-subst,
+.hljs-theme-obsidian .hljs-emphasis,
+.hljs-theme-obsidian .hljs-type,
+.hljs-theme-obsidian .hljs-built_in,
+.hljs-theme-obsidian .hljs-selector-attr,
+.hljs-theme-obsidian .hljs-selector-pseudo,
+.hljs-theme-obsidian .hljs-addition,
+.hljs-theme-obsidian .hljs-variable,
+.hljs-theme-obsidian .hljs-template-tag,
+.hljs-theme-obsidian .hljs-template-variable {
+  color: #8cbbad
+}
+.hljs-theme-obsidian .hljs-string,
+.hljs-theme-obsidian .hljs-symbol {
+  color: #ec7600
+}
+.hljs-theme-obsidian .hljs-comment,
+.hljs-theme-obsidian .hljs-quote,
+.hljs-theme-obsidian .hljs-deletion {
+  color: #818e96
+}
+.hljs-theme-obsidian .hljs-selector-class {
+  color: #A082BD
+}
+.hljs-theme-obsidian .hljs-keyword,
+.hljs-theme-obsidian .hljs-selector-tag,
+.hljs-theme-obsidian .hljs-literal,
+.hljs-theme-obsidian .hljs-doctag,
+.hljs-theme-obsidian .hljs-title,
+.hljs-theme-obsidian .hljs-section,
+.hljs-theme-obsidian .hljs-type,
+.hljs-theme-obsidian .hljs-name,
+.hljs-theme-obsidian .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-obsidian .hljs-code,
+.hljs-theme-obsidian .hljs-title.class_,
+.hljs-theme-obsidian .hljs-class .hljs-title,
+.hljs-theme-obsidian .hljs-section {
+  color: white
+}

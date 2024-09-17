@@ -1,0 +1,84 @@
+.hljs-theme-shades-of-purple pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-shades-of-purple code.hljs {
+  padding: 3px 5px
+}
+/**
+ * Shades of Purple Theme — for Highlightjs.
+ *
+ * @author (c) Ahmad Awais <https://twitter.com/mrahmadawais/>
+ * @link GitHub Repo → https://github.com/ahmadawais/Shades-of-Purple-HighlightJS
+ * @version 1.5.0
+ */
+.hljs-theme-shades-of-purple .hljs {
+  background: #2d2b57;
+  color: #e3dfff;
+  font-weight: normal
+}
+.hljs-theme-shades-of-purple .hljs-subst {
+  color: #e3dfff
+}
+.hljs-theme-shades-of-purple .hljs-title {
+  color: #fad000;
+  font-weight: normal
+}
+.hljs-theme-shades-of-purple .hljs-name {
+  color: #a1feff
+}
+.hljs-theme-shades-of-purple .hljs-tag {
+  color: #ffffff
+}
+.hljs-theme-shades-of-purple .hljs-attr {
+  color: #f8d000;
+  font-style: italic
+}
+.hljs-theme-shades-of-purple .hljs-built_in,
+.hljs-theme-shades-of-purple .hljs-selector-tag,
+.hljs-theme-shades-of-purple .hljs-section {
+  color: #fb9e00
+}
+.hljs-theme-shades-of-purple .hljs-keyword {
+  color: #fb9e00
+}
+.hljs-theme-shades-of-purple .hljs-string,
+.hljs-theme-shades-of-purple .hljs-attribute,
+.hljs-theme-shades-of-purple .hljs-symbol,
+.hljs-theme-shades-of-purple .hljs-bullet,
+.hljs-theme-shades-of-purple .hljs-addition,
+.hljs-theme-shades-of-purple .hljs-code,
+.hljs-theme-shades-of-purple .hljs-regexp,
+.hljs-theme-shades-of-purple .hljs-selector-class,
+.hljs-theme-shades-of-purple .hljs-selector-attr,
+.hljs-theme-shades-of-purple .hljs-selector-pseudo,
+.hljs-theme-shades-of-purple .hljs-template-tag,
+.hljs-theme-shades-of-purple .hljs-quote,
+.hljs-theme-shades-of-purple .hljs-deletion {
+  color: #4cd213
+}
+.hljs-theme-shades-of-purple .hljs-meta,
+.hljs-theme-shades-of-purple .hljs-meta .hljs-string {
+  color: #fb9e00
+}
+.hljs-theme-shades-of-purple .hljs-comment {
+  color: #ac65ff
+}
+.hljs-theme-shades-of-purple .hljs-keyword,
+.hljs-theme-shades-of-purple .hljs-selector-tag,
+.hljs-theme-shades-of-purple .hljs-literal,
+.hljs-theme-shades-of-purple .hljs-name,
+.hljs-theme-shades-of-purple .hljs-strong {
+  font-weight: normal
+}
+.hljs-theme-shades-of-purple .hljs-literal,
+.hljs-theme-shades-of-purple .hljs-number {
+  color: #fa658d
+}
+.hljs-theme-shades-of-purple .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-shades-of-purple .hljs-strong {
+  font-weight: bold
+}

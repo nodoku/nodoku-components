@@ -1,0 +1,89 @@
+.hljs-theme-panda-syntax-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-panda-syntax-light code.hljs {
+  padding: 3px 5px
+}
+/**
+ * Panda Syntax Theme for Highlight.js
+ * Based on: https://github.com/tinkertrain/panda-syntax-vscode
+ * Author: Annmarie Switzer <https://github.com/annmarie-switzer>
+ */
+.hljs-theme-panda-syntax-light .hljs {
+  color: #2a2c2d;
+  background: #e6e6e6
+}
+.hljs-theme-panda-syntax-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-panda-syntax-light .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-panda-syntax-light .hljs-link {
+  text-decoration: underline
+}
+.hljs-theme-panda-syntax-light .hljs-comment,
+.hljs-theme-panda-syntax-light .hljs-quote {
+  color: #676B79;
+  font-style: italic
+}
+.hljs-theme-panda-syntax-light .hljs-params {
+  color: #676B79
+}
+.hljs-theme-panda-syntax-light .hljs-punctuation,
+.hljs-theme-panda-syntax-light .hljs-attr {
+  color: #2a2c2d
+}
+.hljs-theme-panda-syntax-light .hljs-selector-tag,
+.hljs-theme-panda-syntax-light .hljs-name,
+.hljs-theme-panda-syntax-light .hljs-meta,
+.hljs-theme-panda-syntax-light .hljs-operator,
+.hljs-theme-panda-syntax-light .hljs-char.escape_ {
+  color: #c56200
+}
+.hljs-theme-panda-syntax-light .hljs-keyword,
+.hljs-theme-panda-syntax-light .hljs-deletion {
+  color: #d92792
+}
+.hljs-theme-panda-syntax-light .hljs-regexp,
+.hljs-theme-panda-syntax-light .hljs-selector-pseudo,
+.hljs-theme-panda-syntax-light .hljs-selector-attr,
+.hljs-theme-panda-syntax-light .hljs-variable.language_ {
+  color: #cc5e91
+}
+.hljs-theme-panda-syntax-light .hljs-subst,
+.hljs-theme-panda-syntax-light .hljs-property,
+.hljs-theme-panda-syntax-light .hljs-code,
+.hljs-theme-panda-syntax-light .hljs-formula,
+.hljs-theme-panda-syntax-light .hljs-section,
+.hljs-theme-panda-syntax-light .hljs-title.function_ {
+  color: #3787c7
+}
+.hljs-theme-panda-syntax-light .hljs-string,
+.hljs-theme-panda-syntax-light .hljs-symbol,
+.hljs-theme-panda-syntax-light .hljs-bullet,
+.hljs-theme-panda-syntax-light .hljs-addition,
+.hljs-theme-panda-syntax-light .hljs-selector-class,
+.hljs-theme-panda-syntax-light .hljs-title.class_,
+.hljs-theme-panda-syntax-light .hljs-title.class_.inherited__,
+.hljs-theme-panda-syntax-light .hljs-meta .hljs-string {
+  color: #0d7d6c
+}
+.hljs-theme-panda-syntax-light .hljs-variable,
+.hljs-theme-panda-syntax-light .hljs-template-variable,
+.hljs-theme-panda-syntax-light .hljs-number,
+.hljs-theme-panda-syntax-light .hljs-literal,
+.hljs-theme-panda-syntax-light .hljs-type,
+.hljs-theme-panda-syntax-light .hljs-link,
+.hljs-theme-panda-syntax-light .hljs-built_in,
+.hljs-theme-panda-syntax-light .hljs-title,
+.hljs-theme-panda-syntax-light .hljs-selector-id,
+.hljs-theme-panda-syntax-light .hljs-tag,
+.hljs-theme-panda-syntax-light .hljs-doctag,
+.hljs-theme-panda-syntax-light .hljs-attribute,
+.hljs-theme-panda-syntax-light .hljs-template-tag,
+.hljs-theme-panda-syntax-light .hljs-meta .hljs-keyword {
+  color: #7641bb
+}

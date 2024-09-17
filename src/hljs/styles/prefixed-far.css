@@ -1,0 +1,67 @@
+.hljs-theme-far pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-far code.hljs {
+  padding: 3px 5px
+}
+/*
+
+FAR Style (c) MajestiC <majestic2k@gmail.com>
+
+*/
+.hljs-theme-far .hljs {
+  color: #0ff;
+  background: #000080
+}
+.hljs-theme-far .hljs-subst {
+  /* default */
+  
+}
+.hljs-theme-far .hljs-string,
+.hljs-theme-far .hljs-attribute,
+.hljs-theme-far .hljs-symbol,
+.hljs-theme-far .hljs-bullet,
+.hljs-theme-far .hljs-built_in,
+.hljs-theme-far .hljs-template-tag,
+.hljs-theme-far .hljs-template-variable,
+.hljs-theme-far .hljs-addition {
+  color: #ff0
+}
+.hljs-theme-far .hljs-keyword,
+.hljs-theme-far .hljs-selector-tag,
+.hljs-theme-far .hljs-section,
+.hljs-theme-far .hljs-type,
+.hljs-theme-far .hljs-name,
+.hljs-theme-far .hljs-selector-id,
+.hljs-theme-far .hljs-selector-class,
+.hljs-theme-far .hljs-variable {
+  color: #fff
+}
+.hljs-theme-far .hljs-comment,
+.hljs-theme-far .hljs-quote,
+.hljs-theme-far .hljs-doctag,
+.hljs-theme-far .hljs-deletion {
+  color: #888
+}
+.hljs-theme-far .hljs-number,
+.hljs-theme-far .hljs-regexp,
+.hljs-theme-far .hljs-literal,
+.hljs-theme-far .hljs-link {
+  color: #0f0
+}
+.hljs-theme-far .hljs-meta {
+  color: #008080
+}
+.hljs-theme-far .hljs-keyword,
+.hljs-theme-far .hljs-selector-tag,
+.hljs-theme-far .hljs-title,
+.hljs-theme-far .hljs-section,
+.hljs-theme-far .hljs-name,
+.hljs-theme-far .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-far .hljs-emphasis {
+  font-style: italic
+}

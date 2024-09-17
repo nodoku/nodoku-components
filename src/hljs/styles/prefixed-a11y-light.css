@@ -1,0 +1,94 @@
+.hljs-theme-a11y-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-a11y-light code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: a11y-light
+  Author: @ericwbailey
+  Maintainer: @ericwbailey
+
+  Based on the Tomorrow Night Eighties theme: https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow-night-eighties.css
+*/
+.hljs-theme-a11y-light .hljs {
+  background: #fefefe;
+  color: #545454
+}
+/* Comment */
+.hljs-theme-a11y-light .hljs-comment,
+.hljs-theme-a11y-light .hljs-quote {
+  color: #696969
+}
+/* Red */
+.hljs-theme-a11y-light .hljs-variable,
+.hljs-theme-a11y-light .hljs-template-variable,
+.hljs-theme-a11y-light .hljs-tag,
+.hljs-theme-a11y-light .hljs-name,
+.hljs-theme-a11y-light .hljs-selector-id,
+.hljs-theme-a11y-light .hljs-selector-class,
+.hljs-theme-a11y-light .hljs-regexp,
+.hljs-theme-a11y-light .hljs-deletion {
+  color: #d91e18
+}
+/* Orange */
+.hljs-theme-a11y-light .hljs-number,
+.hljs-theme-a11y-light .hljs-built_in,
+.hljs-theme-a11y-light .hljs-literal,
+.hljs-theme-a11y-light .hljs-type,
+.hljs-theme-a11y-light .hljs-params,
+.hljs-theme-a11y-light .hljs-meta,
+.hljs-theme-a11y-light .hljs-link {
+  color: #aa5d00
+}
+/* Yellow */
+.hljs-theme-a11y-light .hljs-attribute {
+  color: #aa5d00
+}
+/* Green */
+.hljs-theme-a11y-light .hljs-string,
+.hljs-theme-a11y-light .hljs-symbol,
+.hljs-theme-a11y-light .hljs-bullet,
+.hljs-theme-a11y-light .hljs-addition {
+  color: #008000
+}
+/* Blue */
+.hljs-theme-a11y-light .hljs-title,
+.hljs-theme-a11y-light .hljs-section {
+  color: #007faa
+}
+/* Purple */
+.hljs-theme-a11y-light .hljs-keyword,
+.hljs-theme-a11y-light .hljs-selector-tag {
+  color: #7928a1
+}
+.hljs-theme-a11y-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-a11y-light .hljs-strong {
+  font-weight: bold
+}
+@media screen and (-ms-high-contrast: active) {
+  .hljs-theme-a11y-light .hljs-addition,
+  .hljs-theme-a11y-light .hljs-attribute,
+  .hljs-theme-a11y-light .hljs-built_in,
+  .hljs-theme-a11y-light .hljs-bullet,
+  .hljs-theme-a11y-light .hljs-comment,
+  .hljs-theme-a11y-light .hljs-link,
+  .hljs-theme-a11y-light .hljs-literal,
+  .hljs-theme-a11y-light .hljs-meta,
+  .hljs-theme-a11y-light .hljs-number,
+  .hljs-theme-a11y-light .hljs-params,
+  .hljs-theme-a11y-light .hljs-string,
+  .hljs-theme-a11y-light .hljs-symbol,
+  .hljs-theme-a11y-light .hljs-type,
+  .hljs-theme-a11y-light .hljs-quote {
+    color: highlight
+  }
+  .hljs-theme-a11y-light .hljs-keyword,
+  .hljs-theme-a11y-light .hljs-selector-tag {
+    font-weight: bold
+  }
+}

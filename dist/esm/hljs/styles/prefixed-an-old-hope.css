@@ -1,0 +1,75 @@
+.hljs-theme-an-old-hope pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-an-old-hope code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: An Old Hope – Star Wars Syntax
+  Author: (c) Gustavo Costa <gusbemacbe@gmail.com>
+  Maintainer: @gusbemacbe
+
+  Original theme - Ocean Dark Theme – by https://github.com/gavsiu
+  Based on Jesse Leite's Atom syntax theme 'An Old Hope'
+    https://github.com/JesseLeite/an-old-hope-syntax-atom
+*/
+/* Millenium Falcon */
+.hljs-theme-an-old-hope .hljs {
+  background: #1C1D21;
+  color: #c0c5ce
+}
+/* Death Star Comment */
+.hljs-theme-an-old-hope .hljs-comment,
+.hljs-theme-an-old-hope .hljs-quote {
+  color: #B6B18B
+}
+/* Darth Vader */
+.hljs-theme-an-old-hope .hljs-variable,
+.hljs-theme-an-old-hope .hljs-template-variable,
+.hljs-theme-an-old-hope .hljs-tag,
+.hljs-theme-an-old-hope .hljs-name,
+.hljs-theme-an-old-hope .hljs-selector-id,
+.hljs-theme-an-old-hope .hljs-selector-class,
+.hljs-theme-an-old-hope .hljs-regexp,
+.hljs-theme-an-old-hope .hljs-deletion {
+  color: #EB3C54
+}
+/* Threepio */
+.hljs-theme-an-old-hope .hljs-number,
+.hljs-theme-an-old-hope .hljs-built_in,
+.hljs-theme-an-old-hope .hljs-literal,
+.hljs-theme-an-old-hope .hljs-type,
+.hljs-theme-an-old-hope .hljs-params,
+.hljs-theme-an-old-hope .hljs-meta,
+.hljs-theme-an-old-hope .hljs-link {
+  color: #E7CE56
+}
+/* Luke Skywalker */
+.hljs-theme-an-old-hope .hljs-attribute {
+  color: #EE7C2B
+}
+/* Obi Wan Kenobi */
+.hljs-theme-an-old-hope .hljs-string,
+.hljs-theme-an-old-hope .hljs-symbol,
+.hljs-theme-an-old-hope .hljs-bullet,
+.hljs-theme-an-old-hope .hljs-addition {
+  color: #4FB4D7
+}
+/* Yoda */
+.hljs-theme-an-old-hope .hljs-title,
+.hljs-theme-an-old-hope .hljs-section {
+  color: #78BB65
+}
+/* Mace Windu */
+.hljs-theme-an-old-hope .hljs-keyword,
+.hljs-theme-an-old-hope .hljs-selector-tag {
+  color: #B45EA4
+}
+.hljs-theme-an-old-hope .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-an-old-hope .hljs-strong {
+  font-weight: bold
+}

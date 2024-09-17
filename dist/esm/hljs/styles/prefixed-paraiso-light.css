@@ -1,0 +1,67 @@
+.hljs-theme-paraiso-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-paraiso-light code.hljs {
+  padding: 3px 5px
+}
+/*
+    Paraíso (light)
+    Created by Jan T. Sott (http://github.com/idleberg)
+    Inspired by the art of Rubens LP (http://www.rubenslp.com.br)
+*/
+.hljs-theme-paraiso-light .hljs {
+  background: #e7e9db;
+  color: #4f424c
+}
+/* Paraíso Comment */
+.hljs-theme-paraiso-light .hljs-comment,
+.hljs-theme-paraiso-light .hljs-quote {
+  color: #776e71
+}
+/* Paraíso Red */
+.hljs-theme-paraiso-light .hljs-variable,
+.hljs-theme-paraiso-light .hljs-template-variable,
+.hljs-theme-paraiso-light .hljs-tag,
+.hljs-theme-paraiso-light .hljs-name,
+.hljs-theme-paraiso-light .hljs-selector-id,
+.hljs-theme-paraiso-light .hljs-selector-class,
+.hljs-theme-paraiso-light .hljs-regexp,
+.hljs-theme-paraiso-light .hljs-link,
+.hljs-theme-paraiso-light .hljs-meta {
+  color: #ef6155
+}
+/* Paraíso Orange */
+.hljs-theme-paraiso-light .hljs-number,
+.hljs-theme-paraiso-light .hljs-built_in,
+.hljs-theme-paraiso-light .hljs-literal,
+.hljs-theme-paraiso-light .hljs-type,
+.hljs-theme-paraiso-light .hljs-params,
+.hljs-theme-paraiso-light .hljs-deletion {
+  color: #f99b15
+}
+/* Paraíso Yellow */
+.hljs-theme-paraiso-light .hljs-title,
+.hljs-theme-paraiso-light .hljs-section,
+.hljs-theme-paraiso-light .hljs-attribute {
+  color: #fec418
+}
+/* Paraíso Green */
+.hljs-theme-paraiso-light .hljs-string,
+.hljs-theme-paraiso-light .hljs-symbol,
+.hljs-theme-paraiso-light .hljs-bullet,
+.hljs-theme-paraiso-light .hljs-addition {
+  color: #48b685
+}
+/* Paraíso Purple */
+.hljs-theme-paraiso-light .hljs-keyword,
+.hljs-theme-paraiso-light .hljs-selector-tag {
+  color: #815ba4
+}
+.hljs-theme-paraiso-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-paraiso-light .hljs-strong {
+  font-weight: bold
+}

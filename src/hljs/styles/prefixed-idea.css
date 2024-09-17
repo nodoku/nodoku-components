@@ -1,0 +1,86 @@
+.hljs-theme-idea pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-idea code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Intellij Idea-like styling (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+.hljs-theme-idea .hljs {
+  color: #000;
+  background: #fff
+}
+.hljs-theme-idea .hljs-subst,
+.hljs-theme-idea .hljs-title {
+  font-weight: normal;
+  color: #000
+}
+.hljs-theme-idea .hljs-comment,
+.hljs-theme-idea .hljs-quote {
+  color: #808080;
+  font-style: italic
+}
+.hljs-theme-idea .hljs-meta {
+  color: #808000
+}
+.hljs-theme-idea .hljs-tag {
+  background: #efefef
+}
+.hljs-theme-idea .hljs-section,
+.hljs-theme-idea .hljs-name,
+.hljs-theme-idea .hljs-literal,
+.hljs-theme-idea .hljs-keyword,
+.hljs-theme-idea .hljs-selector-tag,
+.hljs-theme-idea .hljs-type,
+.hljs-theme-idea .hljs-selector-id,
+.hljs-theme-idea .hljs-selector-class {
+  font-weight: bold;
+  color: #000080
+}
+.hljs-theme-idea .hljs-attribute,
+.hljs-theme-idea .hljs-number,
+.hljs-theme-idea .hljs-regexp,
+.hljs-theme-idea .hljs-link {
+  font-weight: bold;
+  color: #0000ff
+}
+.hljs-theme-idea .hljs-number,
+.hljs-theme-idea .hljs-regexp,
+.hljs-theme-idea .hljs-link {
+  font-weight: normal
+}
+.hljs-theme-idea .hljs-string {
+  color: #008000;
+  font-weight: bold
+}
+.hljs-theme-idea .hljs-symbol,
+.hljs-theme-idea .hljs-bullet,
+.hljs-theme-idea .hljs-formula {
+  color: #000;
+  background: #d0eded;
+  font-style: italic
+}
+.hljs-theme-idea .hljs-doctag {
+  text-decoration: underline
+}
+.hljs-theme-idea .hljs-variable,
+.hljs-theme-idea .hljs-template-variable {
+  color: #660e7a
+}
+.hljs-theme-idea .hljs-addition {
+  background: #baeeba
+}
+.hljs-theme-idea .hljs-deletion {
+  background: #ffc8bd
+}
+.hljs-theme-idea .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-idea .hljs-strong {
+  font-weight: bold
+}

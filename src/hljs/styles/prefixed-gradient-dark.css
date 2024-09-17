@@ -1,0 +1,90 @@
+.hljs-theme-gradient-dark pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-gradient-dark code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Gradient Dark (c) Samia Ali <samiaab1990@gmail.com>
+
+*/
+.hljs-theme-gradient-dark .hljs {
+  background-color: #652487;
+  background-image: linear-gradient(160deg, #652487 0%, #443ac3 35%, #0174b7 68%, #04988e 100%);
+  color: #e7e4eb
+}
+.hljs-theme-gradient-dark .hljs-subtr {
+  color: #e7e4eb
+}
+.hljs-theme-gradient-dark .hljs-doctag,
+.hljs-theme-gradient-dark .hljs-meta,
+.hljs-theme-gradient-dark .hljs-comment,
+.hljs-theme-gradient-dark .hljs-quote {
+  color: #af8dd9
+}
+.hljs-theme-gradient-dark .hljs-selector-tag,
+.hljs-theme-gradient-dark .hljs-selector-id,
+.hljs-theme-gradient-dark .hljs-template-tag,
+.hljs-theme-gradient-dark .hljs-regexp,
+.hljs-theme-gradient-dark .hljs-attr,
+.hljs-theme-gradient-dark .hljs-tag {
+  color: #AEFBFF
+}
+.hljs-theme-gradient-dark .hljs-params,
+.hljs-theme-gradient-dark .hljs-selector-class,
+.hljs-theme-gradient-dark .hljs-bullet {
+  color: #F19FFF
+}
+.hljs-theme-gradient-dark .hljs-keyword,
+.hljs-theme-gradient-dark .hljs-section,
+.hljs-theme-gradient-dark .hljs-meta .hljs-keyword,
+.hljs-theme-gradient-dark .hljs-symbol,
+.hljs-theme-gradient-dark .hljs-type {
+  color: #17fc95
+}
+.hljs-theme-gradient-dark .hljs-addition,
+.hljs-theme-gradient-dark .hljs-number,
+.hljs-theme-gradient-dark .hljs-link {
+  color: #C5FE00
+}
+.hljs-theme-gradient-dark .hljs-string {
+  color: #38c0ff
+}
+.hljs-theme-gradient-dark .hljs-attribute,
+.hljs-theme-gradient-dark .hljs-addition {
+  color: #E7FF9F
+}
+.hljs-theme-gradient-dark .hljs-variable,
+.hljs-theme-gradient-dark .hljs-template-variable {
+  color: #E447FF
+}
+.hljs-theme-gradient-dark .hljs-built_in,
+.hljs-theme-gradient-dark .hljs-formula,
+.hljs-theme-gradient-dark .hljs-name,
+.hljs-theme-gradient-dark .hljs-title,
+.hljs-theme-gradient-dark .hljs-class,
+.hljs-theme-gradient-dark .hljs-function {
+  color: #FFC800
+}
+.hljs-theme-gradient-dark .hljs-selector-pseudo,
+.hljs-theme-gradient-dark .hljs-deletion,
+.hljs-theme-gradient-dark .hljs-literal {
+  color: #FF9E44
+}
+.hljs-theme-gradient-dark .hljs-emphasis,
+.hljs-theme-gradient-dark .hljs-quote {
+  font-style: italic
+}
+.hljs-theme-gradient-dark .hljs-params,
+.hljs-theme-gradient-dark .hljs-selector-class,
+.hljs-theme-gradient-dark .hljs-strong,
+.hljs-theme-gradient-dark .hljs-selector-tag,
+.hljs-theme-gradient-dark .hljs-selector-id,
+.hljs-theme-gradient-dark .hljs-template-tag,
+.hljs-theme-gradient-dark .hljs-section,
+.hljs-theme-gradient-dark .hljs-keyword {
+  font-weight: bold
+}

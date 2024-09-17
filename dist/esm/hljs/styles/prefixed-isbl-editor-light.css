@@ -1,0 +1,93 @@
+.hljs-theme-isbl-editor-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-isbl-editor-light code.hljs {
+  padding: 3px 5px
+}
+/*
+
+ISBL Editor style light color schemec (c) Dmitriy Tarasov <dimatar@gmail.com>
+
+*/
+.hljs-theme-isbl-editor-light .hljs {
+  background: white;
+  color: black
+}
+/* Base color: saturation 0; */
+.hljs-theme-isbl-editor-light .hljs-subst {
+  color: black
+}
+.hljs-theme-isbl-editor-light .hljs-comment {
+  color: #555555;
+  font-style: italic
+}
+.hljs-theme-isbl-editor-light .hljs-keyword,
+.hljs-theme-isbl-editor-light .hljs-attribute,
+.hljs-theme-isbl-editor-light .hljs-selector-tag,
+.hljs-theme-isbl-editor-light .hljs-meta .hljs-keyword,
+.hljs-theme-isbl-editor-light .hljs-doctag,
+.hljs-theme-isbl-editor-light .hljs-name {
+  color: #000000;
+  font-weight: bold
+}
+/* User color: hue: 0 */
+.hljs-theme-isbl-editor-light .hljs-string {
+  color: #000080
+}
+.hljs-theme-isbl-editor-light .hljs-type,
+.hljs-theme-isbl-editor-light .hljs-number,
+.hljs-theme-isbl-editor-light .hljs-selector-id,
+.hljs-theme-isbl-editor-light .hljs-selector-class,
+.hljs-theme-isbl-editor-light .hljs-quote,
+.hljs-theme-isbl-editor-light .hljs-template-tag,
+.hljs-theme-isbl-editor-light .hljs-deletion {
+  color: #000000
+}
+.hljs-theme-isbl-editor-light .hljs-regexp,
+.hljs-theme-isbl-editor-light .hljs-symbol,
+.hljs-theme-isbl-editor-light .hljs-variable,
+.hljs-theme-isbl-editor-light .hljs-template-variable,
+.hljs-theme-isbl-editor-light .hljs-link,
+.hljs-theme-isbl-editor-light .hljs-selector-attr,
+.hljs-theme-isbl-editor-light .hljs-selector-pseudo {
+  color: #5e1700
+}
+/* Language color: hue: 90; */
+.hljs-theme-isbl-editor-light .hljs-built_in,
+.hljs-theme-isbl-editor-light .hljs-literal {
+  color: #000080;
+  font-weight: bold
+}
+.hljs-theme-isbl-editor-light .hljs-bullet,
+.hljs-theme-isbl-editor-light .hljs-code,
+.hljs-theme-isbl-editor-light .hljs-addition {
+  color: #397300
+}
+.hljs-theme-isbl-editor-light .hljs-class {
+  color: #6f1C00;
+  font-weight: bold
+}
+.hljs-theme-isbl-editor-light .hljs-title,
+.hljs-theme-isbl-editor-light .hljs-section {
+  color: #fb2c00
+}
+.hljs-theme-isbl-editor-light .hljs-title>.hljs-built_in {
+  color: #008080;
+  font-weight: normal
+}
+/* Meta color: hue: 200 */
+.hljs-theme-isbl-editor-light .hljs-meta {
+  color: #1f7199
+}
+.hljs-theme-isbl-editor-light .hljs-meta .hljs-string {
+  color: #4d99bf
+}
+/* Misc effects */
+.hljs-theme-isbl-editor-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-isbl-editor-light .hljs-strong {
+  font-weight: bold
+}

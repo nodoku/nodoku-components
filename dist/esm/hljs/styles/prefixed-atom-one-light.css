@@ -1,0 +1,90 @@
+.hljs-theme-atom-one-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-atom-one-light code.hljs {
+  padding: 3px 5px
+}
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+.hljs-theme-atom-one-light .hljs {
+  color: #383a42;
+  background: #fafafa
+}
+.hljs-theme-atom-one-light .hljs-comment,
+.hljs-theme-atom-one-light .hljs-quote {
+  color: #a0a1a7;
+  font-style: italic
+}
+.hljs-theme-atom-one-light .hljs-doctag,
+.hljs-theme-atom-one-light .hljs-keyword,
+.hljs-theme-atom-one-light .hljs-formula {
+  color: #a626a4
+}
+.hljs-theme-atom-one-light .hljs-section,
+.hljs-theme-atom-one-light .hljs-name,
+.hljs-theme-atom-one-light .hljs-selector-tag,
+.hljs-theme-atom-one-light .hljs-deletion,
+.hljs-theme-atom-one-light .hljs-subst {
+  color: #e45649
+}
+.hljs-theme-atom-one-light .hljs-literal {
+  color: #0184bb
+}
+.hljs-theme-atom-one-light .hljs-string,
+.hljs-theme-atom-one-light .hljs-regexp,
+.hljs-theme-atom-one-light .hljs-addition,
+.hljs-theme-atom-one-light .hljs-attribute,
+.hljs-theme-atom-one-light .hljs-meta .hljs-string {
+  color: #50a14f
+}
+.hljs-theme-atom-one-light .hljs-attr,
+.hljs-theme-atom-one-light .hljs-variable,
+.hljs-theme-atom-one-light .hljs-template-variable,
+.hljs-theme-atom-one-light .hljs-type,
+.hljs-theme-atom-one-light .hljs-selector-class,
+.hljs-theme-atom-one-light .hljs-selector-attr,
+.hljs-theme-atom-one-light .hljs-selector-pseudo,
+.hljs-theme-atom-one-light .hljs-number {
+  color: #986801
+}
+.hljs-theme-atom-one-light .hljs-symbol,
+.hljs-theme-atom-one-light .hljs-bullet,
+.hljs-theme-atom-one-light .hljs-link,
+.hljs-theme-atom-one-light .hljs-meta,
+.hljs-theme-atom-one-light .hljs-selector-id,
+.hljs-theme-atom-one-light .hljs-title {
+  color: #4078f2
+}
+.hljs-theme-atom-one-light .hljs-built_in,
+.hljs-theme-atom-one-light .hljs-title.class_,
+.hljs-theme-atom-one-light .hljs-class .hljs-title {
+  color: #c18401
+}
+.hljs-theme-atom-one-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-atom-one-light .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-atom-one-light .hljs-link {
+  text-decoration: underline
+}

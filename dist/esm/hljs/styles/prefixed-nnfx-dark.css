@@ -1,0 +1,104 @@
+.hljs-theme-nnfx-dark pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-nnfx-dark code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: nnfx dark
+  Description: a theme inspired by Netscape Navigator/Firefox
+  Author: (c) 2020-2021 Jim Mason <jmason@ibinx.com>
+  Maintainer: @RocketMan
+  License: https://creativecommons.org/licenses/by-sa/4.0  CC BY-SA 4.0
+  Updated: 2021-05-17
+
+  @version 1.1.0
+*/
+.hljs-theme-nnfx-dark .hljs {
+  background: #333;
+  color: #fff
+}
+.hljs-theme-nnfx-dark .language-xml .hljs-meta,
+.hljs-theme-nnfx-dark .language-xml .hljs-meta-string {
+  font-weight: bold;
+  font-style: italic;
+  color: #69f
+}
+.hljs-theme-nnfx-dark .hljs-comment,
+.hljs-theme-nnfx-dark .hljs-quote {
+  font-style: italic;
+  color: #9c6
+}
+.hljs-theme-nnfx-dark .hljs-name,
+.hljs-theme-nnfx-dark .hljs-keyword,
+.hljs-theme-nnfx-dark .hljs-built_in {
+  color: #a7a
+}
+.hljs-theme-nnfx-dark .hljs-name,
+.hljs-theme-nnfx-dark .hljs-attr {
+  font-weight: bold
+}
+.hljs-theme-nnfx-dark .hljs-string {
+  font-weight: normal
+}
+.hljs-theme-nnfx-dark .hljs-code,
+.hljs-theme-nnfx-dark .hljs-string,
+.hljs-theme-nnfx-dark .hljs-meta .hljs-string,
+.hljs-theme-nnfx-dark .hljs-number,
+.hljs-theme-nnfx-dark .hljs-regexp,
+.hljs-theme-nnfx-dark .hljs-link {
+  color: #bce
+}
+.hljs-theme-nnfx-dark .hljs-title,
+.hljs-theme-nnfx-dark .hljs-symbol,
+.hljs-theme-nnfx-dark .hljs-bullet,
+.hljs-theme-nnfx-dark .hljs-variable,
+.hljs-theme-nnfx-dark .hljs-template-variable {
+  color: #d40
+}
+.hljs-theme-nnfx-dark .hljs-title.class_,
+.hljs-theme-nnfx-dark .hljs-class .hljs-title,
+.hljs-theme-nnfx-dark .hljs-type {
+  font-weight: bold;
+  color: #96c
+}
+.hljs-theme-nnfx-dark .hljs-title.function_,
+.hljs-theme-nnfx-dark .hljs-function .hljs-title,
+.hljs-theme-nnfx-dark .hljs-attr,
+.hljs-theme-nnfx-dark .hljs-subst,
+.hljs-theme-nnfx-dark .hljs-tag {
+  color: #fff
+}
+.hljs-theme-nnfx-dark .hljs-formula {
+  background-color: #eee;
+  font-style: italic
+}
+.hljs-theme-nnfx-dark .hljs-addition {
+  background-color: #797
+}
+.hljs-theme-nnfx-dark .hljs-deletion {
+  background-color: #c99
+}
+.hljs-theme-nnfx-dark .hljs-meta {
+  color: #69f
+}
+.hljs-theme-nnfx-dark .hljs-section,
+.hljs-theme-nnfx-dark .hljs-selector-id,
+.hljs-theme-nnfx-dark .hljs-selector-class,
+.hljs-theme-nnfx-dark .hljs-selector-pseudo,
+.hljs-theme-nnfx-dark .hljs-selector-tag {
+  font-weight: bold;
+  color: #69f
+}
+.hljs-theme-nnfx-dark .hljs-selector-pseudo {
+  font-style: italic
+}
+.hljs-theme-nnfx-dark .hljs-doctag,
+.hljs-theme-nnfx-dark .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-nnfx-dark .hljs-emphasis {
+  font-style: italic
+}

@@ -1,0 +1,80 @@
+.hljs-theme-foundation pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-foundation code.hljs {
+  padding: 3px 5px
+}
+/*
+Description: Foundation 4 docs style for highlight.js
+Author: Dan Allen <dan.j.allen@gmail.com>
+Website: http://foundation.zurb.com/docs/
+Version: 1.0
+Date: 2013-04-02
+*/
+.hljs-theme-foundation .hljs {
+  background: #eee;
+  color: black
+}
+.hljs-theme-foundation .hljs-link,
+.hljs-theme-foundation .hljs-emphasis,
+.hljs-theme-foundation .hljs-attribute,
+.hljs-theme-foundation .hljs-addition {
+  color: #070
+}
+.hljs-theme-foundation .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-foundation .hljs-strong,
+.hljs-theme-foundation .hljs-string,
+.hljs-theme-foundation .hljs-deletion {
+  color: #d14
+}
+.hljs-theme-foundation .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-foundation .hljs-quote,
+.hljs-theme-foundation .hljs-comment {
+  color: #998;
+  font-style: italic
+}
+.hljs-theme-foundation .hljs-section,
+.hljs-theme-foundation .hljs-title {
+  color: #900
+}
+.hljs-theme-foundation .hljs-class .hljs-title,
+.hljs-theme-foundation .hljs-title.class_,
+.hljs-theme-foundation .hljs-type {
+  color: #458
+}
+.hljs-theme-foundation .hljs-variable,
+.hljs-theme-foundation .hljs-template-variable {
+  color: #336699
+}
+.hljs-theme-foundation .hljs-bullet {
+  color: #997700
+}
+.hljs-theme-foundation .hljs-meta {
+  color: #3344bb
+}
+.hljs-theme-foundation .hljs-code,
+.hljs-theme-foundation .hljs-number,
+.hljs-theme-foundation .hljs-literal,
+.hljs-theme-foundation .hljs-keyword,
+.hljs-theme-foundation .hljs-selector-tag {
+  color: #099
+}
+.hljs-theme-foundation .hljs-regexp {
+  background-color: #fff0ff;
+  color: #880088
+}
+.hljs-theme-foundation .hljs-symbol {
+  color: #990073
+}
+.hljs-theme-foundation .hljs-tag,
+.hljs-theme-foundation .hljs-name,
+.hljs-theme-foundation .hljs-selector-id,
+.hljs-theme-foundation .hljs-selector-class {
+  color: #007700
+}

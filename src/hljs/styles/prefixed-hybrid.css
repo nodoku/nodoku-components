@@ -1,0 +1,88 @@
+.hljs-theme-hybrid pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-hybrid code.hljs {
+  padding: 3px 5px
+}
+/*
+
+vim-hybrid theme by w0ng (https://github.com/w0ng/vim-hybrid)
+
+*/
+.hljs-theme-hybrid .hljs {
+  background: #1d1f21;
+  color: #c5c8c6
+}
+/*selection color*/
+.hljs-theme-hybrid .hljs::selection,
+.hljs-theme-hybrid .hljs span::selection {
+  background: #373b41
+}
+.hljs-theme-hybrid .hljs::-moz-selection,
+.hljs-theme-hybrid .hljs span::-moz-selection {
+  background: #373b41
+}
+/*color: fg_yellow*/
+.hljs-theme-hybrid .hljs-title,
+.hljs-theme-hybrid .hljs-name {
+  color: #f0c674
+}
+/*color: fg_comment*/
+.hljs-theme-hybrid .hljs-comment,
+.hljs-theme-hybrid .hljs-meta,
+.hljs-theme-hybrid .hljs-meta .hljs-keyword {
+  color: #707880
+}
+/*color: fg_red*/
+.hljs-theme-hybrid .hljs-number,
+.hljs-theme-hybrid .hljs-symbol,
+.hljs-theme-hybrid .hljs-literal,
+.hljs-theme-hybrid .hljs-deletion,
+.hljs-theme-hybrid .hljs-link {
+  color: #cc6666
+}
+/*color: fg_green*/
+.hljs-theme-hybrid .hljs-string,
+.hljs-theme-hybrid .hljs-doctag,
+.hljs-theme-hybrid .hljs-addition,
+.hljs-theme-hybrid .hljs-regexp,
+.hljs-theme-hybrid .hljs-selector-attr,
+.hljs-theme-hybrid .hljs-selector-pseudo {
+  color: #b5bd68
+}
+/*color: fg_purple*/
+.hljs-theme-hybrid .hljs-attribute,
+.hljs-theme-hybrid .hljs-code,
+.hljs-theme-hybrid .hljs-selector-id {
+  color: #b294bb
+}
+/*color: fg_blue*/
+.hljs-theme-hybrid .hljs-keyword,
+.hljs-theme-hybrid .hljs-selector-tag,
+.hljs-theme-hybrid .hljs-bullet,
+.hljs-theme-hybrid .hljs-tag {
+  color: #81a2be
+}
+/*color: fg_aqua*/
+.hljs-theme-hybrid .hljs-subst,
+.hljs-theme-hybrid .hljs-variable,
+.hljs-theme-hybrid .hljs-template-tag,
+.hljs-theme-hybrid .hljs-template-variable {
+  color: #8abeb7
+}
+/*color: fg_orange*/
+.hljs-theme-hybrid .hljs-type,
+.hljs-theme-hybrid .hljs-built_in,
+.hljs-theme-hybrid .hljs-quote,
+.hljs-theme-hybrid .hljs-section,
+.hljs-theme-hybrid .hljs-selector-class {
+  color: #de935f
+}
+.hljs-theme-hybrid .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-hybrid .hljs-strong {
+  font-weight: bold
+}

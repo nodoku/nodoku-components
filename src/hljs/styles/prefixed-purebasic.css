@@ -1,0 +1,103 @@
+.hljs-theme-purebasic pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-purebasic code.hljs {
+  padding: 3px 5px
+}
+/*
+
+PureBASIC native IDE style ( version 1.0 - April 2016 )
+
+by Tristano Ajmone <tajmone@gmail.com>
+
+Public Domain
+
+NOTE_1:	PureBASIC code syntax highlighting only applies the following classes:
+			.hljs-comment
+			.hljs-function
+			.hljs-keywords
+			.hljs-string
+			.hljs-symbol
+
+		Other classes are added here for the benefit of styling other languages with the look and feel of PureBASIC native IDE style.
+		If you need to customize a stylesheet for PureBASIC only, remove all non-relevant classes -- PureBASIC-related classes are followed by
+		a "--- used for PureBASIC ... ---" comment on same line.
+
+NOTE_2:	Color names provided in comments were derived using "Name that Color" online tool:
+			http://chir.ag/projects/name-that-color
+*/
+.hljs-theme-purebasic .hljs {
+  background: #FFFFDF/* Half and Half (approx.) */
+  
+}
+/* --- used for PureBASIC base color --- */
+/* --- used for PureBASIC Procedures return type --- */
+/* --- used for wrapping PureBASIC Procedures definitions --- */
+.hljs-theme-purebasic .hljs,
+.hljs-theme-purebasic .hljs-type,
+.hljs-theme-purebasic .hljs-function,
+.hljs-theme-purebasic .hljs-name,
+.hljs-theme-purebasic .hljs-number,
+.hljs-theme-purebasic .hljs-attr,
+.hljs-theme-purebasic .hljs-params,
+.hljs-theme-purebasic .hljs-subst {
+  color: #000000/* Black */
+  
+}
+/* --- used for PureBASIC Comments --- */
+.hljs-theme-purebasic .hljs-comment,
+.hljs-theme-purebasic .hljs-regexp,
+.hljs-theme-purebasic .hljs-section,
+.hljs-theme-purebasic .hljs-selector-pseudo,
+.hljs-theme-purebasic .hljs-addition {
+  color: #00AAAA/* Persian Green (approx.) */
+  
+}
+/* --- used for PureBASIC Keywords --- */
+.hljs-theme-purebasic .hljs-keyword,
+.hljs-theme-purebasic .hljs-class,
+.hljs-theme-purebasic .hljs-meta .hljs-keyword,
+.hljs-theme-purebasic .hljs-selector-class,
+.hljs-theme-purebasic .hljs-built_in {
+  color: #006666;
+  /* Blue Stone (approx.) */
+  font-weight: bold
+}
+/* --- used for PureBASIC Procedures Names --- */
+.hljs-theme-purebasic .hljs-title,
+.hljs-theme-purebasic .hljs-tag,
+.hljs-theme-purebasic .hljs-variable,
+.hljs-theme-purebasic .hljs-code {
+  color: #006666/* Blue Stone (approx.) */
+  
+}
+/* --- used for PureBASIC Strings --- */
+.hljs-theme-purebasic .hljs-string,
+.hljs-theme-purebasic .hljs-selector-attr {
+  color: #0080FF/* Azure Radiance (approx.) */
+  
+}
+/* --- used for PureBASIC Constants --- */
+.hljs-theme-purebasic .hljs-symbol,
+.hljs-theme-purebasic .hljs-link,
+.hljs-theme-purebasic .hljs-deletion,
+.hljs-theme-purebasic .hljs-attribute {
+  color: #924B72/* Cannon Pink (approx.) */
+  
+}
+.hljs-theme-purebasic .hljs-meta,
+.hljs-theme-purebasic .hljs-literal,
+.hljs-theme-purebasic .hljs-selector-id {
+  color: #924B72;
+  /* Cannon Pink (approx.) */
+  font-weight: bold
+}
+.hljs-theme-purebasic .hljs-strong,
+.hljs-theme-purebasic .hljs-name {
+  font-weight: bold
+}
+.hljs-theme-purebasic .hljs-emphasis {
+  font-style: italic
+}

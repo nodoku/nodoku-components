@@ -1,0 +1,114 @@
+.hljs-theme-tokyo-night-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-tokyo-night-light code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: Tokyo-night-light
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/
+/*  Comment */
+.hljs-theme-tokyo-night-light .hljs-meta,
+.hljs-theme-tokyo-night-light .hljs-comment {
+  color: #9699a3
+}
+/* Red */
+/*INFO: This keyword, HTML elements, Regex group symbol, CSS units, Terminal Red */
+.hljs-theme-tokyo-night-light .hljs-tag,
+.hljs-theme-tokyo-night-light .hljs-doctag,
+.hljs-theme-tokyo-night-light .hljs-selector-id,
+.hljs-theme-tokyo-night-light .hljs-selector-class,
+.hljs-theme-tokyo-night-light .hljs-regexp,
+.hljs-theme-tokyo-night-light .hljs-template-tag,
+.hljs-theme-tokyo-night-light .hljs-selector-pseudo,
+.hljs-theme-tokyo-night-light .hljs-selector-attr,
+.hljs-theme-tokyo-night-light .hljs-variable.language_,
+.hljs-theme-tokyo-night-light .hljs-deletion {
+  color: #8c4351
+}
+/*Orange */
+/*INFO: Number and Boolean constants, Language support constants */
+.hljs-theme-tokyo-night-light .hljs-variable,
+.hljs-theme-tokyo-night-light .hljs-template-variable,
+.hljs-theme-tokyo-night-light .hljs-number,
+.hljs-theme-tokyo-night-light .hljs-literal,
+.hljs-theme-tokyo-night-light .hljs-type,
+.hljs-theme-tokyo-night-light .hljs-params,
+.hljs-theme-tokyo-night-light .hljs-link {
+  color: #965027
+}
+/*  Yellow */
+/* INFO:  	Function parameters, Regex character sets, Terminal Yellow */
+.hljs-theme-tokyo-night-light .hljs-built_in,
+.hljs-theme-tokyo-night-light .hljs-attribute {
+  color: #8f5e15
+}
+/* cyan */
+/* INFO: Language support functions, CSS HTML elements */
+.hljs-theme-tokyo-night-light .hljs-selector-tag {
+  color: #166775
+}
+/* light blue */
+/* INFO: Object properties, Regex quantifiers and flags, Markdown headings, Terminal Cyan, Markdown code, Import/export keywords */
+.hljs-theme-tokyo-night-light .hljs-keyword,
+.hljs-theme-tokyo-night-light .hljs-title.function_,
+.hljs-theme-tokyo-night-light .hljs-title,
+.hljs-theme-tokyo-night-light .hljs-title.class_,
+.hljs-theme-tokyo-night-light .hljs-title.class_.inherited__,
+.hljs-theme-tokyo-night-light .hljs-subst,
+.hljs-theme-tokyo-night-light .hljs-property {
+  color: #0f4b6e
+}
+/*Green*/
+/* INFO: Object literal keys, Markdown links, Terminal Green */
+.hljs-theme-tokyo-night-light .hljs-selector-tag {
+  color: #33635c
+}
+/*Green(er) */
+/* INFO: Strings, CSS class names */
+.hljs-theme-tokyo-night-light .hljs-quote,
+.hljs-theme-tokyo-night-light .hljs-string,
+.hljs-theme-tokyo-night-light .hljs-symbol,
+.hljs-theme-tokyo-night-light .hljs-bullet,
+.hljs-theme-tokyo-night-light .hljs-addition {
+  color: #485e30
+}
+/* Blue */
+/* INFO:  	Function names, CSS property names, Terminal Blue */
+.hljs-theme-tokyo-night-light .hljs-code,
+.hljs-theme-tokyo-night-light .hljs-formula,
+.hljs-theme-tokyo-night-light .hljs-section {
+  color: #34548a
+}
+/* Magenta */
+/*INFO: Control Keywords, Storage Types, Regex symbols and operators, HTML Attributes, Terminal Magenta */
+.hljs-theme-tokyo-night-light .hljs-name,
+.hljs-theme-tokyo-night-light .hljs-keyword,
+.hljs-theme-tokyo-night-light .hljs-operator,
+.hljs-theme-tokyo-night-light .hljs-keyword,
+.hljs-theme-tokyo-night-light .hljs-char.escape_,
+.hljs-theme-tokyo-night-light .hljs-attr {
+  color: #5a4a78
+}
+/* white*/
+/* INFO: Variables, Class names, Terminal White */
+.hljs-theme-tokyo-night-light .hljs-punctuation {
+  color: #343b58
+}
+.hljs-theme-tokyo-night-light .hljs {
+  background: #d5d6db;
+  color: #565a6e
+}
+.hljs-theme-tokyo-night-light .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-tokyo-night-light .hljs-strong {
+  font-weight: bold
+}

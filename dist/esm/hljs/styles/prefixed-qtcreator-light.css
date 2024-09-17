@@ -1,0 +1,74 @@
+.hljs-theme-qtcreator-light pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-qtcreator-light code.hljs {
+  padding: 3px 5px
+}
+/*
+Qt Creator light color scheme
+*/
+.hljs-theme-qtcreator-light .hljs {
+  color: #000000;
+  background: #ffffff
+}
+.hljs-theme-qtcreator-light .hljs-strong,
+.hljs-theme-qtcreator-light .hljs-emphasis {
+  color: #000000
+}
+.hljs-theme-qtcreator-light .hljs-bullet,
+.hljs-theme-qtcreator-light .hljs-quote,
+.hljs-theme-qtcreator-light .hljs-number,
+.hljs-theme-qtcreator-light .hljs-regexp,
+.hljs-theme-qtcreator-light .hljs-literal {
+  color: #000080
+}
+.hljs-theme-qtcreator-light .hljs-code
+.hljs-selector-class {
+  color: #800080
+}
+.hljs-theme-qtcreator-light .hljs-emphasis,
+.hljs-theme-qtcreator-light .hljs-stronge,
+.hljs-theme-qtcreator-light .hljs-type {
+  font-style: italic
+}
+.hljs-theme-qtcreator-light .hljs-keyword,
+.hljs-theme-qtcreator-light .hljs-selector-tag,
+.hljs-theme-qtcreator-light .hljs-function,
+.hljs-theme-qtcreator-light .hljs-section,
+.hljs-theme-qtcreator-light .hljs-symbol,
+.hljs-theme-qtcreator-light .hljs-name {
+  color: #808000
+}
+.hljs-theme-qtcreator-light .hljs-subst,
+.hljs-theme-qtcreator-light .hljs-tag,
+.hljs-theme-qtcreator-light .hljs-title {
+  color: #000000
+}
+.hljs-theme-qtcreator-light .hljs-attribute {
+  color: #800000
+}
+.hljs-theme-qtcreator-light .hljs-variable,
+.hljs-theme-qtcreator-light .hljs-params,
+.hljs-theme-qtcreator-light .hljs-title.class_,
+.hljs-theme-qtcreator-light .hljs-class .hljs-title {
+  color: #0055AF
+}
+.hljs-theme-qtcreator-light .hljs-string,
+.hljs-theme-qtcreator-light .hljs-selector-id,
+.hljs-theme-qtcreator-light .hljs-selector-attr,
+.hljs-theme-qtcreator-light .hljs-selector-pseudo,
+.hljs-theme-qtcreator-light .hljs-type,
+.hljs-theme-qtcreator-light .hljs-built_in,
+.hljs-theme-qtcreator-light .hljs-template-tag,
+.hljs-theme-qtcreator-light .hljs-template-variable,
+.hljs-theme-qtcreator-light .hljs-addition,
+.hljs-theme-qtcreator-light .hljs-link {
+  color: #008000
+}
+.hljs-theme-qtcreator-light .hljs-comment,
+.hljs-theme-qtcreator-light .hljs-meta,
+.hljs-theme-qtcreator-light .hljs-deletion {
+  color: #008000
+}

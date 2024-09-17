@@ -1,0 +1,70 @@
+.hljs-theme-monokai pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-monokai code.hljs {
+  padding: 3px 5px
+}
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+.hljs-theme-monokai .hljs {
+  background: #272822;
+  color: #ddd
+}
+.hljs-theme-monokai .hljs-tag,
+.hljs-theme-monokai .hljs-keyword,
+.hljs-theme-monokai .hljs-selector-tag,
+.hljs-theme-monokai .hljs-literal,
+.hljs-theme-monokai .hljs-strong,
+.hljs-theme-monokai .hljs-number,
+.hljs-theme-monokai .hljs-name {
+  color: #f92672
+}
+.hljs-theme-monokai .hljs-code {
+  color: #66d9ef
+}
+.hljs-theme-monokai .hljs-attribute,
+.hljs-theme-monokai .hljs-attr,
+.hljs-theme-monokai .hljs-symbol,
+.hljs-theme-monokai .hljs-regexp,
+.hljs-theme-monokai .hljs-link {
+  color: #bf79db
+}
+.hljs-theme-monokai .hljs-string,
+.hljs-theme-monokai .hljs-bullet,
+.hljs-theme-monokai .hljs-subst,
+.hljs-theme-monokai .hljs-title,
+.hljs-theme-monokai .hljs-section,
+.hljs-theme-monokai .hljs-emphasis,
+.hljs-theme-monokai .hljs-type,
+.hljs-theme-monokai .hljs-built_in,
+.hljs-theme-monokai .hljs-selector-attr,
+.hljs-theme-monokai .hljs-selector-pseudo,
+.hljs-theme-monokai .hljs-addition,
+.hljs-theme-monokai .hljs-variable,
+.hljs-theme-monokai .hljs-template-tag,
+.hljs-theme-monokai .hljs-template-variable {
+  color: #a6e22e
+}
+.hljs-theme-monokai .hljs-title.class_,
+.hljs-theme-monokai .hljs-class .hljs-title {
+  color: white
+}
+.hljs-theme-monokai .hljs-comment,
+.hljs-theme-monokai .hljs-quote,
+.hljs-theme-monokai .hljs-deletion,
+.hljs-theme-monokai .hljs-meta {
+  color: #75715e
+}
+.hljs-theme-monokai .hljs-keyword,
+.hljs-theme-monokai .hljs-selector-tag,
+.hljs-theme-monokai .hljs-literal,
+.hljs-theme-monokai .hljs-doctag,
+.hljs-theme-monokai .hljs-title,
+.hljs-theme-monokai .hljs-section,
+.hljs-theme-monokai .hljs-type,
+.hljs-theme-monokai .hljs-selector-id {
+  font-weight: bold
+}

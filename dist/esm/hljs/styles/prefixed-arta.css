@@ -1,0 +1,66 @@
+.hljs-theme-arta pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-arta code.hljs {
+  padding: 3px 5px
+}
+/*
+Date: 17.V.2011
+Author: pumbur <pumbur@pumbur.net>
+*/
+.hljs-theme-arta .hljs {
+  background: #222;
+  color: #aaa
+}
+.hljs-theme-arta .hljs-subst {
+  color: #aaa
+}
+.hljs-theme-arta .hljs-section {
+  color: #fff
+}
+.hljs-theme-arta .hljs-comment,
+.hljs-theme-arta .hljs-quote,
+.hljs-theme-arta .hljs-meta {
+  color: #444
+}
+.hljs-theme-arta .hljs-string,
+.hljs-theme-arta .hljs-symbol,
+.hljs-theme-arta .hljs-bullet,
+.hljs-theme-arta .hljs-regexp {
+  color: #ffcc33
+}
+.hljs-theme-arta .hljs-number,
+.hljs-theme-arta .hljs-addition {
+  color: #00cc66
+}
+.hljs-theme-arta .hljs-built_in,
+.hljs-theme-arta .hljs-literal,
+.hljs-theme-arta .hljs-type,
+.hljs-theme-arta .hljs-template-variable,
+.hljs-theme-arta .hljs-attribute,
+.hljs-theme-arta .hljs-link {
+  color: #32aaee
+}
+.hljs-theme-arta .hljs-keyword,
+.hljs-theme-arta .hljs-selector-tag,
+.hljs-theme-arta .hljs-name,
+.hljs-theme-arta .hljs-selector-id,
+.hljs-theme-arta .hljs-selector-class {
+  color: #6644aa
+}
+.hljs-theme-arta .hljs-title,
+.hljs-theme-arta .hljs-variable,
+.hljs-theme-arta .hljs-deletion,
+.hljs-theme-arta .hljs-template-tag {
+  color: #bb1166
+}
+.hljs-theme-arta .hljs-section,
+.hljs-theme-arta .hljs-doctag,
+.hljs-theme-arta .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-arta .hljs-emphasis {
+  font-style: italic
+}

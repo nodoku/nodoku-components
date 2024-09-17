@@ -1,0 +1,62 @@
+.hljs-theme-school-book pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-school-book code.hljs {
+  padding: 3px 5px
+}
+/*
+
+School Book style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
+
+*/
+.hljs-theme-school-book .hljs {
+  color: #3e5915;
+  background: #f6f5b2
+}
+.hljs-theme-school-book .hljs-keyword,
+.hljs-theme-school-book .hljs-selector-tag,
+.hljs-theme-school-book .hljs-literal {
+  color: #005599;
+  font-weight: bold
+}
+.hljs-theme-school-book .hljs-subst {
+  color: #3e5915
+}
+.hljs-theme-school-book .hljs-string,
+.hljs-theme-school-book .hljs-title,
+.hljs-theme-school-book .hljs-section,
+.hljs-theme-school-book .hljs-type,
+.hljs-theme-school-book .hljs-symbol,
+.hljs-theme-school-book .hljs-bullet,
+.hljs-theme-school-book .hljs-attribute,
+.hljs-theme-school-book .hljs-built_in,
+.hljs-theme-school-book .hljs-addition,
+.hljs-theme-school-book .hljs-variable,
+.hljs-theme-school-book .hljs-template-tag,
+.hljs-theme-school-book .hljs-template-variable,
+.hljs-theme-school-book .hljs-link {
+  color: #2c009f
+}
+.hljs-theme-school-book .hljs-comment,
+.hljs-theme-school-book .hljs-quote,
+.hljs-theme-school-book .hljs-deletion,
+.hljs-theme-school-book .hljs-meta {
+  color: #e60415
+}
+.hljs-theme-school-book .hljs-keyword,
+.hljs-theme-school-book .hljs-selector-tag,
+.hljs-theme-school-book .hljs-literal,
+.hljs-theme-school-book .hljs-doctag,
+.hljs-theme-school-book .hljs-title,
+.hljs-theme-school-book .hljs-section,
+.hljs-theme-school-book .hljs-type,
+.hljs-theme-school-book .hljs-name,
+.hljs-theme-school-book .hljs-selector-id,
+.hljs-theme-school-book .hljs-strong {
+  font-weight: bold
+}
+.hljs-theme-school-book .hljs-emphasis {
+  font-style: italic
+}

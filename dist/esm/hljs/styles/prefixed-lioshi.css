@@ -1,0 +1,76 @@
+.hljs-theme-lioshi pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+.hljs-theme-lioshi code.hljs {
+  padding: 3px 5px
+}
+/* lioshi Theme */
+/* Original theme - https://github.com/lioshi/vscode-lioshi-theme */
+.hljs-theme-lioshi .hljs {
+  background: #303030;
+  color: #c5c8c6
+}
+/* Comment */
+.hljs-theme-lioshi .hljs-comment {
+  color: #8d8d8d
+}
+/* quote */
+.hljs-theme-lioshi .hljs-quote {
+  color: #b3c7d8
+}
+/* Red */
+.hljs-theme-lioshi .hljs-variable,
+.hljs-theme-lioshi .hljs-template-variable,
+.hljs-theme-lioshi .hljs-tag,
+.hljs-theme-lioshi .hljs-name,
+.hljs-theme-lioshi .hljs-selector-id,
+.hljs-theme-lioshi .hljs-selector-class,
+.hljs-theme-lioshi .hljs-regexp,
+.hljs-theme-lioshi .hljs-deletion {
+  color: #cc6666
+}
+/* Orange */
+.hljs-theme-lioshi .hljs-number,
+.hljs-theme-lioshi .hljs-built_in,
+.hljs-theme-lioshi .hljs-literal,
+.hljs-theme-lioshi .hljs-type,
+.hljs-theme-lioshi .hljs-subst
+.hljs-link {
+  color: #de935f
+}
+/* Yellow */
+.hljs-theme-lioshi .hljs-attribute {
+  color: #f0c674
+}
+/* Green */
+.hljs-theme-lioshi .hljs-string,
+.hljs-theme-lioshi .hljs-bullet,
+.hljs-theme-lioshi .hljs-params,
+.hljs-theme-lioshi .hljs-addition {
+  color: #b5bd68
+}
+/* Purple */
+.hljs-theme-lioshi .hljs-selector-tag,
+.hljs-theme-lioshi .hljs-keyword,
+.hljs-theme-lioshi .hljs-function,
+.hljs-theme-lioshi .hljs-class {
+  color: #be94bb
+}
+/* Blue */
+.hljs-theme-lioshi .hljs-title,
+.hljs-theme-lioshi .hljs-meta,
+.hljs-theme-lioshi .hljs-section {
+  color: #81a2be
+}
+/* Purple light */
+.hljs-theme-lioshi .hljs-symbol {
+  color: #dbc4d9
+}
+.hljs-theme-lioshi .hljs-emphasis {
+  font-style: italic
+}
+.hljs-theme-lioshi .hljs-strong {
+  font-weight: bold
+}
