@@ -24,13 +24,11 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
 
     const html = hljs.highlight(code.code, {language: code.lang}).value;
 
-    const themes = Object.keys(theme)
-
     if (effectiveTheme.light) {
-        await import(`../../../hljs/styles/prefixed-${effectiveTheme.light}.css`);
+        await import(`../../hljs/styles/prefixed-${effectiveTheme.light}.css`);
     }
     if (effectiveTheme.dark) {
-        await import(`../../../hljs/styles/prefixed-${effectiveTheme.dark}.css`);
+        await import(`../../hljs/styles/prefixed-${effectiveTheme.dark}.css`);
     }
 
     const lightClassName = `${effectiveTheme.lightDisplay} dark:hidden ${defaultThemeName === "light" ? "inline-block" : "hidden"}`

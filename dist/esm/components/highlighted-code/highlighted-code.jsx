@@ -48,7 +48,7 @@ var HighlightedCodeProps = /** @class */ (function () {
 export { HighlightedCodeProps };
 export function HighlightedCodeImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
-        var code, theme, defaultThemeName, effectiveTheme, html, themes, lightClassName, darkClassName, pre, res;
+        var code, theme, defaultThemeName, effectiveTheme, html, lightClassName, darkClassName, pre, res;
         var _a, _b, _c, _d, _e, _f;
         return __generator(this, function (_g) {
             switch (_g.label) {
@@ -56,15 +56,14 @@ export function HighlightedCodeImpl(props) {
                     code = props.code, theme = props.theme, defaultThemeName = props.defaultThemeName;
                     effectiveTheme = mergeTheme(theme, HighlightedCodeThemeImpl.defaultTheme);
                     html = hljs.highlight(code.code, { language: code.lang }).value;
-                    themes = Object.keys(theme);
                     if (!effectiveTheme.light) return [3 /*break*/, 2];
-                    return [4 /*yield*/, import("../../../hljs/styles/prefixed-".concat(effectiveTheme.light, ".css"))];
+                    return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.light, ".css"))];
                 case 1:
                     _g.sent();
                     _g.label = 2;
                 case 2:
                     if (!effectiveTheme.dark) return [3 /*break*/, 4];
-                    return [4 /*yield*/, import("../../../hljs/styles/prefixed-".concat(effectiveTheme.dark, ".css"))];
+                    return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.dark, ".css"))];
                 case 3:
                     _g.sent();
                     _g.label = 4;
