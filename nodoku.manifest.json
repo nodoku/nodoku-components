@@ -1,0 +1,11 @@
+{
+  "namespace": "NodokuComponents",
+  "components": {
+    "core/typography": {
+      "schemaFile": "./dist/schemas/components/typography/visual-schema.json",
+      "defaultThemeFile": "./dist/schemas/components/typography/default-theme.yml",
+      "implementation": "Typography",
+      "numBlocks": 1
+    }
+  }
+}

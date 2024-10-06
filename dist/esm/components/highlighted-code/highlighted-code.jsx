@@ -56,14 +56,14 @@ export function HighlightedCodeImpl(props) {
                     code = props.code, theme = props.theme, defaultThemeName = props.defaultThemeName;
                     effectiveTheme = mergeTheme(theme, HighlightedCodeThemeImpl.defaultTheme);
                     html = hljs.highlight(code.code, { language: code.lang }).value;
-                    if (!effectiveTheme.light) return [3 /*break*/, 2];
-                    return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.light, ".css"))];
+                    if (!effectiveTheme.hljsLightTheme) return [3 /*break*/, 2];
+                    return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.hljsLightTheme, ".css"))];
                 case 1:
                     _g.sent();
                     _g.label = 2;
                 case 2:
-                    if (!effectiveTheme.dark) return [3 /*break*/, 4];
-                    return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.dark, ".css"))];
+                    if (!effectiveTheme.hljsDarkTheme) return [3 /*break*/, 4];
+                    return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.hljsDarkTheme, ".css"))];
                 case 3:
                     _g.sent();
                     _g.label = 4;
@@ -74,13 +74,13 @@ export function HighlightedCodeImpl(props) {
             <code lang={code.lang} className={"hljs"} dangerouslySetInnerHTML={{ __html: html }}/>
         </pre>);
                     res = [];
-                    if (theme.light) {
-                        res.push((<div className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration, " hljs-theme-").concat(effectiveTheme.light, " ").concat(lightClassName)}>
+                    if (theme.hljsLightTheme) {
+                        res.push((<div className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration, " hljs-theme-").concat(effectiveTheme.hljsLightTheme, " ").concat(lightClassName)}>
                 {pre}
             </div>));
                     }
-                    if (theme.dark) {
-                        res.push((<div className={"".concat((_c = effectiveTheme.preContainer) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.preContainer) === null || _d === void 0 ? void 0 : _d.decoration, " hljs-theme-").concat(effectiveTheme.dark, " ").concat(darkClassName)}>
+                    if (theme.hljsDarkTheme) {
+                        res.push((<div className={"".concat((_c = effectiveTheme.preContainer) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.preContainer) === null || _d === void 0 ? void 0 : _d.decoration, " hljs-theme-").concat(effectiveTheme.hljsDarkTheme, " ").concat(darkClassName)}>
                 {pre}
             </div>));
                     }

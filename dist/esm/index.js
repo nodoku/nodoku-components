@@ -36,6 +36,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 import { HighlightedCodeImpl } from "./components/highlighted-code/highlighted-code";
 import { ListCompImpl } from "./components/list-comp/list-comp";
+import { ParagraphsImpl } from "./components/paragraphs/paragraphs";
+import { BackgroundsImpl } from "./components/backgrounds/backgrounds";
+import { TypographyImpl } from "./components/typography/typography";
 export var NodokuComponents;
 (function (NodokuComponents) {
     function HighlightedCode(props) {
@@ -54,4 +57,28 @@ export var NodokuComponents;
         });
     }
     NodokuComponents.ListComp = ListComp;
+    function Paragraphs(props) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, ParagraphsImpl(props)];
+            });
+        });
+    }
+    NodokuComponents.Paragraphs = Paragraphs;
+    function Backgrounds(props) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, BackgroundsImpl(props)];
+            });
+        });
+    }
+    NodokuComponents.Backgrounds = Backgrounds;
+    function Typography(props) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, TypographyImpl(props)];
+            });
+        });
+    }
+    NodokuComponents.Typography = Typography;
 })(NodokuComponents || (NodokuComponents = {}));

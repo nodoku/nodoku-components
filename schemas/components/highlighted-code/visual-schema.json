@@ -1,28 +1,29 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "properties": {
-    "light": {
-      "type": "string"
-    },
-    "dark": {
-      "type": "string"
-    },
-
-    "lightDisplay": {
+  "definitions": {
+    "DisplayType": {
       "type": "string",
       "enum": [
         "light:block",
         "light:inline-block"
       ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "hljsLightTheme": {
+      "type": "string"
+    },
+    "hljsDarkTheme": {
+      "type": "string"
+    },
+
+    "lightDisplay": {
+      "$ref": "#/definitions/DisplayType"
     },
 
     "darkDisplay":  {
-      "type": "string",
-      "enum": [
-        "dark:block",
-        "dark:inline-block"
-      ]
+      "$ref": "#/definitions/DisplayType"
     },
 
     "codeContainer": {

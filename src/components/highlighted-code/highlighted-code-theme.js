@@ -2,8 +2,8 @@ var HighlightedCodeThemeImpl = /** @class */ (function () {
     function HighlightedCodeThemeImpl() {
     }
     HighlightedCodeThemeImpl.defaultTheme = {
-        hljsLightTheme: "a11y-light",
-        hljsDarkTheme: "a11y-dark",
+        light: "a11y-light",
+        dark: "a11y-dark",
         lightDisplay: "light:inline-block",
         darkDisplay: "dark:inline-block",
         codeContainer: {

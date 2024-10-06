@@ -1,7 +1,7 @@
 import { ThemeStyle } from "nodoku-core";
 export declare class HighlightedCodeThemeImpl {
-    hljsLightTheme?: string;
-    hljsDarkTheme?: string;
+    light?: string;
+    dark?: string;
     lightDisplay?: "light:block" | "light:inline-block";
     darkDisplay?: "dark:block" | "dark:inline-block";
     codeContainer?: ThemeStyle;

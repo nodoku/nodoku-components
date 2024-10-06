@@ -24,11 +24,11 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
 
     const html = hljs.highlight(code.code, {language: code.lang}).value;
 
-    if (effectiveTheme.light) {
-        await import(`../../hljs/styles/prefixed-${effectiveTheme.light}.css`);
+    if (effectiveTheme.hljsLightTheme) {
+        await import(`../../hljs/styles/prefixed-${effectiveTheme.hljsLightTheme}.css`);
     }
-    if (effectiveTheme.dark) {
-        await import(`../../hljs/styles/prefixed-${effectiveTheme.dark}.css`);
+    if (effectiveTheme.hljsDarkTheme) {
+        await import(`../../hljs/styles/prefixed-${effectiveTheme.hljsDarkTheme}.css`);
     }
 
     const lightClassName = `${effectiveTheme.lightDisplay} dark:hidden ${defaultThemeName === "light" ? "inline-block" : "hidden"}`
@@ -42,16 +42,16 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
 
 
     const res: JSX.Element[] = [];
-    if (theme.light) {
+    if (theme.hljsLightTheme) {
         res.push((
-            <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.light} ${lightClassName}`}>
+            <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
                 {pre}
             </div>
         ))
     }
-    if (theme.dark) {
+    if (theme.hljsDarkTheme) {
         res.push((
-            <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.dark} ${darkClassName}`}>
+            <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
                 {pre}
             </div>
         ))
