@@ -23,24 +23,28 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "14.2.3",
     "highlight.js": "^11.10.0",
+    "node-html-parser": "^6.1.13",
+    "nodoku-core": "file:../nodoku-core",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "typescript": "^5",
-    "nodoku-core": "file:../nodoku-core"
+    "typescript": "^5"
   },
   "devDependencies": {
-    "postcss-selector-prefix": "^5.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8.4.38",
+    "postcss-selector-prefix": "^5.0.1",
+    "shx": "^0.3.4",
     "tsx": "^4.19.0",
-    "typescript": "^5",
-    "shx": "^0.3.4"
+    "typescript": "^5"
   },
   "scripts": {
     "dist_old": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist && nodoku-gen-component-default-theme",
     "dist": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist",
     "highlight.js-prefix": "tsx src/scripts/prefix-highlight-js-themes.ts"
+  },
+  "dependencies": {
+    "html-react-parser": "^5.1.18"
   }
 }

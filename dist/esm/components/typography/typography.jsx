@@ -87,21 +87,88 @@ export function TypographyImpl(props) {
                     return [2 /*return*/, (<div className={"".concat((_a = effectiveTheme.containerStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.containerStyle) === null || _b === void 0 ? void 0 : _b.decoration)}>
             <div className={"".concat((_c = effectiveTheme.contentContainerStyle) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.contentContainerStyle) === null || _d === void 0 ? void 0 : _d.decoration)}>
 
-                {block.title &&
-                                <h1>{t(block.title.key, block.title.ns)}</h1>}
-                {block.subTitle &&
-                                <h2>{t(block.subTitle.key, block.subTitle.ns)}</h2>}
-                {block.h3 &&
-                                <h3>{t(block.h3.key, block.h3.ns)}</h3>}
-                {block.h4 &&
-                                <h4>{t(block.h4.key, block.h4.ns)}</h4>}
-                {block.h5 &&
-                                <h5>{t(block.h5.key, block.h5.ns)}</h5>}
-                {block.h6 &&
-                                <h6>{t(block.h6.key, block.h6.ns)}</h6>}
+                {/*{block.title &&*/}
+                {/*    <h1>{t(block.title.key, block.title.ns)}</h1>*/}
+                {/*}*/}
+                {/*{block.subTitle &&*/}
+                {/*    <h2>{t(block.subTitle.key, block.subTitle.ns)}</h2>*/}
+                {/*}*/}
+                {/*{block.h3 &&*/}
+                {/*    <h3>{t(block.h3.key, block.h3.ns)}</h3>*/}
+                {/*}*/}
+                {/*{block.h4 &&*/}
+                {/*    <h4>{t(block.h4.key, block.h4.ns)}</h4>*/}
+                {/*}*/}
+                {/*{block.h5 &&*/}
+                {/*    <h5>{t(block.h5.key, block.h5.ns)}</h5>*/}
+                {/*}*/}
+                {/*{block.h6 &&*/}
+                {/*    <h6>{t(block.h6.key, block.h6.ns)}</h6>*/}
+                {/*}*/}
 
-                {paragraphs}
+                {/*{paragraphs}*/}
 
+                {block.htmlElements.map(function (elem, i) {
+                                // return <div dangerouslySetInnerHTML={{__html: t(elem.translatedText.key, elem.translatedText.ns)}} />
+                                if (elem.htmlElem.rawTagName === "h1") {
+                                    return <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "h2") {
+                                    return <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "h3") {
+                                    return <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "h4") {
+                                    return <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "h5") {
+                                    return <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "h6") {
+                                    return <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "p") {
+                                    return <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "blockquote") {
+                                    return <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns) }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "pre") {
+                                    return <pre className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: elem.htmlElem.innerHTML }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "figure") {
+                                    return (<figure className={elem.htmlElem.classNames}>
+                                <img src={t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)} alt={t(elem.translatedTexts[1].key, elem.translatedTexts[1].ns)}/>
+                                {elem.translatedTexts.length > 2 && (<figcaption dangerouslySetInnerHTML={{ __html: t(elem.translatedTexts[2].key, elem.translatedTexts[2].ns) }}/>)}
+                            </figure>);
+                                }
+                                else if (elem.htmlElem.rawTagName === "ol") {
+                                    return (<ol className={elem.htmlElem.classNames}>
+                                {elem.translatedTexts.map(function (item) {
+                                            return <li dangerouslySetInnerHTML={{ __html: t(item.key, item.ns) }}/>;
+                                        })}
+                            </ol>);
+                                }
+                                else if (elem.htmlElem.rawTagName === "ul") {
+                                    return (<ul className={elem.htmlElem.classNames}>
+                                {elem.translatedTexts.map(function (item) {
+                                            return <li dangerouslySetInnerHTML={{ __html: t(item.key, item.ns) }}/>;
+                                        })}
+                            </ul>);
+                                }
+                                else if (elem.htmlElem.rawTagName === "img") {
+                                    return <img className={elem.htmlElem.classNames} src={t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)} alt={t(elem.translatedTexts[1].key, elem.translatedTexts[1].ns)} title={t(elem.translatedTexts[2].key, elem.translatedTexts[2].ns)}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "table") {
+                                    return <table className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: elem.htmlElem.innerHTML }}/>;
+                                }
+                                else if (elem.htmlElem.rawTagName === "hr") {
+                                    return <hr />;
+                                }
+                                // return <div>unknown element {elem.htmlElem.rawTagName} {elem.htmlElem.textContent}</div>
+                                return <></>;
+                            })}
 
 
             </div>
