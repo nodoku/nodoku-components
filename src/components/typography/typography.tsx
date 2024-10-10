@@ -1,31 +1,15 @@
 import {JSX} from "react";
-import {ParagraphsImpl} from "../paragraphs/paragraphs";
-import {mergeTheme, NdContentBlock, NdSkinComponentProps} from "nodoku-core";
+import {
+    mergeTheme,
+    NdCode,
+    NdContentBlock,
+    NdContentImage,
+    NdList,
+    NdSkinComponentProps,
+    NdTranslatedText
+} from "nodoku-core";
 import {TypographyThemeImpl} from "./typography-theme";
-import {NdTranslatedText} from "nodoku-core";
 import HTMLElement from "node-html-parser/dist/nodes/html";
-import parse from 'html-react-parser';
-
-// export class TypographyProps {
-//     lng: string;
-//     block: NdContentBlock;
-//     theme: TypographyThemeImpl;
-//     defaultThemeName: NdDefaultThemeName;
-//     i18nextProvider: I18nextProvider;
-//
-//     constructor(lng: string,
-//                 block: NdContentBlock,
-//                 theme: TypographyThemeImpl,
-//                 defaultThemeName: NdDefaultThemeName,
-//                 i18nextProvider: I18nextProvider) {
-//
-//         this.lng = lng;
-//         this.block = block;
-//         this.theme = theme;
-//         this.defaultThemeName = defaultThemeName;
-//         this.i18nextProvider = i18nextProvider;
-//     }
-// }
 
 export async function TypographyImpl(props: NdSkinComponentProps<TypographyThemeImpl, void>): Promise<JSX.Element> {
 
@@ -51,109 +35,93 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
 
     const {t} = await i18nextProvider(lng);
 
-
-
-    const paragraphs = await ParagraphsImpl({
-        lng: lng,
-        blockParagraphs: block.paragraphs,
-        paragraphStyle: {base: " ", decoration: " "},
-        codeHighlightTheme: effectiveTheme.codeHighlightTheme!,
-        listTheme: {listStyle: {base: " ", decoration: " "}, listItemStyle: {base: " ", decoration: " "}},
-        defaultThemeName: defaultThemeName,
-        i18nextProvider: i18nextProvider
-    });
-
-
     return (
         <div className={`${effectiveTheme.containerStyle?.base} ${effectiveTheme.containerStyle?.decoration}`}>
             <div className={`${effectiveTheme.contentContainerStyle?.base} ${effectiveTheme.contentContainerStyle?.decoration}`}>
-
-                {/*{block.title &&*/}
-                {/*    <h1>{t(block.title.key, block.title.ns)}</h1>*/}
-                {/*}*/}
-                {/*{block.subTitle &&*/}
-                {/*    <h2>{t(block.subTitle.key, block.subTitle.ns)}</h2>*/}
-                {/*}*/}
-                {/*{block.h3 &&*/}
-                {/*    <h3>{t(block.h3.key, block.h3.ns)}</h3>*/}
-                {/*}*/}
-                {/*{block.h4 &&*/}
-                {/*    <h4>{t(block.h4.key, block.h4.ns)}</h4>*/}
-                {/*}*/}
-                {/*{block.h5 &&*/}
-                {/*    <h5>{t(block.h5.key, block.h5.ns)}</h5>*/}
-                {/*}*/}
-                {/*{block.h6 &&*/}
-                {/*    <h6>{t(block.h6.key, block.h6.ns)}</h6>*/}
-                {/*}*/}
-
-                {/*{paragraphs}*/}
-
-                {block.htmlElements.map((elem: {htmlElem: HTMLElement, translatedTexts: NdTranslatedText[]}, i: number): JSX.Element => {
-                    // return <div dangerouslySetInnerHTML={{__html: t(elem.translatedText.key, elem.translatedText.ns)}} />
-                    if (elem.htmlElem.rawTagName === "h1") {
-                        return <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "h2") {
-                        return <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "h3") {
-                        return <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "h4") {
-                        return <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "h5") {
-                        return <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "h6") {
-                        return <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "p") {
-                        return <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "blockquote") {
-                        return <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}} />
-                    } else if (elem.htmlElem.rawTagName === "pre") {
-                        return <pre className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: elem.htmlElem.innerHTML}} />
-                    } else if (elem.htmlElem.rawTagName === "figure") {
-                        return (
-                            <figure className={elem.htmlElem.classNames}>
-                                <img src={t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)} alt={t(elem.translatedTexts[1].key, elem.translatedTexts[1].ns)}/>
-                                {elem.translatedTexts.length > 2 && (
-                                    <figcaption dangerouslySetInnerHTML={{__html: t(elem.translatedTexts[2].key, elem.translatedTexts[2].ns)}} />
-                                )}
-                            </figure>
-                        )
-                    } else if (elem.htmlElem.rawTagName === "ol") {
-                        return (
-                            <ol className={elem.htmlElem.classNames}>
-                                {elem.translatedTexts.map(item => {
-                                    return <li dangerouslySetInnerHTML={{__html: t(item.key, item.ns)}}/>
-                                })}
-                            </ol>
-                        )
-                    } else if (elem.htmlElem.rawTagName === "ul") {
-                        return (
-                            <ul className={elem.htmlElem.classNames}>
-                                {elem.translatedTexts.map(item => {
-                                    return <li dangerouslySetInnerHTML={{__html: t(item.key, item.ns)}}/>
-                                })}
-                            </ul>
-                        )
-                    } else if (elem.htmlElem.rawTagName === "img") {
-                        return <img className={elem.htmlElem.classNames}
-                                    src={t(elem.translatedTexts[0].key, elem.translatedTexts[0].ns)}
-                                    alt={t(elem.translatedTexts[1].key, elem.translatedTexts[1].ns)}
-                                    title={t(elem.translatedTexts[2].key, elem.translatedTexts[2].ns)} />
-                    } else if (elem.htmlElem.rawTagName === "table") {
-                        return <table className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: elem.htmlElem.innerHTML}} />
-                    } else if (elem.htmlElem.rawTagName === "hr") {
-                        return <hr />
-                    }
-
-
-                    // return <div>unknown element {elem.htmlElem.rawTagName} {elem.htmlElem.textContent}</div>
-                    return <></>
-                })}
-
-
+                {await Promise.all(block.htmlElements.map(elem => renderElement(elem)))}
             </div>
         </div>
-
     );
+
+    async function renderElement(elem: {
+        htmlElem: HTMLElement,
+        translatedText: (NdTranslatedText | NdContentImage | NdList | NdCode) }): Promise<JSX.Element> {
+
+        let imgUrl = ""
+        if (elem.translatedText instanceof NdContentImage) {
+            const imgText: NdContentImage = elem.translatedText as NdContentImage;
+            imgUrl = await imageUrlProvider(t(imgText.url.key, imgText.url.ns))
+        }
+
+        if (elem.htmlElem.rawTagName === "h1") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "h2") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "h3") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "h4") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "h5") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "h6") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "p") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "blockquote") {
+            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            return <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText.key, pText.ns)}} />
+        } else if (elem.htmlElem.rawTagName === "pre") {
+            const codeText: NdCode = elem.translatedText as NdCode;
+            return (
+                <pre className={elem.htmlElem.classNames}>
+                    <code lang={codeText.lang}>
+                        {codeText.code}
+                    </code>
+                </pre>
+            )
+        } else if (elem.htmlElem.rawTagName === "figure") {
+            const imgText: NdContentImage = elem.translatedText as NdContentImage;
+            return (
+                <figure className={elem.htmlElem.classNames}>
+                    <img src={imgUrl} alt={imgText.alt ? t(imgText.alt.key, imgText.alt.ns) : "N/A"}/>
+                    {imgText.title && <figcaption dangerouslySetInnerHTML={{__html: t(imgText.title.key, imgText.title.ns)}} />}
+                </figure>
+            )
+        } else if (elem.htmlElem.rawTagName === "ol") {
+            const listText: NdList = elem.translatedText as NdList;
+            return (
+                <ol className={elem.htmlElem.classNames}>
+                    {listText.items.map(item => <li dangerouslySetInnerHTML={{__html: t(item.key, item.ns)}}/>)}
+                </ol>
+            )
+        } else if (elem.htmlElem.rawTagName === "ul") {
+            const listText: NdList = elem.translatedText as NdList;
+            return (
+                <ul className={elem.htmlElem.classNames}>
+                    {listText.items.map(item => <li dangerouslySetInnerHTML={{__html: t(item.key, item.ns)}}/>)}
+                </ul>
+            )
+        } else if (elem.htmlElem.rawTagName === "img") {
+            const imgText: NdContentImage = elem.translatedText as NdContentImage;
+            return <img className={elem.htmlElem.classNames}
+                        src={imgUrl}
+                        alt={imgText.alt ? t(imgText.alt.key, imgText.alt.ns) : "N/A"}
+                        title={imgText.title ? t(imgText.title.key, imgText.title.ns) : ""} />
+        } else if (elem.htmlElem.rawTagName === "table") {
+            return <table className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: elem.htmlElem.innerHTML}} />
+        } else if (elem.htmlElem.rawTagName === "hr") {
+            return <hr />
+        }
+
+        return <></>
+
+    }
 
 }

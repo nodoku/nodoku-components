@@ -43,8 +43,5 @@
     "dist_old": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist && nodoku-gen-component-default-theme",
     "dist": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist",
     "highlight.js-prefix": "tsx src/scripts/prefix-highlight-js-themes.ts"
-  },
-  "dependencies": {
-    "html-react-parser": "^5.1.18"
   }
 }
