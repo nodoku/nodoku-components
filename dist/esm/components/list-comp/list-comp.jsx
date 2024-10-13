@@ -60,7 +60,7 @@ export function ListCompImpl(props) {
                     t = (_e.sent()).t;
                     listItems = list.items.map(function (i) {
                         var _a, _b;
-                        return <li className={"".concat((_a = effectiveTheme.listItemStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listItemStyle) === null || _b === void 0 ? void 0 : _b.decoration)} dangerouslySetInnerHTML={{ __html: t(i.key, i.ns) }}/>;
+                        return <li key={i.key} className={"".concat((_a = effectiveTheme.listItemStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listItemStyle) === null || _b === void 0 ? void 0 : _b.decoration)} dangerouslySetInnerHTML={{ __html: t(i) }}/>;
                     });
                     if (list.ordered) {
                         return [2 /*return*/, <ol className={"".concat((_a = effectiveTheme.listStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listStyle) === null || _b === void 0 ? void 0 : _b.decoration)}>{listItems}</ol>];

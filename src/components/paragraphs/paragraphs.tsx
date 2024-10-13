@@ -63,7 +63,7 @@ export async function ParagraphsImpl(props: ParagraphsProps): Promise<JSX.Elemen
                     return (
                         <p key={ip}
                            className={`${paragraphStyle?.base} ${paragraphStyle?.decoration}`}
-                           dangerouslySetInnerHTML={{__html: t(p.key, p.ns)}} />
+                           dangerouslySetInnerHTML={{__html: t(p)}} />
                     )
                 } else if (p instanceof NdCode) {
                     return await HighlightedCodeImpl({code: p as NdCode, theme: codeHighlightTheme, defaultThemeName: defaultThemeName})

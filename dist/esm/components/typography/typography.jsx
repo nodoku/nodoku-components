@@ -47,42 +47,42 @@ export function TypographyImpl(props) {
                             imgUrl = "";
                             if (!(elem.translatedText instanceof NdContentImage)) return [3 /*break*/, 2];
                             imgText = elem.translatedText;
-                            return [4 /*yield*/, imageUrlProvider(t(imgText.url.key, imgText.url.ns))];
+                            return [4 /*yield*/, imageUrlProvider(t(imgText.url))];
                         case 1:
                             imgUrl = _a.sent();
                             _a.label = 2;
                         case 2:
                             if (elem.htmlElem.rawTagName === "h1") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "h2") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "h3") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "h4") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "h5") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "h6") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "p") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "blockquote") {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText.key, pText.ns) }}/>];
+                                return [2 /*return*/, <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "pre") {
                                 codeText = elem.translatedText;
@@ -95,29 +95,25 @@ export function TypographyImpl(props) {
                             else if (elem.htmlElem.rawTagName === "figure") {
                                 imgText = elem.translatedText;
                                 return [2 /*return*/, (<figure className={elem.htmlElem.classNames}>
-                    <img src={imgUrl} alt={imgText.alt ? t(imgText.alt.key, imgText.alt.ns) : "N/A"}/>
-                    {imgText.title && <figcaption dangerouslySetInnerHTML={{ __html: t(imgText.title.key, imgText.title.ns) }}/>}
+                    <img src={imgUrl} alt={imgText.alt ? t(imgText.alt) : "N/A"}/>
+                    {imgText.title && <figcaption dangerouslySetInnerHTML={{ __html: t(imgText.title) }}/>}
                 </figure>)];
                             }
                             else if (elem.htmlElem.rawTagName === "ol") {
                                 listText = elem.translatedText;
                                 return [2 /*return*/, (<ol className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (item) {
-                                            return <li dangerouslySetInnerHTML={{ __html: t(item.key, item.ns) }}/>;
-                                        })}
+                    {listText.items.map(function (item) { return <li key={item.key} dangerouslySetInnerHTML={{ __html: t(item) }}/>; })}
                 </ol>)];
                             }
                             else if (elem.htmlElem.rawTagName === "ul") {
                                 listText = elem.translatedText;
                                 return [2 /*return*/, (<ul className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (item) {
-                                            return <li dangerouslySetInnerHTML={{ __html: t(item.key, item.ns) }}/>;
-                                        })}
+                    {listText.items.map(function (item) { return <li key={item.key} dangerouslySetInnerHTML={{ __html: t(item) }}/>; })}
                 </ul>)];
                             }
                             else if (elem.htmlElem.rawTagName === "img") {
                                 imgText = elem.translatedText;
-                                return [2 /*return*/, <img className={elem.htmlElem.classNames} src={imgUrl} alt={imgText.alt ? t(imgText.alt.key, imgText.alt.ns) : "N/A"} title={imgText.title ? t(imgText.title.key, imgText.title.ns) : ""}/>];
+                                return [2 /*return*/, <img className={elem.htmlElem.classNames} src={imgUrl} alt={imgText.alt ? t(imgText.alt) : "N/A"} title={imgText.title ? t(imgText.title) : ""}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "table") {
                                 return [2 /*return*/, <table className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: elem.htmlElem.innerHTML }}/>];

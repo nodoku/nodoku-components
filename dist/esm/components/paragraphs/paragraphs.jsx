@@ -67,7 +67,7 @@ export function ParagraphsImpl(props) {
                                 switch (_a.label) {
                                     case 0:
                                         if (!(p instanceof NdTranslatedText)) return [3 /*break*/, 1];
-                                        return [2 /*return*/, (<p key={ip} className={"".concat(paragraphStyle === null || paragraphStyle === void 0 ? void 0 : paragraphStyle.base, " ").concat(paragraphStyle === null || paragraphStyle === void 0 ? void 0 : paragraphStyle.decoration)} dangerouslySetInnerHTML={{ __html: t(p.key, p.ns) }}/>)];
+                                        return [2 /*return*/, (<p key={ip} className={"".concat(paragraphStyle === null || paragraphStyle === void 0 ? void 0 : paragraphStyle.base, " ").concat(paragraphStyle === null || paragraphStyle === void 0 ? void 0 : paragraphStyle.decoration)} dangerouslySetInnerHTML={{ __html: t(p) }}/>)];
                                     case 1:
                                         if (!(p instanceof NdCode)) return [3 /*break*/, 3];
                                         return [4 /*yield*/, HighlightedCodeImpl({ code: p, theme: codeHighlightTheme, defaultThemeName: defaultThemeName })];

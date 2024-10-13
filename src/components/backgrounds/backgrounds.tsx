@@ -67,7 +67,7 @@ export async function BackgroundsImpl(props: BackgroundsProps): Promise<JSX.Elem
 
 
     if (bgImageUrl) {
-        const resolvedBgImageUrl = await imageUrlProvider(t(bgImageUrl.key, bgImageUrl?.ns));
+        const resolvedBgImageUrl = await imageUrlProvider(t(bgImageUrl));
         style = {backgroundImage: `url(${resolvedBgImageUrl})`}
     }
 

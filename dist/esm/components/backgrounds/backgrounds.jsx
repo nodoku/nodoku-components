@@ -68,7 +68,7 @@ export function BackgroundsImpl(props) {
                     }
                     style = {};
                     if (!bgImageUrl) return [3 /*break*/, 3];
-                    return [4 /*yield*/, imageUrlProvider(t(bgImageUrl.key, bgImageUrl === null || bgImageUrl === void 0 ? void 0 : bgImageUrl.ns))];
+                    return [4 /*yield*/, imageUrlProvider(t(bgImageUrl))];
                 case 2:
                     resolvedBgImageUrl = _e.sent();
                     style = { backgroundImage: "url(".concat(resolvedBgImageUrl, ")") };

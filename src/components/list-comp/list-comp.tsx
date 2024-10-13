@@ -27,8 +27,8 @@ export async function ListCompImpl(props: ListCompProps): Promise<JSX.Element> {
     const {t} = await i18nextProvider(lng);
 
     const listItems: JSX.Element[] = list.items.map(i =>
-        <li className={`${effectiveTheme.listItemStyle?.base} ${effectiveTheme.listItemStyle?.decoration}`}
-            dangerouslySetInnerHTML={{__html: t(i.key, i.ns)}}/>
+        <li key={i.key} className={`${effectiveTheme.listItemStyle?.base} ${effectiveTheme.listItemStyle?.decoration}`}
+            dangerouslySetInnerHTML={{__html: t(i)}}/>
     );
 
     if (list.ordered) {
