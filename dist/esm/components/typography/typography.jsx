@@ -86,7 +86,7 @@ export function TypographyImpl(props) {
                             }
                             else if (elem.htmlElem.rawTagName === "pre") {
                                 codeText = elem.translatedText;
-                                return [2 /*return*/, (<pre className={elem.htmlElem.classNames}>
+                                return [2 /*return*/, (<pre className={elem.htmlElem.classNames} dir={"ltr"}>
                     <code lang={codeText.lang}>
                         {codeText.code}
                     </code>

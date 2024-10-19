@@ -81,7 +81,7 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
         } else if (elem.htmlElem.rawTagName === "pre") {
             const codeText: NdCode = elem.translatedText as NdCode;
             return (
-                <pre className={elem.htmlElem.classNames}>
+                <pre className={elem.htmlElem.classNames} dir={"ltr"}>
                     <code lang={codeText.lang}>
                         {codeText.code}
                     </code>
