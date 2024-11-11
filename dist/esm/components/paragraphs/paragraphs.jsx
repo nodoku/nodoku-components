@@ -34,7 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { NdCode, NdTranslatedText } from "nodoku-core";
+import { NdCode, NdTranslatableText } from "nodoku-core";
 import { HighlightedCodeImpl } from "../highlighted-code/highlighted-code";
 import { ListCompImpl } from "../list-comp/list-comp";
 var ParagraphsProps = /** @class */ (function () {
@@ -66,7 +66,7 @@ export function ParagraphsImpl(props) {
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0:
-                                        if (!(p instanceof NdTranslatedText)) return [3 /*break*/, 1];
+                                        if (!(p instanceof NdTranslatableText)) return [3 /*break*/, 1];
                                         return [2 /*return*/, (<p key={ip} className={"".concat(paragraphStyle === null || paragraphStyle === void 0 ? void 0 : paragraphStyle.base, " ").concat(paragraphStyle === null || paragraphStyle === void 0 ? void 0 : paragraphStyle.decoration)} dangerouslySetInnerHTML={{ __html: t(p) }}/>)];
                                     case 1:
                                         if (!(p instanceof NdCode)) return [3 /*break*/, 3];

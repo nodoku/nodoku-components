@@ -6,7 +6,7 @@ import {
     NdContentImage,
     NdList,
     NdSkinComponentProps,
-    NdTranslatedText
+    NdTranslatableText
 } from "nodoku-core";
 import {TypographyThemeImpl} from "./typography-theme";
 import HTMLElement from "node-html-parser/dist/nodes/html";
@@ -46,7 +46,7 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
 
     async function renderElement(elem: {
         htmlElem: HTMLElement,
-        translatedText: (NdTranslatedText | NdContentImage | NdList | NdCode) }): Promise<JSX.Element> {
+        translatedText: (NdTranslatableText | NdContentImage | NdList | NdCode) }): Promise<JSX.Element> {
 
         let imgUrl = ""
         if (elem.translatedText instanceof NdContentImage) {
@@ -55,28 +55,28 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
         }
 
         if (elem.htmlElem.rawTagName === "h1") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "h2") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "h3") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "h4") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "h5") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "h6") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "p") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "blockquote") {
-            const pText: NdTranslatedText = elem.translatedText as NdTranslatedText;
+            const pText: NdTranslatableText = elem.translatedText as NdTranslatableText;
             return <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: t(pText)}} />
         } else if (elem.htmlElem.rawTagName === "pre") {
             const codeText: NdCode = elem.translatedText as NdCode;

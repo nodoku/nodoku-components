@@ -4,7 +4,7 @@ import {
     NdCode,
     NdDefaultThemeName,
     NdList,
-    NdTranslatedText,
+    NdTranslatableText,
     ThemeStyle
 } from "nodoku-core";
 import {HighlightedCodeThemeImpl} from "../highlighted-code/highlighted-code-theme";
@@ -15,7 +15,7 @@ import {ListCompThemeImpl} from "../list-comp/list-comp-theme";
 
 export class ParagraphsProps {
     lng: string;
-    blockParagraphs: (NdTranslatedText | NdList | NdCode)[] = [];
+    blockParagraphs: (NdTranslatableText | NdList | NdCode)[] = [];
     paragraphStyle: ThemeStyle | undefined;
     codeHighlightTheme: HighlightedCodeThemeImpl;
     listTheme: ListCompThemeImpl;
@@ -24,7 +24,7 @@ export class ParagraphsProps {
 
 
     constructor(lng: string,
-                blockParagraphs: (NdTranslatedText | NdList | NdCode)[],
+                blockParagraphs: (NdTranslatableText | NdList | NdCode)[],
                 paragraphStyle: ThemeStyle | undefined,
                 codeHighlightTheme: HighlightedCodeThemeImpl,
                 listTheme: ListCompThemeImpl,
@@ -58,8 +58,8 @@ export async function ParagraphsImpl(props: ParagraphsProps): Promise<JSX.Elemen
 
     return (
         <>
-            {await Promise.all(blockParagraphs.map(async (p: NdTranslatedText | NdList | NdCode, ip: number): Promise<JSX.Element> => {
-                if (p instanceof NdTranslatedText) {
+            {await Promise.all(blockParagraphs.map(async (p: NdTranslatableText | NdList | NdCode, ip: number): Promise<JSX.Element> => {
+                if (p instanceof NdTranslatableText) {
                     return (
                         <p key={ip}
                            className={`${paragraphStyle?.base} ${paragraphStyle?.decoration}`}

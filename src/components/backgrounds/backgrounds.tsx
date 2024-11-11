@@ -3,7 +3,7 @@ import {
     ExtendedThemeStyle,
     ImageUrlProvider,
     NdDefaultThemeName,
-    NdTranslatedText,
+    NdTranslatableText,
     ThemeStyle,
     NdContentImage, I18nextProvider
 } from "nodoku-core";
@@ -15,7 +15,7 @@ export class BackgroundsProps {
     i18nextProvider: I18nextProvider;
     bgColorStyle?: ExtendedThemeStyle;
     bgImageStyle?: ThemeStyle;
-    bgImageUrl?: NdTranslatedText;
+    bgImageUrl?: NdTranslatableText;
     imageUrlProvider: ImageUrlProvider = url => Promise.resolve(url);
 
     constructor(lng: string,
