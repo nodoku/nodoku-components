@@ -24,7 +24,7 @@
     "eslint-config-next": "14.2.3",
     "highlight.js": "^11.10.0",
     "node-html-parser": "^6.1.13",
-    "nodoku-core": "0.1.4",
+    "nodoku-core": "../nodoku-core/dist",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "typescript": "^5"
@@ -40,7 +40,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "dist": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist && shx cp ./package-dist.json ./dist/package.json && shx cp ./README.md ./dist",
+    "dist": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist && shx cp ./package-dist.json ./dist/package.json",
     "highlight.js-prefix": "tsx src/scripts/prefix-highlight-js-themes.ts"
   }
 }
