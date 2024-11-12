@@ -1,6 +1,6 @@
 {
   "name": "nodoku-components",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
@@ -40,7 +40,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "dist": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist && shx cp ./package-dist.json ./dist/package.json && shx cp ./README.md ./dist",
+    "dist": "shx rm -rf dist && tsc && tsx src/scripts/prefix-highlight-js-themes.ts && shx cp -r src/hljs ./dist/esm && shx cp -r schemas ./dist && shx cp ./package-dist.json ./dist/package.json && shx cp ./README.md ./dist && shx cp -r ./docs ./dist",
     "highlight.js-prefix": "tsx src/scripts/prefix-highlight-js-themes.ts"
   }
 }
