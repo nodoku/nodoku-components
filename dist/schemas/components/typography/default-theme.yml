@@ -9,7 +9,7 @@ contentContainerStyle:
   decoration: ''
 
 preContainer:
-  base: '',
+  base: ''
   decoration: ''
 
 codeHighlightTheme:
