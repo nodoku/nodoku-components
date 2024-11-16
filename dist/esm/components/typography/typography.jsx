@@ -41,16 +41,17 @@ export function TypographyImpl(props) {
         function renderElement(elem) {
             return __awaiter(this, void 0, void 0, function () {
                 var imgUrl, imgText, pText, pText, pText, pText, pText, pText, pText, pText, codeText, imgText, listText, listText, imgText;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
+                var _a, _b;
+                return __generator(this, function (_c) {
+                    switch (_c.label) {
                         case 0:
                             imgUrl = "";
                             if (!(elem.translatedText instanceof NdContentImage)) return [3 /*break*/, 2];
                             imgText = elem.translatedText;
                             return [4 /*yield*/, imageUrlProvider(t(imgText.url))];
                         case 1:
-                            imgUrl = _a.sent();
-                            _a.label = 2;
+                            imgUrl = _c.sent();
+                            _c.label = 2;
                         case 2:
                             if (elem.htmlElem.rawTagName === "h1") {
                                 pText = elem.translatedText;
@@ -86,11 +87,13 @@ export function TypographyImpl(props) {
                             }
                             else if (elem.htmlElem.rawTagName === "pre") {
                                 codeText = elem.translatedText;
-                                return [2 /*return*/, (<pre className={elem.htmlElem.classNames} dir={"ltr"}>
-                    <code lang={codeText.lang}>
-                        {codeText.code}
-                    </code>
-                </pre>)];
+                                return [2 /*return*/, (<div className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration)}>
+                    <pre className={elem.htmlElem.classNames} dir={"ltr"}>
+                        <code lang={codeText.lang}>
+                            {codeText.code}
+                        </code>
+                    </pre>
+                </div>)];
                             }
                             else if (elem.htmlElem.rawTagName === "figure") {
                                 imgText = elem.translatedText;
@@ -150,4 +153,3 @@ export function TypographyImpl(props) {
         });
     });
 }
-//# sourceMappingURL=typography.jsx.map

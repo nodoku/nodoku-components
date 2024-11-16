@@ -19,4 +19,3 @@ var HighlightedCodeThemeImpl = /** @class */ (function () {
 }());
 export { HighlightedCodeThemeImpl };
 export default HighlightedCodeThemeImpl.defaultTheme;
-//# sourceMappingURL=highlighted-code-theme.js.map

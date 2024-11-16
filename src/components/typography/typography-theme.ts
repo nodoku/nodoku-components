@@ -4,6 +4,7 @@ import {ThemeStyle} from "nodoku-core";
 export class TypographyThemeImpl {
 
     containerStyle?: ThemeStyle;
+    preContainer?: ThemeStyle;
     contentContainerStyle?: ThemeStyle;
     codeHighlightTheme?: HighlightedCodeThemeImpl;
 

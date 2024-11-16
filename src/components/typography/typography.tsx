@@ -81,11 +81,13 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
         } else if (elem.htmlElem.rawTagName === "pre") {
             const codeText: NdCode = elem.translatedText as NdCode;
             return (
-                <pre className={elem.htmlElem.classNames} dir={"ltr"}>
-                    <code lang={codeText.lang}>
-                        {codeText.code}
-                    </code>
-                </pre>
+                <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration}`}>
+                    <pre className={elem.htmlElem.classNames} dir={"ltr"}>
+                        <code lang={codeText.lang}>
+                            {codeText.code}
+                        </code>
+                    </pre>
+                </div>
             )
         } else if (elem.htmlElem.rawTagName === "figure") {
             const imgText: NdContentImage = elem.translatedText as NdContentImage;
