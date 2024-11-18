@@ -31,8 +31,8 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
         await import(`../../hljs/styles/prefixed-${effectiveTheme.hljsDarkTheme}.css`);
     }
 
-    const lightClassName = `${effectiveTheme.lightDisplay} dark:hidden ${defaultThemeName === "light" ? "inline-block" : "hidden"}`
-    const darkClassName = `${effectiveTheme.darkDisplay} light:hidden ${defaultThemeName === "dark" ? "inline-block" : "hidden"}`
+    const lightClassName = `${effectiveTheme.lightDisplay} ${defaultThemeName === "light" ? "dark:hidden" : "hidden"}`
+    const darkClassName = `${effectiveTheme.darkDisplay} ${defaultThemeName === "dark" ? "light:hidden" : "hidden"}`
 
     const pre = (
         <pre className={"text-pretty"}>
@@ -42,14 +42,14 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
 
 
     const res: JSX.Element[] = [];
-    if (theme.hljsLightTheme) {
+    if (effectiveTheme.hljsLightTheme) {
         res.push((
             <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
                 {pre}
             </div>
         ))
     }
-    if (theme.hljsDarkTheme) {
+    if (effectiveTheme.hljsDarkTheme) {
         res.push((
             <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
                 {pre}

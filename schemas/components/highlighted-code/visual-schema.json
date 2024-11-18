@@ -4,8 +4,12 @@
     "DisplayType": {
       "type": "string",
       "enum": [
+        "block",
+        "inline-block",
         "light:block",
-        "light:inline-block"
+        "light:inline-block",
+        "dark:block",
+        "dark:inline-block"
       ]
     }
   },

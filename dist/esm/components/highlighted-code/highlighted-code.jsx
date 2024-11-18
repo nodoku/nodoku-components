@@ -68,18 +68,18 @@ export function HighlightedCodeImpl(props) {
                     _g.sent();
                     _g.label = 4;
                 case 4:
-                    lightClassName = "".concat(effectiveTheme.lightDisplay, " dark:hidden ").concat(defaultThemeName === "light" ? "inline-block" : "hidden");
-                    darkClassName = "".concat(effectiveTheme.darkDisplay, " light:hidden ").concat(defaultThemeName === "dark" ? "inline-block" : "hidden");
+                    lightClassName = "".concat(effectiveTheme.lightDisplay, " ").concat(defaultThemeName === "light" ? "dark:hidden" : "hidden");
+                    darkClassName = "".concat(effectiveTheme.darkDisplay, " ").concat(defaultThemeName === "dark" ? "light:hidden" : "hidden");
                     pre = (<pre className={"text-pretty"}>
             <code lang={code.lang} className={"hljs"} dangerouslySetInnerHTML={{ __html: html }}/>
         </pre>);
                     res = [];
-                    if (theme.hljsLightTheme) {
+                    if (effectiveTheme.hljsLightTheme) {
                         res.push((<div className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration, " hljs-theme-").concat(effectiveTheme.hljsLightTheme, " ").concat(lightClassName)}>
                 {pre}
             </div>));
                     }
-                    if (theme.hljsDarkTheme) {
+                    if (effectiveTheme.hljsDarkTheme) {
                         res.push((<div className={"".concat((_c = effectiveTheme.preContainer) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.preContainer) === null || _d === void 0 ? void 0 : _d.decoration, " hljs-theme-").concat(effectiveTheme.hljsDarkTheme, " ").concat(darkClassName)}>
                 {pre}
             </div>));
