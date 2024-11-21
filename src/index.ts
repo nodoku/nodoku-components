@@ -10,6 +10,8 @@ import {BackgroundsImpl, BackgroundsProps} from "./components/backgrounds/backgr
 import {NdSkinComponentProps} from "../../nodoku-core";
 import {TypographyThemeImpl} from "./components/typography/typography-theme";
 import {TypographyImpl} from "./components/typography/typography";
+import {NdImageProviderImpl} from "./components/nd-image/nd-image";
+import {NdImageProps} from "nodoku-core";
 
 export namespace NodokuComponents {
 
@@ -35,6 +37,10 @@ export namespace NodokuComponents {
 
     export async function Typography(props: NdSkinComponentProps<TypographyTheme, void>): Promise<JSX.Element> {
         return TypographyImpl(props)
+    }
+
+    export async function NdImageProvider(props: NdImageProps): Promise<JSX.Element> {
+        return NdImageProviderImpl(props)
     }
 
 }

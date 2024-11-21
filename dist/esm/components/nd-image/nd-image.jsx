@@ -34,60 +34,28 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { HighlightedCodeImpl } from "./components/highlighted-code/highlighted-code";
-import { ListCompImpl } from "./components/list-comp/list-comp";
-import { ParagraphsImpl } from "./components/paragraphs/paragraphs";
-import { BackgroundsImpl } from "./components/backgrounds/backgrounds";
-import { TypographyImpl } from "./components/typography/typography";
-import { NdImageProviderImpl } from "./components/nd-image/nd-image";
-export var NodokuComponents;
-(function (NodokuComponents) {
-    function HighlightedCode(props) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, HighlightedCodeImpl(props)];
-            });
+import React from "react";
+import { nameToReactIconHi2 } from "./name-to-react-icon-hi2";
+import { nameToReactIconHi } from "./name-to-react-icon-hi";
+export function NdImageProviderImpl(props) {
+    return __awaiter(this, void 0, void 0, function () {
+        var url, alt, title, imageStyle, iconName, icon;
+        return __generator(this, function (_a) {
+            url = props.url, alt = props.alt, title = props.title, imageStyle = props.imageStyle;
+            if (url.startsWith("icon:")) {
+                iconName = url.substring("icon:".length);
+                icon = undefined;
+                if (iconName.startsWith("react-icons/hi:")) {
+                    icon = nameToReactIconHi(iconName.substring("react-icons/hi:".length));
+                }
+                else if (iconName.startsWith("react-icons/hi2")) {
+                    icon = nameToReactIconHi2(iconName.substring("react-icons/hi2:".length));
+                }
+                if (icon) {
+                    return [2 /*return*/, icon(({ size: imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.imageWidth }))];
+                }
+            }
+            return [2 /*return*/, <img className={"".concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.base, " ").concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.decoration)} src={url} alt={alt}/>];
         });
-    }
-    NodokuComponents.HighlightedCode = HighlightedCode;
-    function ListComp(props) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, ListCompImpl(props)];
-            });
-        });
-    }
-    NodokuComponents.ListComp = ListComp;
-    function Paragraphs(props) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, ParagraphsImpl(props)];
-            });
-        });
-    }
-    NodokuComponents.Paragraphs = Paragraphs;
-    function Backgrounds(props) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, BackgroundsImpl(props)];
-            });
-        });
-    }
-    NodokuComponents.Backgrounds = Backgrounds;
-    function Typography(props) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, TypographyImpl(props)];
-            });
-        });
-    }
-    NodokuComponents.Typography = Typography;
-    function NdImageProvider(props) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, NdImageProviderImpl(props)];
-            });
-        });
-    }
-    NodokuComponents.NdImageProvider = NdImageProvider;
-})(NodokuComponents || (NodokuComponents = {}));
+    });
+}

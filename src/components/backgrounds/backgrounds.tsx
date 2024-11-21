@@ -1,11 +1,9 @@
 import {JSX} from "react";
 import {
     ExtendedThemeStyle,
-    ImageUrlProvider,
     NdDefaultThemeName,
-    NdTranslatableText,
     ThemeStyle,
-    NdContentImage, I18nextProvider
+    I18nextProvider
 } from "nodoku-core";
 
 
@@ -15,8 +13,8 @@ export class BackgroundsProps {
     i18nextProvider: I18nextProvider;
     bgColorStyle?: ExtendedThemeStyle;
     bgImageStyle?: ThemeStyle;
-    bgImageUrl?: NdTranslatableText;
-    imageUrlProvider: ImageUrlProvider = url => Promise.resolve(url);
+    // bgImageUrl?: NdTranslatableText;
+    // imageProvider: ImageProvider = (imageProps: NdImageProps) => (Promise.resolve(</>));
 
     constructor(lng: string,
                 defaultThemeName: NdDefaultThemeName,
@@ -40,8 +38,8 @@ export async function BackgroundsImpl(props: BackgroundsProps): Promise<JSX.Elem
         defaultThemeName,
         bgColorStyle,
         bgImageStyle,
-        bgImageUrl,
-        imageUrlProvider,
+        // bgImageUrl,
+        // imageProvider,
         i18nextProvider
     } = props;
 
@@ -66,10 +64,11 @@ export async function BackgroundsImpl(props: BackgroundsProps): Promise<JSX.Elem
     var style: React.CSSProperties = {}
 
 
-    if (bgImageUrl) {
-        const resolvedBgImageUrl = await imageUrlProvider(t(bgImageUrl));
-        style = {backgroundImage: `url(${resolvedBgImageUrl})`}
-    }
+    // if (bgImageUrl) {
+    //     // const resolvedBgImageUrl = await imageUrlProvider(t(bgImageUrl));
+    //     const resolvedBgImageUrl = t(bgImageUrl);
+    //     style = {backgroundImage: `url(${resolvedBgImageUrl})`}
+    // }
 
     return (
         <>

@@ -35,8 +35,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var BackgroundsProps = /** @class */ (function () {
+    // bgImageUrl?: NdTranslatableText;
+    // imageProvider: ImageProvider = (imageProps: NdImageProps) => (Promise.resolve(</>));
     function BackgroundsProps(lng, defaultThemeName, bgColorStyle, bgImageStyle, i18nextProvider) {
-        this.imageUrlProvider = function (url) { return Promise.resolve(url); };
         this.lng = lng;
         this.defaultThemeName = defaultThemeName;
         this.bgColorStyle = bgColorStyle;
@@ -48,12 +49,15 @@ var BackgroundsProps = /** @class */ (function () {
 export { BackgroundsProps };
 export function BackgroundsImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
-        var lng, defaultThemeName, bgColorStyle, bgImageStyle, bgImageUrl, imageUrlProvider, i18nextProvider, backgrounds, t, lightClassName, darkClassName, style, resolvedBgImageUrl;
+        var lng, defaultThemeName, bgColorStyle, bgImageStyle, 
+        // bgImageUrl,
+        // imageProvider,
+        i18nextProvider, backgrounds, t, lightClassName, darkClassName, style;
         var _a, _b, _c, _d;
         return __generator(this, function (_e) {
             switch (_e.label) {
                 case 0:
-                    lng = props.lng, defaultThemeName = props.defaultThemeName, bgColorStyle = props.bgColorStyle, bgImageStyle = props.bgImageStyle, bgImageUrl = props.bgImageUrl, imageUrlProvider = props.imageUrlProvider, i18nextProvider = props.i18nextProvider;
+                    lng = props.lng, defaultThemeName = props.defaultThemeName, bgColorStyle = props.bgColorStyle, bgImageStyle = props.bgImageStyle, i18nextProvider = props.i18nextProvider;
                     backgrounds = [];
                     return [4 /*yield*/, i18nextProvider(lng)];
                 case 1:
@@ -67,13 +71,12 @@ export function BackgroundsImpl(props) {
                         backgrounds.push(<div className={"absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg ".concat(darkClassName)} style={(_d = bgColorStyle === null || bgColorStyle === void 0 ? void 0 : bgColorStyle.css) === null || _d === void 0 ? void 0 : _d.dark}></div>);
                     }
                     style = {};
-                    if (!bgImageUrl) return [3 /*break*/, 3];
-                    return [4 /*yield*/, imageUrlProvider(t(bgImageUrl))];
-                case 2:
-                    resolvedBgImageUrl = _e.sent();
-                    style = { backgroundImage: "url(".concat(resolvedBgImageUrl, ")") };
-                    _e.label = 3;
-                case 3: return [2 /*return*/, (<>
+                    // if (bgImageUrl) {
+                    //     // const resolvedBgImageUrl = await imageUrlProvider(t(bgImageUrl));
+                    //     const resolvedBgImageUrl = t(bgImageUrl);
+                    //     style = {backgroundImage: `url(${resolvedBgImageUrl})`}
+                    // }
+                    return [2 /*return*/, (<>
             <div className={"nd-bg-image absolute top-0 left-0 right-0 bottom-0 ".concat(bgImageStyle === null || bgImageStyle === void 0 ? void 0 : bgImageStyle.base, " ").concat(bgImageStyle === null || bgImageStyle === void 0 ? void 0 : bgImageStyle.decoration)} style={style}></div>
             <div className={"nd-bg-color absolute top-0 left-0 right-0 bottom-0 ".concat(bgColorStyle === null || bgColorStyle === void 0 ? void 0 : bgColorStyle.base, " ").concat(bgColorStyle === null || bgColorStyle === void 0 ? void 0 : bgColorStyle.decoration)}>
                 {backgrounds}

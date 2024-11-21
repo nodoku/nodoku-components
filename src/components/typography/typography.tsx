@@ -20,7 +20,7 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
         theme,
         themes,
         lng,
-        imageUrlProvider,
+        imageProvider,
         i18nextProvider,
         defaultThemeName} = props;
 
@@ -48,10 +48,10 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
         htmlElem: HTMLElement,
         translatedText: (NdTranslatableText | NdContentImage | NdList | NdCode) }): Promise<JSX.Element> {
 
-        let imgUrl = ""
+        let imgElem: JSX.Element | undefined = undefined;
         if (elem.translatedText instanceof NdContentImage) {
             const imgText: NdContentImage = elem.translatedText as NdContentImage;
-            imgUrl = await imageUrlProvider(t(imgText.url))
+            imgElem = await imageProvider({url: t(imgText.url), alt: (imgText.alt ? t(imgText.alt) : "N/A")})
         }
 
         if (elem.htmlElem.rawTagName === "h1") {
@@ -93,7 +93,8 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
             const imgText: NdContentImage = elem.translatedText as NdContentImage;
             return (
                 <figure className={elem.htmlElem.classNames}>
-                    <img src={imgUrl} alt={imgText.alt ? t(imgText.alt) : "N/A"}/>
+                    {/*<img src={imgElem} alt={imgText.alt ? t(imgText.alt) : "N/A"}/>*/}
+                    {imgElem}
                     {imgText.title && <figcaption dangerouslySetInnerHTML={{__html: t(imgText.title)}} />}
                 </figure>
             )
@@ -114,7 +115,7 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
         } else if (elem.htmlElem.rawTagName === "img") {
             const imgText: NdContentImage = elem.translatedText as NdContentImage;
             return <img className={elem.htmlElem.classNames}
-                        src={imgUrl}
+                        src={t(imgText.url)}
                         alt={imgText.alt ? t(imgText.alt) : "N/A"}
                         title={imgText.title ? t(imgText.title) : ""} />
         } else if (elem.htmlElem.rawTagName === "table") {

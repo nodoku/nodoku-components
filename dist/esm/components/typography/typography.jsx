@@ -40,17 +40,17 @@ export function TypographyImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         function renderElement(elem) {
             return __awaiter(this, void 0, void 0, function () {
-                var imgUrl, imgText, pText, pText, pText, pText, pText, pText, pText, pText, codeText, imgText, listText, listText, imgText;
+                var imgElem, imgText, pText, pText, pText, pText, pText, pText, pText, pText, codeText, imgText, listText, listText, imgText;
                 var _a, _b;
                 return __generator(this, function (_c) {
                     switch (_c.label) {
                         case 0:
-                            imgUrl = "";
+                            imgElem = undefined;
                             if (!(elem.translatedText instanceof NdContentImage)) return [3 /*break*/, 2];
                             imgText = elem.translatedText;
-                            return [4 /*yield*/, imageUrlProvider(t(imgText.url))];
+                            return [4 /*yield*/, imageProvider({ url: t(imgText.url), alt: (imgText.alt ? t(imgText.alt) : "N/A") })];
                         case 1:
-                            imgUrl = _c.sent();
+                            imgElem = _c.sent();
                             _c.label = 2;
                         case 2:
                             if (elem.htmlElem.rawTagName === "h1") {
@@ -98,7 +98,8 @@ export function TypographyImpl(props) {
                             else if (elem.htmlElem.rawTagName === "figure") {
                                 imgText = elem.translatedText;
                                 return [2 /*return*/, (<figure className={elem.htmlElem.classNames}>
-                    <img src={imgUrl} alt={imgText.alt ? t(imgText.alt) : "N/A"}/>
+                    {/*<img src={imgElem} alt={imgText.alt ? t(imgText.alt) : "N/A"}/>*/}
+                    {imgElem}
                     {imgText.title && <figcaption dangerouslySetInnerHTML={{ __html: t(imgText.title) }}/>}
                 </figure>)];
                             }
@@ -116,7 +117,7 @@ export function TypographyImpl(props) {
                             }
                             else if (elem.htmlElem.rawTagName === "img") {
                                 imgText = elem.translatedText;
-                                return [2 /*return*/, <img className={elem.htmlElem.classNames} src={imgUrl} alt={imgText.alt ? t(imgText.alt) : "N/A"} title={imgText.title ? t(imgText.title) : ""}/>];
+                                return [2 /*return*/, <img className={elem.htmlElem.classNames} src={t(imgText.url)} alt={imgText.alt ? t(imgText.alt) : "N/A"} title={imgText.title ? t(imgText.title) : ""}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "table") {
                                 return [2 /*return*/, <table className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: elem.htmlElem.innerHTML }}/>];
@@ -129,12 +130,12 @@ export function TypographyImpl(props) {
                 });
             });
         }
-        var componentIndex, content, theme, themes, lng, imageUrlProvider, i18nextProvider, defaultThemeName, effectiveTheme, block, t;
+        var componentIndex, content, theme, themes, lng, imageProvider, i18nextProvider, defaultThemeName, effectiveTheme, block, t;
         var _a, _b, _c, _d;
         return __generator(this, function (_e) {
             switch (_e.label) {
                 case 0:
-                    componentIndex = props.componentIndex, content = props.content, theme = props.theme, themes = props.themes, lng = props.lng, imageUrlProvider = props.imageUrlProvider, i18nextProvider = props.i18nextProvider, defaultThemeName = props.defaultThemeName;
+                    componentIndex = props.componentIndex, content = props.content, theme = props.theme, themes = props.themes, lng = props.lng, imageProvider = props.imageProvider, i18nextProvider = props.i18nextProvider, defaultThemeName = props.defaultThemeName;
                     effectiveTheme = mergeTheme(theme, TypographyThemeImpl.defaultTheme);
                     if (themes.length > 0) {
                         effectiveTheme = mergeTheme(themes[componentIndex % themes.length], effectiveTheme);
