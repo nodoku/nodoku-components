@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import { mergeTheme } from "nodoku-core";
-import { ListCompThemeImpl } from "./list-comp-theme";
+import { listCompDefaultThemeImpl } from "./list-comp-theme";
 var ListCompProps = /** @class */ (function () {
     function ListCompProps(list, lng, i18nextProvider, listTheme) {
         this.list = list;
@@ -54,19 +54,19 @@ export function ListCompImpl(props) {
             switch (_e.label) {
                 case 0:
                     list = props.list, i18nextProvider = props.i18nextProvider, lng = props.lng, listTheme = props.listTheme;
-                    effectiveTheme = mergeTheme(listTheme, ListCompThemeImpl.defaultTheme);
+                    effectiveTheme = mergeTheme(listTheme, listCompDefaultThemeImpl);
                     return [4 /*yield*/, i18nextProvider(lng)];
                 case 1:
                     t = (_e.sent()).t;
                     listItems = list.items.map(function (i) {
                         var _a, _b;
-                        return <li key={i.key} className={"".concat((_a = effectiveTheme.listItemStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listItemStyle) === null || _b === void 0 ? void 0 : _b.decoration)} dangerouslySetInnerHTML={{ __html: t(i) }}/>;
+                        return <li key={i.key} className={"listItemStyle ".concat((_a = effectiveTheme.listItemStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listItemStyle) === null || _b === void 0 ? void 0 : _b.decoration)} dangerouslySetInnerHTML={{ __html: t(i) }}/>;
                     });
                     if (list.ordered) {
-                        return [2 /*return*/, <ol className={"".concat((_a = effectiveTheme.listStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listStyle) === null || _b === void 0 ? void 0 : _b.decoration)}>{listItems}</ol>];
+                        return [2 /*return*/, <ol className={"listStyle ".concat((_a = effectiveTheme.listStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listStyle) === null || _b === void 0 ? void 0 : _b.decoration)}>{listItems}</ol>];
                     }
                     else {
-                        return [2 /*return*/, <ul className={"".concat((_c = effectiveTheme.listStyle) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.listStyle) === null || _d === void 0 ? void 0 : _d.decoration)}>{listItems}</ul>];
+                        return [2 /*return*/, <ul className={"listStyle ".concat((_c = effectiveTheme.listStyle) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.listStyle) === null || _d === void 0 ? void 0 : _d.decoration)}>{listItems}</ul>];
                     }
                     return [2 /*return*/];
             }

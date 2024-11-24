@@ -1,12 +1,59 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "definitions": {
+    "CssProperties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+
+    "ThemeStyle": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "type": "string"
+        },
+        "decoration": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "ExtendedThemeStyle": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ThemeStyle"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "css": {
+              "type": "object",
+              "properties": {
+                "light": {
+                  "$ref": "#/definitions/CssProperties"
+                },
+                "dark": {
+                  "$ref": "#/definitions/CssProperties"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  },
   "properties": {
     "listStyle": {
-      "$ref": "../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ThemeStyle"
+      "$ref": "#/definitions/ThemeStyle"
     },
     "listItemStyle": {
-      "$ref": "../../../node_modules/nodoku-core/schemas/skin-common-schema.json#/definitions/ExtendedThemeStyle"
+      "$ref": "#/definitions/ExtendedThemeStyle"
     },
     "additionalProperties": false
   }

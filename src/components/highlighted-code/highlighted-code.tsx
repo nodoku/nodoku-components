@@ -1,15 +1,17 @@
 import hljs from 'highlight.js';
 import {mergeTheme, NdCode, NdDefaultThemeName} from "nodoku-core";
 import {JSX} from "react"
-import {HighlightedCodeThemeImpl} from "./highlighted-code-theme";
+import {highlightedCodeDefaultThemeImpl} from "./highlighted-code-theme";
+import {NodokuComponents} from "../../index";
+import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
 
 
 export class HighlightedCodeProps {
     code: NdCode;
-    theme: HighlightedCodeThemeImpl;
+    theme: HighlightedCodeTheme;
     defaultThemeName: NdDefaultThemeName
 
-    constructor(code: NdCode, theme: HighlightedCodeThemeImpl, defaultThemeName: NdDefaultThemeName) {
+    constructor(code: NdCode, theme: HighlightedCodeTheme, defaultThemeName: NdDefaultThemeName) {
         this.code = code;
         this.theme = theme;
         this.defaultThemeName = defaultThemeName;
@@ -20,7 +22,7 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
 
     const {code, theme, defaultThemeName} = props
 
-    const effectiveTheme: HighlightedCodeThemeImpl = mergeTheme(theme, HighlightedCodeThemeImpl.defaultTheme);
+    const effectiveTheme: HighlightedCodeTheme = mergeTheme(theme, highlightedCodeDefaultThemeImpl);
 
     const html = hljs.highlight(code.code, {language: code.lang}).value;
 
@@ -35,7 +37,7 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
     const darkClassName = `${effectiveTheme.darkDisplay} ${defaultThemeName === "dark" ? "light:hidden" : "hidden"}`
 
     const pre = (
-        <pre className={"text-pretty"}>
+        <pre className={`pre ${effectiveTheme.pre?.base} ${effectiveTheme.pre?.decoration}`}>
             <code lang={code.lang} className={"hljs"} dangerouslySetInnerHTML={{__html: html}}/>
         </pre>
     )
@@ -44,19 +46,19 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
     const res: JSX.Element[] = [];
     if (effectiveTheme.hljsLightTheme) {
         res.push((
-            <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
+            <div className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
                 {pre}
             </div>
         ))
     }
     if (effectiveTheme.hljsDarkTheme) {
         res.push((
-            <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
+            <div className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
                 {pre}
             </div>
         ))
     }
 
-    return <div className={`${effectiveTheme.codeContainer?.base} ${effectiveTheme.codeContainer?.decoration}`}>{res}</div>
+    return <div className={`codeContainer ${effectiveTheme.codeContainer?.base} ${effectiveTheme.codeContainer?.decoration}`}>{res}</div>
 
 }

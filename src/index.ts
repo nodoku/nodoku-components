@@ -12,12 +12,22 @@ import {TypographyThemeImpl} from "./components/typography/typography-theme";
 import {TypographyImpl} from "./components/typography/typography";
 import {NdImageProviderImpl} from "./components/nd-image/nd-image";
 import {NdImageProps} from "nodoku-core";
+import {ParagraphThemeImpl} from "./components/paragraphs/paragraph-theme";
+import {paragraphDefaultThemeImpl} from "./components/paragraphs/paragraph-theme";
+import {highlightedCodeDefaultThemeImpl} from "./components/highlighted-code/highlighted-code-theme";
+import exp from "node:constants";
+import {listCompDefaultThemeImpl} from "./components/list-comp/list-comp-theme";
 
 export namespace NodokuComponents {
 
     export type ListCompTheme = ListCompThemeImpl;
     export type HighlightedCodeTheme = HighlightedCodeThemeImpl;
     export type TypographyTheme = TypographyThemeImpl;
+    export type ParagraphTheme = ParagraphThemeImpl;
+
+    export const listCompDefaultTheme : ListCompTheme = listCompDefaultThemeImpl;
+    export const highlightedCodeDefaultTheme: HighlightedCodeTheme = highlightedCodeDefaultThemeImpl;
+    export const paragraphDefaultTheme: ParagraphTheme = paragraphDefaultThemeImpl;
 
     export async function HighlightedCode(props: HighlightedCodeProps): Promise<JSX.Element> {
         return HighlightedCodeImpl(props)

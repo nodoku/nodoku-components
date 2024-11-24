@@ -40,8 +40,14 @@ import { ParagraphsImpl } from "./components/paragraphs/paragraphs";
 import { BackgroundsImpl } from "./components/backgrounds/backgrounds";
 import { TypographyImpl } from "./components/typography/typography";
 import { NdImageProviderImpl } from "./components/nd-image/nd-image";
+import { paragraphDefaultThemeImpl } from "./components/paragraphs/paragraph-theme";
+import { highlightedCodeDefaultThemeImpl } from "./components/highlighted-code/highlighted-code-theme";
+import { listCompDefaultThemeImpl } from "./components/list-comp/list-comp-theme";
 export var NodokuComponents;
 (function (NodokuComponents) {
+    NodokuComponents.listCompDefaultTheme = listCompDefaultThemeImpl;
+    NodokuComponents.highlightedCodeDefaultTheme = highlightedCodeDefaultThemeImpl;
+    NodokuComponents.paragraphDefaultTheme = paragraphDefaultThemeImpl;
     function HighlightedCode(props) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {

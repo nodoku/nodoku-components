@@ -35,7 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import { mergeTheme, NdContentImage } from "nodoku-core";
-import { TypographyThemeImpl } from "./typography-theme";
+import { typographyDefaultTheme } from "./typography-theme";
 export function TypographyImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         function renderElement(elem) {
@@ -136,7 +136,7 @@ export function TypographyImpl(props) {
             switch (_e.label) {
                 case 0:
                     componentIndex = props.componentIndex, content = props.content, theme = props.theme, themes = props.themes, lng = props.lng, imageProvider = props.imageProvider, i18nextProvider = props.i18nextProvider, defaultThemeName = props.defaultThemeName;
-                    effectiveTheme = mergeTheme(theme, TypographyThemeImpl.defaultTheme);
+                    effectiveTheme = mergeTheme(theme, typographyDefaultTheme);
                     if (themes.length > 0) {
                         effectiveTheme = mergeTheme(themes[componentIndex % themes.length], effectiveTheme);
                     }

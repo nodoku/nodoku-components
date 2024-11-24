@@ -4,41 +4,45 @@ import {
     NdCode,
     NdDefaultThemeName,
     NdList,
-    NdTranslatableText,
-    ThemeStyle
+    NdTranslatableText
 } from "nodoku-core";
-import {HighlightedCodeThemeImpl} from "../highlighted-code/highlighted-code-theme";
 import {HighlightedCodeImpl} from "../highlighted-code/highlighted-code";
 import {ListCompImpl} from "../list-comp/list-comp";
-import {ListCompThemeImpl} from "../list-comp/list-comp-theme";
+import {NodokuComponents} from "../../index";
+import ParagraphTheme = NodokuComponents.ParagraphTheme;
+import ListCompTheme = NodokuComponents.ListCompTheme;
+import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
+import {ThemeStyle} from "nodoku-core";
+import {ParagraphThemeImpl} from "./paragraph-theme";
+import {ts} from "nodoku-core";
 
 
-export class ParagraphsProps {
+export type ParagraphsProps = {
     lng: string;
-    blockParagraphs: (NdTranslatableText | NdList | NdCode)[] = [];
-    paragraphStyle: ThemeStyle | undefined;
-    codeHighlightTheme: HighlightedCodeThemeImpl;
-    listTheme: ListCompThemeImpl;
+    blockParagraphs: (NdTranslatableText | NdList | NdCode)[];
+    paragraphTheme: ParagraphTheme;
+    codeHighlightTheme: HighlightedCodeTheme;
+    listTheme: ListCompTheme;
     defaultThemeName: NdDefaultThemeName;
     i18nextProvider: I18nextProvider;
 
 
-    constructor(lng: string,
-                blockParagraphs: (NdTranslatableText | NdList | NdCode)[],
-                paragraphStyle: ThemeStyle | undefined,
-                codeHighlightTheme: HighlightedCodeThemeImpl,
-                listTheme: ListCompThemeImpl,
-                defaultThemeName: NdDefaultThemeName,
-                i18nextProvider: I18nextProvider) {
-
-        this.lng = lng;
-        this.blockParagraphs = blockParagraphs;
-        this.paragraphStyle = paragraphStyle;
-        this.codeHighlightTheme = codeHighlightTheme;
-        this.listTheme = listTheme;
-        this.defaultThemeName = defaultThemeName;
-        this.i18nextProvider = i18nextProvider;
-    }
+    // constructor(lng: string,
+    //             blockParagraphs: (NdTranslatableText | NdList | NdCode)[],
+    //             paragraphStyle: ParagraphTheme | undefined,
+    //             codeHighlightTheme: HighlightedCodeTheme,
+    //             listTheme: ListCompTheme,
+    //             defaultThemeName: NdDefaultThemeName,
+    //             i18nextProvider: I18nextProvider) {
+    //
+    //     this.lng = lng;
+    //     this.blockParagraphs = blockParagraphs;
+    //     this.paragraphTheme = paragraphStyle;
+    //     this.codeHighlightTheme = codeHighlightTheme;
+    //     this.listTheme = listTheme;
+    //     this.defaultThemeName = defaultThemeName;
+    //     this.i18nextProvider = i18nextProvider;
+    // }
 }
 
 
@@ -48,7 +52,7 @@ export async function ParagraphsImpl(props: ParagraphsProps): Promise<JSX.Elemen
         lng,
         blockParagraphs,
         i18nextProvider,
-        paragraphStyle,
+        paragraphTheme,
         listTheme,
         codeHighlightTheme,
         defaultThemeName
@@ -57,12 +61,12 @@ export async function ParagraphsImpl(props: ParagraphsProps): Promise<JSX.Elemen
     const {t} = await i18nextProvider(lng);
 
     return (
-        <>
+        <div className={`${ts(paragraphTheme, "paragraphContainer")} paragraphContainer ${paragraphTheme.paragraphContainer?.base} ${paragraphTheme?.paragraphContainer?.decoration}`}>
             {await Promise.all(blockParagraphs.map(async (p: NdTranslatableText | NdList | NdCode, ip: number): Promise<JSX.Element> => {
                 if (p instanceof NdTranslatableText) {
                     return (
                         <p key={ip}
-                           className={`${paragraphStyle?.base} ${paragraphStyle?.decoration}`}
+                           className={`${ts(paragraphTheme, "paragraphStyle")} paragraphStyle ${paragraphTheme.paragraphStyle?.base} ${paragraphTheme?.paragraphStyle?.decoration}`}
                            dangerouslySetInnerHTML={{__html: t(p)}} />
                     )
                 } else if (p instanceof NdCode) {
@@ -71,7 +75,7 @@ export async function ParagraphsImpl(props: ParagraphsProps): Promise<JSX.Elemen
                     return await ListCompImpl({list: p as NdList, lng: lng, i18nextProvider: i18nextProvider, listTheme: listTheme})
                 }
             }))}
-        </>
+        </div>
     )
 
 }

@@ -1,9 +1,10 @@
-import { HighlightedCodeThemeImpl } from "../highlighted-code/highlighted-code-theme";
 import { ThemeStyle } from "nodoku-core";
-export declare class TypographyThemeImpl {
+import { NodokuComponents } from "../../index";
+import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
+export type TypographyThemeImpl = {
     containerStyle?: ThemeStyle;
     preContainer?: ThemeStyle;
     contentContainerStyle?: ThemeStyle;
-    codeHighlightTheme?: HighlightedCodeThemeImpl;
-    static defaultTheme: TypographyThemeImpl;
-}
+    codeHighlightTheme?: HighlightedCodeTheme;
+};
+export declare const typographyDefaultTheme: TypographyThemeImpl;

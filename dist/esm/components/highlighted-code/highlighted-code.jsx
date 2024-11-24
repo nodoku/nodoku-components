@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 import hljs from 'highlight.js';
 import { mergeTheme } from "nodoku-core";
-import { HighlightedCodeThemeImpl } from "./highlighted-code-theme";
+import { highlightedCodeDefaultThemeImpl } from "./highlighted-code-theme";
 var HighlightedCodeProps = /** @class */ (function () {
     function HighlightedCodeProps(code, theme, defaultThemeName) {
         this.code = code;
@@ -49,42 +49,42 @@ export { HighlightedCodeProps };
 export function HighlightedCodeImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         var code, theme, defaultThemeName, effectiveTheme, html, lightClassName, darkClassName, pre, res;
-        var _a, _b, _c, _d, _e, _f;
-        return __generator(this, function (_g) {
-            switch (_g.label) {
+        var _a, _b, _c, _d, _e, _f, _g, _h;
+        return __generator(this, function (_j) {
+            switch (_j.label) {
                 case 0:
                     code = props.code, theme = props.theme, defaultThemeName = props.defaultThemeName;
-                    effectiveTheme = mergeTheme(theme, HighlightedCodeThemeImpl.defaultTheme);
+                    effectiveTheme = mergeTheme(theme, highlightedCodeDefaultThemeImpl);
                     html = hljs.highlight(code.code, { language: code.lang }).value;
                     if (!effectiveTheme.hljsLightTheme) return [3 /*break*/, 2];
                     return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.hljsLightTheme, ".css"))];
                 case 1:
-                    _g.sent();
-                    _g.label = 2;
+                    _j.sent();
+                    _j.label = 2;
                 case 2:
                     if (!effectiveTheme.hljsDarkTheme) return [3 /*break*/, 4];
                     return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.hljsDarkTheme, ".css"))];
                 case 3:
-                    _g.sent();
-                    _g.label = 4;
+                    _j.sent();
+                    _j.label = 4;
                 case 4:
                     lightClassName = "".concat(effectiveTheme.lightDisplay, " ").concat(defaultThemeName === "light" ? "dark:hidden" : "hidden");
                     darkClassName = "".concat(effectiveTheme.darkDisplay, " ").concat(defaultThemeName === "dark" ? "light:hidden" : "hidden");
-                    pre = (<pre className={"text-pretty"}>
+                    pre = (<pre className={"pre ".concat((_a = effectiveTheme.pre) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.pre) === null || _b === void 0 ? void 0 : _b.decoration)}>
             <code lang={code.lang} className={"hljs"} dangerouslySetInnerHTML={{ __html: html }}/>
         </pre>);
                     res = [];
                     if (effectiveTheme.hljsLightTheme) {
-                        res.push((<div className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration, " hljs-theme-").concat(effectiveTheme.hljsLightTheme, " ").concat(lightClassName)}>
+                        res.push((<div className={"preContainer ".concat((_c = effectiveTheme.preContainer) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.preContainer) === null || _d === void 0 ? void 0 : _d.decoration, " hljs-theme-").concat(effectiveTheme.hljsLightTheme, " ").concat(lightClassName)}>
                 {pre}
             </div>));
                     }
                     if (effectiveTheme.hljsDarkTheme) {
-                        res.push((<div className={"".concat((_c = effectiveTheme.preContainer) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.preContainer) === null || _d === void 0 ? void 0 : _d.decoration, " hljs-theme-").concat(effectiveTheme.hljsDarkTheme, " ").concat(darkClassName)}>
+                        res.push((<div className={"preContainer ".concat((_e = effectiveTheme.preContainer) === null || _e === void 0 ? void 0 : _e.base, " ").concat((_f = effectiveTheme.preContainer) === null || _f === void 0 ? void 0 : _f.decoration, " hljs-theme-").concat(effectiveTheme.hljsDarkTheme, " ").concat(darkClassName)}>
                 {pre}
             </div>));
                     }
-                    return [2 /*return*/, <div className={"".concat((_e = effectiveTheme.codeContainer) === null || _e === void 0 ? void 0 : _e.base, " ").concat((_f = effectiveTheme.codeContainer) === null || _f === void 0 ? void 0 : _f.decoration)}>{res}</div>];
+                    return [2 /*return*/, <div className={"codeContainer ".concat((_g = effectiveTheme.codeContainer) === null || _g === void 0 ? void 0 : _g.base, " ").concat((_h = effectiveTheme.codeContainer) === null || _h === void 0 ? void 0 : _h.decoration)}>{res}</div>];
             }
         });
     });

@@ -10,9 +10,11 @@ import {
 } from "nodoku-core";
 import {TypographyThemeImpl} from "./typography-theme";
 import HTMLElement from "node-html-parser/dist/nodes/html";
-import {it} from "node:test";
+import {typographyDefaultTheme} from "./typography-theme";
+import {NodokuComponents} from "../../index";
+import TypographyTheme = NodokuComponents.TypographyTheme;
 
-export async function TypographyImpl(props: NdSkinComponentProps<TypographyThemeImpl, void>): Promise<JSX.Element> {
+export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme, void>): Promise<JSX.Element> {
 
     const {
         componentIndex,
@@ -27,7 +29,7 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
     // console.log("content card ", JSON.stringify(content));
     // console.log("visual card ", JSON.stringify(theme));
 
-    let effectiveTheme: TypographyThemeImpl = mergeTheme(theme, TypographyThemeImpl.defaultTheme);
+    let effectiveTheme: TypographyThemeImpl = mergeTheme(theme, typographyDefaultTheme);
     if (themes.length > 0) {
         effectiveTheme = mergeTheme(themes[componentIndex % themes.length], effectiveTheme)
     }

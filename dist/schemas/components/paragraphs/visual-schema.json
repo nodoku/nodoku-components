@@ -45,42 +45,16 @@
           "additionalProperties": false
         }
       ]
-    },
-    "DisplayType": {
-      "type": "string",
-      "enum": [
-        "block",
-        "inline-block",
-        "light:block",
-        "light:inline-block",
-        "dark:block",
-        "dark:inline-block"
-      ]
     }
   },
   "type": "object",
   "properties": {
-    "hljsLightTheme": {
-      "type": "string"
-    },
-    "hljsDarkTheme": {
-      "type": "string"
-    },
-    "lightDisplay": {
-      "$ref": "#/definitions/DisplayType"
-    },
-    "darkDisplay":  {
-      "$ref": "#/definitions/DisplayType"
-    },
-    "preContainer": {
+    "paragraphContainer": {
       "$ref": "#/definitions/ThemeStyle"
     },
-    "pre": {
-      "$ref": "#/definitions/ThemeStyle"
+    "paragraphStyle": {
+      "$ref": "#/definitions/ExtendedThemeStyle"
     },
-    "codeContainer": {
-      "$ref": "#/definitions/ThemeStyle"
-    }
-  },
-  "additionalProperties": false
+    "additionalProperties": false
+  }
 }
