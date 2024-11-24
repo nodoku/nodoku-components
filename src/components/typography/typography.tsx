@@ -10,9 +10,11 @@ import {
 } from "nodoku-core";
 import {TypographyThemeImpl} from "./typography-theme";
 import HTMLElement from "node-html-parser/dist/nodes/html";
-import {typographyDefaultTheme} from "./typography-theme";
+import {HighlightedCodeImpl} from "../highlighted-code/highlighted-code";
 import {NodokuComponents} from "../../index";
 import TypographyTheme = NodokuComponents.TypographyTheme;
+import {typographyDefaultTheme} from "./typography-theme";
+import {highlightedCodeDefaultThemeImpl} from "../highlighted-code/highlighted-code-theme";
 
 export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme, void>): Promise<JSX.Element> {
 
@@ -84,11 +86,10 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
             const codeText: NdCode = elem.translatedText as NdCode;
             return (
                 <div className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration}`}>
-                    <pre className={elem.htmlElem.classNames} dir={"ltr"}>
-                        <code lang={codeText.lang}>
-                            {codeText.code}
-                        </code>
-                    </pre>
+                    {await HighlightedCodeImpl({
+                        code: codeText as NdCode,
+                        theme: effectiveTheme.codeHighlightTheme || highlightedCodeDefaultThemeImpl,
+                        defaultThemeName: defaultThemeName})}
                 </div>
             )
         } else if (elem.htmlElem.rawTagName === "figure") {

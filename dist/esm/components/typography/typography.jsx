@@ -35,7 +35,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import { mergeTheme, NdContentImage } from "nodoku-core";
+import { HighlightedCodeImpl } from "../highlighted-code/highlighted-code";
 import { typographyDefaultTheme } from "./typography-theme";
+import { highlightedCodeDefaultThemeImpl } from "../highlighted-code/highlighted-code-theme";
 export function TypographyImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         function renderElement(elem) {
@@ -53,49 +55,50 @@ export function TypographyImpl(props) {
                             imgElem = _c.sent();
                             _c.label = 2;
                         case 2:
-                            if (elem.htmlElem.rawTagName === "h1") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "h2") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "h3") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "h4") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "h5") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "h6") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "p") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "blockquote") {
-                                pText = elem.translatedText;
-                                return [2 /*return*/, <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
-                            }
-                            else if (elem.htmlElem.rawTagName === "pre") {
-                                codeText = elem.translatedText;
-                                return [2 /*return*/, (<div className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration)}>
-                    <pre className={elem.htmlElem.classNames} dir={"ltr"}>
-                        <code lang={codeText.lang}>
-                            {codeText.code}
-                        </code>
-                    </pre>
+                            if (!(elem.htmlElem.rawTagName === "h1")) return [3 /*break*/, 3];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <h1 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 3:
+                            if (!(elem.htmlElem.rawTagName === "h2")) return [3 /*break*/, 4];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <h2 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 4:
+                            if (!(elem.htmlElem.rawTagName === "h3")) return [3 /*break*/, 5];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <h3 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 5:
+                            if (!(elem.htmlElem.rawTagName === "h4")) return [3 /*break*/, 6];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <h4 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 6:
+                            if (!(elem.htmlElem.rawTagName === "h5")) return [3 /*break*/, 7];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <h5 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 7:
+                            if (!(elem.htmlElem.rawTagName === "h6")) return [3 /*break*/, 8];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <h6 className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 8:
+                            if (!(elem.htmlElem.rawTagName === "p")) return [3 /*break*/, 9];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <p className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 9:
+                            if (!(elem.htmlElem.rawTagName === "blockquote")) return [3 /*break*/, 10];
+                            pText = elem.translatedText;
+                            return [2 /*return*/, <blockquote className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                        case 10:
+                            if (!(elem.htmlElem.rawTagName === "pre")) return [3 /*break*/, 12];
+                            codeText = elem.translatedText;
+                            return [4 /*yield*/, HighlightedCodeImpl({
+                                    code: codeText,
+                                    theme: effectiveTheme.codeHighlightTheme || highlightedCodeDefaultThemeImpl,
+                                    defaultThemeName: defaultThemeName
+                                })];
+                        case 11: return [2 /*return*/, (<div className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration)}>
+                    {_c.sent()}
                 </div>)];
-                            }
-                            else if (elem.htmlElem.rawTagName === "figure") {
+                        case 12:
+                            if (elem.htmlElem.rawTagName === "figure") {
                                 imgText = elem.translatedText;
                                 return [2 /*return*/, (<figure className={elem.htmlElem.classNames}>
                     {/*<img src={imgElem} alt={imgText.alt ? t(imgText.alt) : "N/A"}/>*/}
@@ -125,7 +128,8 @@ export function TypographyImpl(props) {
                             else if (elem.htmlElem.rawTagName === "hr") {
                                 return [2 /*return*/, <hr />];
                             }
-                            return [2 /*return*/, <></>];
+                            _c.label = 13;
+                        case 13: return [2 /*return*/, <></>];
                     }
                 });
             });
