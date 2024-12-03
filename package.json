@@ -1,6 +1,6 @@
 {
   "name": "nodoku-components",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
@@ -23,7 +23,7 @@
     "eslint": "^8.56.0",
     "highlight.js": "^11.10.0",
     "node-html-parser": "^6.1.13",
-    "nodoku-core": "^0.2.1",
+    "nodoku-core": "^0.2.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "next": "^15.0",

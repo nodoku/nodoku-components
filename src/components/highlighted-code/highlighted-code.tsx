@@ -46,14 +46,14 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
     const res: JSX.Element[] = [];
     if (effectiveTheme.hljsLightTheme) {
         res.push((
-            <div className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
+            <div key={"light-theme-code-highlight"} className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
                 {pre}
             </div>
         ))
     }
     if (effectiveTheme.hljsDarkTheme) {
         res.push((
-            <div className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
+            <div key={"dark-theme-code-highlight"} className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
                 {pre}
             </div>
         ))
