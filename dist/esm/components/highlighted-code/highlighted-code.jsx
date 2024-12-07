@@ -37,36 +37,28 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 import hljs from 'highlight.js';
 import { mergeTheme } from "nodoku-core";
 import { highlightedCodeDefaultThemeImpl } from "./highlighted-code-theme";
-var HighlightedCodeProps = /** @class */ (function () {
-    function HighlightedCodeProps(code, theme, defaultThemeName) {
-        this.code = code;
-        this.theme = theme;
-        this.defaultThemeName = defaultThemeName;
-    }
-    return HighlightedCodeProps;
-}());
-export { HighlightedCodeProps };
+import { ts } from "nodoku-core";
 export function HighlightedCodeImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
-        var code, theme, defaultThemeName, effectiveTheme, html, lightClassName, darkClassName, pre, res;
-        var _a, _b, _c, _d, _e, _f, _g, _h;
-        return __generator(this, function (_j) {
-            switch (_j.label) {
+        var key, code, theme, defaultThemeName, effectiveTheme, html, lightClassName, darkClassName, pre, res;
+        var _a, _b;
+        return __generator(this, function (_c) {
+            switch (_c.label) {
                 case 0:
-                    code = props.code, theme = props.theme, defaultThemeName = props.defaultThemeName;
+                    key = props.key, code = props.code, theme = props.theme, defaultThemeName = props.defaultThemeName;
                     effectiveTheme = mergeTheme(theme, highlightedCodeDefaultThemeImpl);
                     html = hljs.highlight(code.code, { language: code.lang }).value;
                     if (!effectiveTheme.hljsLightTheme) return [3 /*break*/, 2];
                     return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.hljsLightTheme, ".css"))];
                 case 1:
-                    _j.sent();
-                    _j.label = 2;
+                    _c.sent();
+                    _c.label = 2;
                 case 2:
                     if (!effectiveTheme.hljsDarkTheme) return [3 /*break*/, 4];
                     return [4 /*yield*/, import("../../hljs/styles/prefixed-".concat(effectiveTheme.hljsDarkTheme, ".css"))];
                 case 3:
-                    _j.sent();
-                    _j.label = 4;
+                    _c.sent();
+                    _c.label = 4;
                 case 4:
                     lightClassName = "".concat(effectiveTheme.lightDisplay, " ").concat(defaultThemeName === "light" ? "dark:hidden" : "hidden");
                     darkClassName = "".concat(effectiveTheme.darkDisplay, " ").concat(defaultThemeName === "dark" ? "light:hidden" : "hidden");
@@ -75,16 +67,16 @@ export function HighlightedCodeImpl(props) {
         </pre>);
                     res = [];
                     if (effectiveTheme.hljsLightTheme) {
-                        res.push((<div key={"light-theme-code-highlight"} className={"preContainer ".concat((_c = effectiveTheme.preContainer) === null || _c === void 0 ? void 0 : _c.base, " ").concat((_d = effectiveTheme.preContainer) === null || _d === void 0 ? void 0 : _d.decoration, " hljs-theme-").concat(effectiveTheme.hljsLightTheme, " ").concat(lightClassName)}>
+                        res.push((<div key={"light-theme-code-highlight"} className={"preContainer ".concat(ts(effectiveTheme, "preContainer"), " hljs-theme-").concat(effectiveTheme.hljsLightTheme, " ").concat(lightClassName)}>
                 {pre}
             </div>));
                     }
                     if (effectiveTheme.hljsDarkTheme) {
-                        res.push((<div key={"dark-theme-code-highlight"} className={"preContainer ".concat((_e = effectiveTheme.preContainer) === null || _e === void 0 ? void 0 : _e.base, " ").concat((_f = effectiveTheme.preContainer) === null || _f === void 0 ? void 0 : _f.decoration, " hljs-theme-").concat(effectiveTheme.hljsDarkTheme, " ").concat(darkClassName)}>
+                        res.push((<div key={"dark-theme-code-highlight"} className={"preContainer ".concat(ts(effectiveTheme, "preContainer"), " hljs-theme-").concat(effectiveTheme.hljsDarkTheme, " ").concat(darkClassName)}>
                 {pre}
             </div>));
                     }
-                    return [2 /*return*/, <div className={"codeContainer ".concat((_g = effectiveTheme.codeContainer) === null || _g === void 0 ? void 0 : _g.base, " ").concat((_h = effectiveTheme.codeContainer) === null || _h === void 0 ? void 0 : _h.decoration)}>{res}</div>];
+                    return [2 /*return*/, <div key={key} className={"codeContainer ".concat(ts(effectiveTheme, "codeContainer"))}>{res}</div>];
             }
         });
     });

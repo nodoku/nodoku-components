@@ -42,32 +42,30 @@ export function ParagraphsImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         var lng, blockParagraphs, i18nextProvider, paragraphTheme, listTheme, codeHighlightTheme, defaultThemeName, t;
         var _this = this;
-        var _a, _b;
-        return __generator(this, function (_c) {
-            switch (_c.label) {
+        return __generator(this, function (_a) {
+            switch (_a.label) {
                 case 0:
                     lng = props.lng, blockParagraphs = props.blockParagraphs, i18nextProvider = props.i18nextProvider, paragraphTheme = props.paragraphTheme, listTheme = props.listTheme, codeHighlightTheme = props.codeHighlightTheme, defaultThemeName = props.defaultThemeName;
                     return [4 /*yield*/, i18nextProvider(lng)];
                 case 1:
-                    t = (_c.sent()).t;
+                    t = (_a.sent()).t;
                     return [4 /*yield*/, Promise.all(blockParagraphs.map(function (p, ip) { return __awaiter(_this, void 0, void 0, function () {
-                            var _a, _b;
-                            return __generator(this, function (_c) {
-                                switch (_c.label) {
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
                                     case 0:
                                         if (!(p instanceof NdTranslatableText)) return [3 /*break*/, 1];
-                                        return [2 /*return*/, (<p key={ip} className={"".concat(ts(paragraphTheme, "paragraphStyle"), " paragraphStyle ").concat((_a = paragraphTheme.paragraphStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = paragraphTheme === null || paragraphTheme === void 0 ? void 0 : paragraphTheme.paragraphStyle) === null || _b === void 0 ? void 0 : _b.decoration)} dangerouslySetInnerHTML={{ __html: t(p) }}/>)];
+                                        return [2 /*return*/, (<p key={"para-".concat(ip)} className={"".concat(ts(paragraphTheme, "paragraphStyle"), " paragraphStyle")} dangerouslySetInnerHTML={{ __html: t(p) }}/>)];
                                     case 1:
                                         if (!(p instanceof NdCode)) return [3 /*break*/, 3];
-                                        return [4 /*yield*/, HighlightedCodeImpl({ code: p, theme: codeHighlightTheme, defaultThemeName: defaultThemeName })];
-                                    case 2: return [2 /*return*/, _c.sent()];
-                                    case 3: return [4 /*yield*/, ListCompImpl({ list: p, lng: lng, i18nextProvider: i18nextProvider, listTheme: listTheme })];
-                                    case 4: return [2 /*return*/, _c.sent()];
+                                        return [4 /*yield*/, HighlightedCodeImpl({ key: "code-".concat(ip), code: p, theme: codeHighlightTheme, defaultThemeName: defaultThemeName })];
+                                    case 2: return [2 /*return*/, _a.sent()];
+                                    case 3: return [4 /*yield*/, ListCompImpl({ key: "list-".concat(ip), list: p, lng: lng, i18nextProvider: i18nextProvider, listTheme: listTheme })];
+                                    case 4: return [2 /*return*/, _a.sent()];
                                 }
                             });
                         }); }))];
-                case 2: return [2 /*return*/, (<div className={"".concat(ts(paragraphTheme, "paragraphContainer"), " paragraphContainer ").concat((_a = paragraphTheme.paragraphContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = paragraphTheme === null || paragraphTheme === void 0 ? void 0 : paragraphTheme.paragraphContainer) === null || _b === void 0 ? void 0 : _b.decoration)}>
-            {_c.sent()}
+                case 2: return [2 /*return*/, (<div className={"".concat(ts(paragraphTheme, "paragraphContainer"), " paragraphContainer")}>
+            {_a.sent()}
         </div>)];
             }
         });

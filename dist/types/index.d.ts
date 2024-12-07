@@ -5,7 +5,7 @@ import { ListCompProps } from "./components/list-comp/list-comp";
 import { ListCompThemeImpl } from "./components/list-comp/list-comp-theme";
 import { ParagraphsProps } from "./components/paragraphs/paragraphs";
 import { BackgroundsProps } from "./components/backgrounds/backgrounds";
-import { NdSkinComponentProps } from "../../nodoku-core";
+import { NdSkinComponentProps } from "nodoku-core";
 import { TypographyThemeImpl } from "./components/typography/typography-theme";
 import { NdImageProps } from "nodoku-core";
 import { ParagraphThemeImpl } from "./components/paragraphs/paragraph-theme";

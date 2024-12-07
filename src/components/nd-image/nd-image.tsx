@@ -3,7 +3,6 @@ import React from "react";
 import {IconType} from "react-icons";
 import {nameToReactIconHi2} from "./name-to-react-icon-hi2";
 import {nameToReactIconHi} from "./name-to-react-icon-hi";
-import Image from "next/image";
 import {NdImageProps} from "nodoku-core";
 
 export async function NdImageProviderImpl(props: NdImageProps): Promise<JSX.Element> {
@@ -11,7 +10,6 @@ export async function NdImageProviderImpl(props: NdImageProps): Promise<JSX.Elem
     const {url, alt, title, imageStyle} = props;
 
     if (url.startsWith("icon:")) {
-        // return <HiOutlineMap size={40} className={imageClassName}/>
         const iconName = url.substring("icon:".length);
 
         let icon: IconType | undefined= undefined;

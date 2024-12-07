@@ -4,23 +4,20 @@ import {JSX} from "react"
 import {highlightedCodeDefaultThemeImpl} from "./highlighted-code-theme";
 import {NodokuComponents} from "../../index";
 import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
+import {ts} from "nodoku-core";
 
 
-export class HighlightedCodeProps {
+export type HighlightedCodeProps = {
+    key: string;
     code: NdCode;
     theme: HighlightedCodeTheme;
     defaultThemeName: NdDefaultThemeName
 
-    constructor(code: NdCode, theme: HighlightedCodeTheme, defaultThemeName: NdDefaultThemeName) {
-        this.code = code;
-        this.theme = theme;
-        this.defaultThemeName = defaultThemeName;
-    }
 }
 
 export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<JSX.Element> {
 
-    const {code, theme, defaultThemeName} = props
+    const {key, code, theme, defaultThemeName} = props
 
     const effectiveTheme: HighlightedCodeTheme = mergeTheme(theme, highlightedCodeDefaultThemeImpl);
 
@@ -46,19 +43,19 @@ export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<
     const res: JSX.Element[] = [];
     if (effectiveTheme.hljsLightTheme) {
         res.push((
-            <div key={"light-theme-code-highlight"} className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
+            <div key={"light-theme-code-highlight"} className={`preContainer ${ts(effectiveTheme, "preContainer")} hljs-theme-${effectiveTheme.hljsLightTheme} ${lightClassName}`}>
                 {pre}
             </div>
         ))
     }
     if (effectiveTheme.hljsDarkTheme) {
         res.push((
-            <div key={"dark-theme-code-highlight"} className={`preContainer ${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
+            <div key={"dark-theme-code-highlight"} className={`preContainer ${ts(effectiveTheme, "preContainer")} hljs-theme-${effectiveTheme.hljsDarkTheme} ${darkClassName}`}>
                 {pre}
             </div>
         ))
     }
 
-    return <div className={`codeContainer ${effectiveTheme.codeContainer?.base} ${effectiveTheme.codeContainer?.decoration}`}>{res}</div>
+    return <div key={key} className={`codeContainer ${ts(effectiveTheme,  "codeContainer")}`}>{res}</div>
 
 }

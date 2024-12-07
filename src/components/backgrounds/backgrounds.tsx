@@ -7,27 +7,13 @@ import {
 } from "nodoku-core";
 
 
-export class BackgroundsProps {
+export type BackgroundsProps = {
     lng: string;
     defaultThemeName: NdDefaultThemeName;
     i18nextProvider: I18nextProvider;
     bgColorStyle?: ExtendedThemeStyle;
     bgImageStyle?: ThemeStyle;
-    // bgImageUrl?: NdTranslatableText;
-    // imageProvider: ImageProvider = (imageProps: NdImageProps) => (Promise.resolve(</>));
 
-    constructor(lng: string,
-                defaultThemeName: NdDefaultThemeName,
-                bgColorStyle: ThemeStyle,
-                bgImageStyle: ThemeStyle,
-                i18nextProvider: I18nextProvider) {
-
-        this.lng = lng;
-        this.defaultThemeName = defaultThemeName;
-        this.bgColorStyle = bgColorStyle;
-        this.bgImageStyle = bgImageStyle;
-        this.i18nextProvider = i18nextProvider;
-    }
 }
 
 
@@ -38,8 +24,6 @@ export async function BackgroundsImpl(props: BackgroundsProps): Promise<JSX.Elem
         defaultThemeName,
         bgColorStyle,
         bgImageStyle,
-        // bgImageUrl,
-        // imageProvider,
         i18nextProvider
     } = props;
 
@@ -51,24 +35,17 @@ export async function BackgroundsImpl(props: BackgroundsProps): Promise<JSX.Elem
     const darkClassName = "light:hidden dark:inline-block " + (defaultThemeName === "dark" ? "inline-block" : "hidden")
 
     if (bgColorStyle?.css?.light) {
-        backgrounds.push(<div
-            className={`absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg ${lightClassName}`}
+        backgrounds.push(<div key={"bg-color-css-light"}
+            className={`bg-color-css-light absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg ${lightClassName}`}
             style={bgColorStyle?.css?.light}></div>);
     }
     if (bgColorStyle?.css?.dark) {
-        backgrounds.push(<div
-            className={`absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg ${darkClassName}`}
+        backgrounds.push(<div key={"bg-color-css-dark"}
+            className={`bg-color-css-dark absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg ${darkClassName}`}
             style={bgColorStyle?.css?.dark}></div>);
     }
 
     var style: React.CSSProperties = {}
-
-
-    // if (bgImageUrl) {
-    //     // const resolvedBgImageUrl = await imageUrlProvider(t(bgImageUrl));
-    //     const resolvedBgImageUrl = t(bgImageUrl);
-    //     style = {backgroundImage: `url(${resolvedBgImageUrl})`}
-    // }
 
     return (
         <>
