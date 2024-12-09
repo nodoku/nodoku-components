@@ -1,0 +1,17 @@
+import type {IconType} from "react-icons";
+{{#numbers}}
+import { nameToReactIcon_{{module}}_{{.}} } from "./name-to-react-icon-{{module}}-{{.}}";
+{{/numbers}}
+
+export default async function nameToReactIcon_{{module}}(iconName: string): Promise<IconType | undefined> {
+
+    let icon: IconType | undefined;
+    {{#numbers}}
+    if ((icon = await nameToReactIcon_{{module}}_{{.}}(iconName)) !== undefined) {
+        return icon;
+    }
+    {{/numbers}}
+
+    return undefined;
+
+}

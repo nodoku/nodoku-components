@@ -1,0 +1,15 @@
+import type {IconType} from "react-icons";
+
+export async function nameToReactIcon(iconName: string): Promise<IconType | undefined> {
+
+    let icon: IconType | undefined;
+    {{#modules}}
+    if (iconName.startsWith("{{.}}")) {
+        const { nameToReactIcon_{{.}} } = await import("./name-to-react-icon-{{.}}")
+        return nameToReactIcon_{{.}}(iconName);
+    }
+    {{/modules}}
+
+    return undefined;
+
+}
