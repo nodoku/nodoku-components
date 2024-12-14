@@ -35,26 +35,34 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import React from "react";
-import { nameToReactIconHi2 } from "./name-to-react-icon-hi2";
-import { nameToReactIconHi } from "./name-to-react-icon-hi";
-export function NdImageProviderImpl(props) {
+export function imageProviderImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
-        var url, alt, title, imageStyle, iconName, icon;
+        var url, alt, title, imageStyle;
         return __generator(this, function (_a) {
             url = props.url, alt = props.alt, title = props.title, imageStyle = props.imageStyle;
-            if (url.startsWith("icon:")) {
-                iconName = url.substring("icon:".length);
-                icon = undefined;
-                if (iconName.startsWith("react-icons/hi:")) {
-                    icon = nameToReactIconHi(iconName.substring("react-icons/hi:".length));
-                }
-                else if (iconName.startsWith("react-icons/hi2")) {
-                    icon = nameToReactIconHi2(iconName.substring("react-icons/hi2:".length));
-                }
-                if (icon) {
-                    return [2 /*return*/, icon(({ size: imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.imageWidth }))];
-                }
-            }
+            // if (url.startsWith("icon:")) {
+            //     const iconName = url.substring("icon:".length);
+            //
+            //     // let icon: IconType | undefined;
+            //     // if (iconName.startsWith("react-icons/")) {
+            //     //      icon = nameToReactIcon(iconName.substring("react-icons/".length));
+            //     // }
+            //     const icon: JSX.Element | undefined = await NdIconProviderImpl(iconName, {size: imageStyle?.imageWidth || "32"})
+            //     // if (iconName.startsWith("react-icons/hi:")) {
+            //     //     icon = nameToReactIconHi(iconName.substring("react-icons/hi:".length));
+            //     // } else if (iconName.startsWith("react-icons/hi2")) {
+            //     //     icon = nameToReactIconHi2(iconName.substring("react-icons/hi2:".length));
+            //     // }
+            //
+            //
+            //     if (icon) {
+            //         return (
+            //             <div className={`${imageStyle?.base} ${imageStyle?.decoration}`}>
+            //                 {icon}
+            //             </div>
+            //         )
+            //     }
+            // }
             return [2 /*return*/, <img className={"".concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.base, " ").concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.decoration)} src={url} alt={alt}/>];
         });
     });

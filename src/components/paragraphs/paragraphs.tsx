@@ -1,6 +1,6 @@
 import {JSX} from "react"
 import {
-    I18nextProvider,
+    NdI18nextProvider,
     NdCode,
     NdDefaultThemeName,
     NdList,
@@ -13,32 +13,33 @@ import ParagraphTheme = NodokuComponents.ParagraphTheme;
 import ListCompTheme = NodokuComponents.ListCompTheme;
 import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
 import {ts} from "nodoku-core";
+import {NdI18nextTrustedHtmlProvider} from "nodoku-core";
 
 
-export type ParagraphsProps = {
+export type ParagraphsPropsImpl = {
     lng: string;
     blockParagraphs: (NdTranslatableText | NdList | NdCode)[];
     paragraphTheme: ParagraphTheme;
     codeHighlightTheme: HighlightedCodeTheme;
     listTheme: ListCompTheme;
     defaultThemeName: NdDefaultThemeName;
-    i18nextProvider: I18nextProvider;
+    i18nextTrustedHtmlProvider: NdI18nextTrustedHtmlProvider;
 }
 
 
-export async function ParagraphsImpl(props: ParagraphsProps): Promise<JSX.Element> {
+export async function ParagraphsImpl(props: ParagraphsPropsImpl): Promise<JSX.Element> {
 
     const {
         lng,
         blockParagraphs,
-        i18nextProvider,
+        i18nextTrustedHtmlProvider,
         paragraphTheme,
         listTheme,
         codeHighlightTheme,
         defaultThemeName
     } = props;
 
-    const {t} = await i18nextProvider(lng);
+    const {t} = await i18nextTrustedHtmlProvider(lng);
 
     return (
         <div className={`${ts(paragraphTheme, "paragraphContainer")} paragraphContainer`}>
@@ -47,12 +48,12 @@ export async function ParagraphsImpl(props: ParagraphsProps): Promise<JSX.Elemen
                     return (
                         <p key={`para-${ip}`}
                            className={`${ts(paragraphTheme, "paragraphStyle")} paragraphStyle`}
-                           dangerouslySetInnerHTML={{__html: t(p)}} />
+                           dangerouslySetInnerHTML={t(p)} />
                     )
                 } else if (p instanceof NdCode) {
                     return await HighlightedCodeImpl({key: `code-${ip}`, code: p as NdCode, theme: codeHighlightTheme, defaultThemeName: defaultThemeName})
                 } else {
-                    return await ListCompImpl({key: `list-${ip}`, list: p as NdList, lng: lng, i18nextProvider: i18nextProvider, listTheme: listTheme})
+                    return await ListCompImpl({key: `list-${ip}`, list: p as NdList, lng: lng, i18nextProvider: i18nextTrustedHtmlProvider, listTheme: listTheme})
                 }
             }))}
         </div>

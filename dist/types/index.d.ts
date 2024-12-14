@@ -1,10 +1,10 @@
 import { JSX } from "react";
-import { HighlightedCodeProps } from "./components/highlighted-code/highlighted-code";
+import { HighlightedCodePropsImpl } from "./components/highlighted-code/highlighted-code";
 import { HighlightedCodeThemeImpl } from "./components/highlighted-code/highlighted-code-theme";
-import { ListCompProps } from "./components/list-comp/list-comp";
+import { ListCompPropsImpl } from "./components/list-comp/list-comp";
 import { ListCompThemeImpl } from "./components/list-comp/list-comp-theme";
-import { ParagraphsProps } from "./components/paragraphs/paragraphs";
-import { BackgroundsProps } from "./components/backgrounds/backgrounds";
+import { ParagraphsPropsImpl } from "./components/paragraphs/paragraphs";
+import { BackgroundsPropsImpl } from "./components/backgrounds/backgrounds";
 import { NdSkinComponentProps } from "nodoku-core";
 import { TypographyThemeImpl } from "./components/typography/typography-theme";
 import { NdImageProps } from "nodoku-core";
@@ -17,10 +17,14 @@ export declare namespace NodokuComponents {
     const listCompDefaultTheme: ListCompTheme;
     const highlightedCodeDefaultTheme: HighlightedCodeTheme;
     const paragraphDefaultTheme: ParagraphTheme;
+    type HighlightedCodeProps = HighlightedCodePropsImpl;
+    type ParagraphsProps = ParagraphsPropsImpl;
+    type ListCompProps = ListCompPropsImpl;
+    type BackgroundsProps = BackgroundsPropsImpl;
     function HighlightedCode(props: HighlightedCodeProps): Promise<JSX.Element>;
     function ListComp(props: ListCompProps): Promise<JSX.Element>;
     function Paragraphs(props: ParagraphsProps): Promise<JSX.Element>;
     function Backgrounds(props: BackgroundsProps): Promise<JSX.Element>;
     function Typography(props: NdSkinComponentProps<TypographyTheme, void>): Promise<JSX.Element>;
-    function NdImageProvider(props: NdImageProps): Promise<JSX.Element>;
+    function imageProvider(props: NdImageProps): Promise<JSX.Element>;
 }

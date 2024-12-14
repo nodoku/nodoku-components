@@ -7,7 +7,7 @@ import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
 import {ts} from "nodoku-core";
 
 
-export type HighlightedCodeProps = {
+export type HighlightedCodePropsImpl = {
     key: string;
     code: NdCode;
     theme: HighlightedCodeTheme;
@@ -15,7 +15,7 @@ export type HighlightedCodeProps = {
 
 }
 
-export async function HighlightedCodeImpl(props: HighlightedCodeProps): Promise<JSX.Element> {
+export async function HighlightedCodeImpl(props: HighlightedCodePropsImpl): Promise<JSX.Element> {
 
     const {key, code, theme, defaultThemeName} = props
 

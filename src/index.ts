@@ -1,21 +1,20 @@
 
 import {JSX} from "react"
 
-import {HighlightedCodeImpl, HighlightedCodeProps} from "./components/highlighted-code/highlighted-code";
+import {HighlightedCodeImpl, HighlightedCodePropsImpl} from "./components/highlighted-code/highlighted-code";
 import {HighlightedCodeThemeImpl} from "./components/highlighted-code/highlighted-code-theme";
-import {ListCompImpl, ListCompProps} from "./components/list-comp/list-comp";
+import {ListCompImpl, ListCompPropsImpl} from "./components/list-comp/list-comp";
 import {ListCompThemeImpl} from "./components/list-comp/list-comp-theme";
-import {ParagraphsImpl, ParagraphsProps} from "./components/paragraphs/paragraphs";
-import {BackgroundsImpl, BackgroundsProps} from "./components/backgrounds/backgrounds";
+import {ParagraphsImpl, ParagraphsPropsImpl} from "./components/paragraphs/paragraphs";
+import {BackgroundsImpl, BackgroundsPropsImpl} from "./components/backgrounds/backgrounds";
 import {NdSkinComponentProps} from "nodoku-core";
 import {TypographyThemeImpl} from "./components/typography/typography-theme";
 import {TypographyImpl} from "./components/typography/typography";
-import {NdImageProviderImpl} from "./components/nd-image/nd-image";
+import {imageProviderImpl} from "./components/nd-image/nd-image";
 import {NdImageProps} from "nodoku-core";
 import {ParagraphThemeImpl} from "./components/paragraphs/paragraph-theme";
 import {paragraphDefaultThemeImpl} from "./components/paragraphs/paragraph-theme";
 import {highlightedCodeDefaultThemeImpl} from "./components/highlighted-code/highlighted-code-theme";
-import exp from "node:constants";
 import {listCompDefaultThemeImpl} from "./components/list-comp/list-comp-theme";
 
 export namespace NodokuComponents {
@@ -28,6 +27,11 @@ export namespace NodokuComponents {
     export const listCompDefaultTheme : ListCompTheme = listCompDefaultThemeImpl;
     export const highlightedCodeDefaultTheme: HighlightedCodeTheme = highlightedCodeDefaultThemeImpl;
     export const paragraphDefaultTheme: ParagraphTheme = paragraphDefaultThemeImpl;
+
+    export type HighlightedCodeProps = HighlightedCodePropsImpl;
+    export type ParagraphsProps = ParagraphsPropsImpl;
+    export type ListCompProps = ListCompPropsImpl;
+    export type BackgroundsProps = BackgroundsPropsImpl;
 
     export async function HighlightedCode(props: HighlightedCodeProps): Promise<JSX.Element> {
         return HighlightedCodeImpl(props)
@@ -49,8 +53,8 @@ export namespace NodokuComponents {
         return TypographyImpl(props)
     }
 
-    export async function NdImageProvider(props: NdImageProps): Promise<JSX.Element> {
-        return NdImageProviderImpl(props)
+    export async function imageProvider(props: NdImageProps): Promise<JSX.Element> {
+        return imageProviderImpl(props)
     }
 
 }

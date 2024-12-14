@@ -2,34 +2,29 @@ import {JSX} from "react";
 import {
     ExtendedThemeStyle,
     NdDefaultThemeName,
-    ThemeStyle,
-    I18nextProvider
+    ThemeStyle
 } from "nodoku-core";
 
 
-export type BackgroundsProps = {
+export type BackgroundsPropsImpl = {
     lng: string;
     defaultThemeName: NdDefaultThemeName;
-    i18nextProvider: I18nextProvider;
     bgColorStyle?: ExtendedThemeStyle;
     bgImageStyle?: ThemeStyle;
 
 }
 
 
-export async function BackgroundsImpl(props: BackgroundsProps): Promise<JSX.Element> {
+export async function BackgroundsImpl(props: BackgroundsPropsImpl): Promise<JSX.Element> {
 
     const {
         lng,
         defaultThemeName,
         bgColorStyle,
-        bgImageStyle,
-        i18nextProvider
+        bgImageStyle
     } = props;
 
     const backgrounds: JSX.Element[] = [];
-
-    const {t} = await i18nextProvider(lng);
 
     const lightClassName = "light:inline-block dark:hidden " + (defaultThemeName === "light" ? "inline-block" : "hidden")
     const darkClassName = "light:hidden dark:inline-block " + (defaultThemeName === "dark" ? "inline-block" : "hidden")

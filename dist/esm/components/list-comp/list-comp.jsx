@@ -50,7 +50,7 @@ export function ListCompImpl(props) {
                 case 1:
                     t = (_e.sent()).t;
                     listItems = list.items.map(function (item) {
-                        return <li key={item.key} className={"listItemStyle ".concat(ts(effectiveTheme, "listItemStyle"))} dangerouslySetInnerHTML={{ __html: t(item) }}/>;
+                        return <li key={item.key} className={"listItemStyle ".concat(ts(effectiveTheme, "listItemStyle"))} dangerouslySetInnerHTML={t(item)}/>;
                     });
                     if (list.ordered) {
                         return [2 /*return*/, <ol key={key} className={"listStyle ".concat((_a = effectiveTheme.listStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listStyle) === null || _b === void 0 ? void 0 : _b.decoration)}>{listItems}</ol>];

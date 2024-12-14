@@ -1,6 +1,6 @@
 {
   "name": "nodoku-components",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
@@ -22,12 +22,11 @@
     "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.56.0",
     "highlight.js": "^11.10.0",
+    "next": "^15.0",
     "node-html-parser": "^6.1.13",
-    "nodoku-core": "^0.2.3",
+    "nodoku-core": "^0.2.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "next": "^15.0",
-    "react-icons": "^5.3.0",
     "typescript": "^5"
   },
   "devDependencies": {

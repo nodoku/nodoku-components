@@ -50,7 +50,7 @@ export function TypographyImpl(props) {
                             imgElem = undefined;
                             if (!(elem.translatedText instanceof NdContentImage)) return [3 /*break*/, 2];
                             imgText = elem.translatedText;
-                            return [4 /*yield*/, imageProvider({ url: t(imgText.url), alt: (imgText.alt ? t(imgText.alt) : "N/A") })];
+                            return [4 /*yield*/, imageProvider({ url: t(imgText.url).__html, alt: (imgText.alt ? t(imgText.alt) : "N/A") })];
                         case 1:
                             imgElem = _c.sent();
                             _c.label = 2;
@@ -58,42 +58,42 @@ export function TypographyImpl(props) {
                             key = "typo-".concat(i);
                             if (!(elem.htmlElem.rawTagName === "h1")) return [3 /*break*/, 3];
                             pText = elem.translatedText;
-                            return [2 /*return*/, <h1 key={"typography-h1-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                            return [2 /*return*/, <h1 key={"typography-h1-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                         case 3:
                             if (!(elem.htmlElem.rawTagName === "h2")) return [3 /*break*/, 4];
                             pText = elem.translatedText;
-                            return [2 /*return*/, <h2 key={"typography-h2-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                            return [2 /*return*/, <h2 key={"typography-h2-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                         case 4:
                             if (!(elem.htmlElem.rawTagName === "h3")) return [3 /*break*/, 5];
                             pText = elem.translatedText;
-                            return [2 /*return*/, <h3 key={"typography-h3-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                            return [2 /*return*/, <h3 key={"typography-h3-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                         case 5:
                             if (!(elem.htmlElem.rawTagName === "h4")) return [3 /*break*/, 6];
                             pText = elem.translatedText;
-                            return [2 /*return*/, <h4 key={"typography-h4-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                            return [2 /*return*/, <h4 key={"typography-h4-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                         case 6:
                             if (!(elem.htmlElem.rawTagName === "h5")) return [3 /*break*/, 7];
                             pText = elem.translatedText;
-                            return [2 /*return*/, <h5 key={"typography-h5-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                            return [2 /*return*/, <h5 key={"typography-h5-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                         case 7:
                             if (!(elem.htmlElem.rawTagName === "h6")) return [3 /*break*/, 8];
                             pText = elem.translatedText;
-                            return [2 /*return*/, <h6 key={"typography-h6-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                            return [2 /*return*/, <h6 key={"typography-h6-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                         case 8:
                             if (!(elem.htmlElem.rawTagName === "p")) return [3 /*break*/, 9];
                             if (elem.translatedText instanceof NdCallToAction) {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <p key={"typography-cta-".concat(key)}><a className={elem.htmlElem.classNames} href={t(pText.ctaUrl)}>|{t(pText.ctaTitle || pText.ctaUrl)}|</a></p>];
+                                return [2 /*return*/, <p key={"typography-cta-".concat(key)}>|<a className={elem.htmlElem.classNames} href={t(pText.ctaUrl).__html} dangerouslySetInnerHTML={t(pText.ctaTitle || pText.ctaUrl)}/>|</p>];
                             }
                             else {
                                 pText = elem.translatedText;
-                                return [2 /*return*/, <p key={"typography-p-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                                return [2 /*return*/, <p key={"typography-p-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                             }
                             return [3 /*break*/, 13];
                         case 9:
                             if (!(elem.htmlElem.rawTagName === "blockquote")) return [3 /*break*/, 10];
                             pText = elem.translatedText;
-                            return [2 /*return*/, <blockquote key={"typography-bq-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: t(pText) }}/>];
+                            return [2 /*return*/, <blockquote key={"typography-bq-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                         case 10:
                             if (!(elem.htmlElem.rawTagName === "pre")) return [3 /*break*/, 12];
                             codeText = elem.translatedText;
@@ -111,24 +111,24 @@ export function TypographyImpl(props) {
                                 imgText = elem.translatedText;
                                 return [2 /*return*/, (<figure key={"typography-fig-".concat(key)} className={elem.htmlElem.classNames}>
                     {imgElem}
-                    {imgText.title && <figcaption dangerouslySetInnerHTML={{ __html: t(imgText.title) }}/>}
+                    {imgText.title && <figcaption dangerouslySetInnerHTML={t(imgText.title)}/>}
                 </figure>)];
                             }
                             else if (elem.htmlElem.rawTagName === "ol") {
                                 listText = elem.translatedText;
                                 return [2 /*return*/, (<ol key={"typography-ol-".concat(key)} className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (item) { return <li key={"".concat(key, "-").concat(item.key)} dangerouslySetInnerHTML={{ __html: t(item) }}/>; })}
+                    {listText.items.map(function (item) { return <li key={"".concat(key, "-").concat(item.key)} dangerouslySetInnerHTML={t(item)}/>; })}
                 </ol>)];
                             }
                             else if (elem.htmlElem.rawTagName === "ul") {
                                 listText = elem.translatedText;
                                 return [2 /*return*/, (<ul key={"typography-ul-".concat(key)} className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (item) { return <li key={"".concat(key, "-").concat(item.key)} dangerouslySetInnerHTML={{ __html: t(item) }}/>; })}
+                    {listText.items.map(function (item) { return <li key={"".concat(key, "-").concat(item.key)} dangerouslySetInnerHTML={t(item)}/>; })}
                 </ul>)];
                             }
                             else if (elem.htmlElem.rawTagName === "img") {
                                 imgText = elem.translatedText;
-                                return [2 /*return*/, <img key={"typography-img-".concat(key)} className={elem.htmlElem.classNames} src={t(imgText.url)} alt={imgText.alt ? t(imgText.alt) : "N/A"} title={imgText.title ? t(imgText.title) : ""}/>];
+                                return [2 /*return*/, <img key={"typography-img-".concat(key)} className={elem.htmlElem.classNames} src={t(imgText.url).__html} alt={imgText.alt ? t(imgText.alt).__html : "N/A"} title={imgText.title ? t(imgText.title).__html : ""}/>];
                             }
                             else if (elem.htmlElem.rawTagName === "table") {
                                 return [2 /*return*/, <table key={"typography-table-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: elem.htmlElem.innerHTML }}/>];
@@ -142,17 +142,17 @@ export function TypographyImpl(props) {
                 });
             });
         }
-        var componentIndex, content, theme, themes, lng, imageProvider, i18nextProvider, defaultThemeName, effectiveTheme, block, t;
+        var componentIndex, content, theme, themes, lng, imageProvider, i18nextTrustedHtmlProvider, defaultThemeName, effectiveTheme, block, t;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    componentIndex = props.componentIndex, content = props.content, theme = props.theme, themes = props.themes, lng = props.lng, imageProvider = props.imageProvider, i18nextProvider = props.i18nextProvider, defaultThemeName = props.defaultThemeName;
+                    componentIndex = props.componentIndex, content = props.content, theme = props.theme, themes = props.themes, lng = props.lng, imageProvider = props.imageProvider, i18nextTrustedHtmlProvider = props.i18nextTrustedHtmlProvider, defaultThemeName = props.defaultThemeName;
                     effectiveTheme = mergeTheme(theme, typographyDefaultTheme);
                     if (themes.length > 0) {
                         effectiveTheme = mergeTheme(themes[componentIndex % themes.length], effectiveTheme);
                     }
                     block = content[0];
-                    return [4 /*yield*/, i18nextProvider(lng)];
+                    return [4 /*yield*/, i18nextTrustedHtmlProvider(lng)];
                 case 1:
                     t = (_a.sent()).t;
                     return [4 /*yield*/, Promise.all(block.htmlElements.map(function (elem, i) { return renderElement(elem, i, t); }))];

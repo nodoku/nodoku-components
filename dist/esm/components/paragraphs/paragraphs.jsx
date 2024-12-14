@@ -40,13 +40,13 @@ import { ListCompImpl } from "../list-comp/list-comp";
 import { ts } from "nodoku-core";
 export function ParagraphsImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
-        var lng, blockParagraphs, i18nextProvider, paragraphTheme, listTheme, codeHighlightTheme, defaultThemeName, t;
+        var lng, blockParagraphs, i18nextTrustedHtmlProvider, paragraphTheme, listTheme, codeHighlightTheme, defaultThemeName, t;
         var _this = this;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    lng = props.lng, blockParagraphs = props.blockParagraphs, i18nextProvider = props.i18nextProvider, paragraphTheme = props.paragraphTheme, listTheme = props.listTheme, codeHighlightTheme = props.codeHighlightTheme, defaultThemeName = props.defaultThemeName;
-                    return [4 /*yield*/, i18nextProvider(lng)];
+                    lng = props.lng, blockParagraphs = props.blockParagraphs, i18nextTrustedHtmlProvider = props.i18nextTrustedHtmlProvider, paragraphTheme = props.paragraphTheme, listTheme = props.listTheme, codeHighlightTheme = props.codeHighlightTheme, defaultThemeName = props.defaultThemeName;
+                    return [4 /*yield*/, i18nextTrustedHtmlProvider(lng)];
                 case 1:
                     t = (_a.sent()).t;
                     return [4 /*yield*/, Promise.all(blockParagraphs.map(function (p, ip) { return __awaiter(_this, void 0, void 0, function () {
@@ -54,12 +54,12 @@ export function ParagraphsImpl(props) {
                                 switch (_a.label) {
                                     case 0:
                                         if (!(p instanceof NdTranslatableText)) return [3 /*break*/, 1];
-                                        return [2 /*return*/, (<p key={"para-".concat(ip)} className={"".concat(ts(paragraphTheme, "paragraphStyle"), " paragraphStyle")} dangerouslySetInnerHTML={{ __html: t(p) }}/>)];
+                                        return [2 /*return*/, (<p key={"para-".concat(ip)} className={"".concat(ts(paragraphTheme, "paragraphStyle"), " paragraphStyle")} dangerouslySetInnerHTML={t(p)}/>)];
                                     case 1:
                                         if (!(p instanceof NdCode)) return [3 /*break*/, 3];
                                         return [4 /*yield*/, HighlightedCodeImpl({ key: "code-".concat(ip), code: p, theme: codeHighlightTheme, defaultThemeName: defaultThemeName })];
                                     case 2: return [2 /*return*/, _a.sent()];
-                                    case 3: return [4 /*yield*/, ListCompImpl({ key: "list-".concat(ip), list: p, lng: lng, i18nextProvider: i18nextProvider, listTheme: listTheme })];
+                                    case 3: return [4 /*yield*/, ListCompImpl({ key: "list-".concat(ip), list: p, lng: lng, i18nextProvider: i18nextTrustedHtmlProvider, listTheme: listTheme })];
                                     case 4: return [2 /*return*/, _a.sent()];
                                 }
                             });

@@ -1,21 +1,22 @@
 import {mergeTheme, NdList, NdTranslatableText} from "nodoku-core";
-import {I18nextProvider} from "nodoku-core";
+import {NdI18nextProvider} from "nodoku-core";
 import {JSX} from "react";
 import {listCompDefaultThemeImpl} from "./list-comp-theme";
 import {NodokuComponents} from "../../index";
 import ListCompTheme = NodokuComponents.ListCompTheme;
 import {ts} from "nodoku-core";
+import {NdI18nextTrustedHtmlProvider} from "nodoku-core";
 
-export type ListCompProps = {
+export type ListCompPropsImpl = {
     key: string;
     list: NdList;
     lng: string;
-    i18nextProvider: I18nextProvider;
+    i18nextProvider: NdI18nextTrustedHtmlProvider;
     listTheme: ListCompTheme;
 
 }
 
-export async function ListCompImpl(props: ListCompProps): Promise<JSX.Element> {
+export async function ListCompImpl(props: ListCompPropsImpl): Promise<JSX.Element> {
 
     const {key, list, i18nextProvider, lng, listTheme} = props
 
@@ -25,7 +26,7 @@ export async function ListCompImpl(props: ListCompProps): Promise<JSX.Element> {
 
     const listItems: JSX.Element[] = list.items.map((item: NdTranslatableText) =>
         <li key={item.key} className={`listItemStyle ${ts(effectiveTheme, "listItemStyle")}`}
-            dangerouslySetInnerHTML={{__html: t(item)}}/>
+            dangerouslySetInnerHTML={t(item)}/>
     );
 
     if (list.ordered) {
