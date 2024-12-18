@@ -23,12 +23,12 @@ export async function HighlightedCodeImpl(props: HighlightedCodePropsImpl): Prom
 
     const html = hljs.highlight(code.code, {language: code.lang}).value;
 
-    if (effectiveTheme.hljsLightTheme) {
-        await import(`../../hljs/styles/prefixed-${effectiveTheme.hljsLightTheme}.css`);
-    }
-    if (effectiveTheme.hljsDarkTheme) {
-        await import(`../../hljs/styles/prefixed-${effectiveTheme.hljsDarkTheme}.css`);
-    }
+    // if (effectiveTheme.hljsLightTheme) {
+    //     await import(`../../hljs/styles/prefixed-${effectiveTheme.hljsLightTheme}.css`);
+    // }
+    // if (effectiveTheme.hljsDarkTheme) {
+    //     await import(`../../hljs/styles/prefixed-${effectiveTheme.hljsDarkTheme}.css`);
+    // }
 
     const lightClassName = `${effectiveTheme.lightDisplay} ${defaultThemeName === "light" ? "dark:hidden" : "hidden"}`
     const darkClassName = `${effectiveTheme.darkDisplay} ${defaultThemeName === "dark" ? "light:hidden" : "hidden"}`
