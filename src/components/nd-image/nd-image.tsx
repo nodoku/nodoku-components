@@ -31,7 +31,7 @@ export async function imageProviderImpl(props: NdImageProps): Promise<JSX.Elemen
     //     }
     // }
 
-    return <img className={`${imageStyle?.base} ${imageStyle?.decoration}`} src={url} alt={alt}/>;
+    return <img className={`${imageStyle?.base} ${imageStyle?.decoration}`} src={url} alt={alt} loading={"lazy"}/>;
 
     // return <Image src={url} alt={alt || url} className={`${imageStyle?.base} ${imageStyle?.decoration}`}/>
 

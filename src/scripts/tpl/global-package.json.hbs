@@ -1,0 +1,31 @@
+{
+    "name": "nodoku-components",
+    "version": "{{version}}",
+    "exports": {
+        ".": {
+            "types": "./types/index.d.ts",
+            "import": "./esm/index.js"
+        },
+
+    {{#hljsThemes}}
+        "./{{.}}": {
+            "import": "./esm/hljs/styles/prefixed-{{.}}.css"
+        },
+    {{/hljsThemes}}
+
+        "./package.json": "./package.json"
+    },
+    "module": "esm/index.js",
+    "types": "types/index.d.ts",
+    "type": "module",
+    "peerDependencies": {
+    {{#peerDeps}}
+        "{{{name}}}": "{{{ver}}}"{{^isLast}},{{/isLast}}
+    {{/peerDeps}}
+    },
+    "dependencies": {
+    {{#deps}}
+        "{{name}}": "{{ver}}"{{^isLast}},{{/isLast}}
+    {{/deps}}
+    }
+}

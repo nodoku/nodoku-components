@@ -63,7 +63,7 @@ export function imageProviderImpl(props) {
             //         )
             //     }
             // }
-            return [2 /*return*/, <img className={"".concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.base, " ").concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.decoration)} src={url} alt={alt}/>];
+            return [2 /*return*/, <img className={"".concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.base, " ").concat(imageStyle === null || imageStyle === void 0 ? void 0 : imageStyle.decoration)} src={url} alt={alt} loading={"lazy"}/>];
         });
     });
 }

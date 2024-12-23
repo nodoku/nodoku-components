@@ -1,38 +1,252 @@
 {
-  "name": "nodoku-components",
-  "version": "0.2.5",
-  "exports": {
-    ".": {
-      "types": "./types/index.d.ts",
-      "import": "./esm/index.js"
+    "name": "nodoku-components",
+    "version": "0.2.6",
+    "exports": {
+        ".": {
+            "types": "./types/index.d.ts",
+            "import": "./esm/index.js"
+        },
+
+        "./1c-light": {
+            "import": "./esm/hljs/styles/prefixed-1c-light.css"
+        },
+        "./a11y-dark": {
+            "import": "./esm/hljs/styles/prefixed-a11y-dark.css"
+        },
+        "./a11y-light": {
+            "import": "./esm/hljs/styles/prefixed-a11y-light.css"
+        },
+        "./agate": {
+            "import": "./esm/hljs/styles/prefixed-agate.css"
+        },
+        "./an-old-hope": {
+            "import": "./esm/hljs/styles/prefixed-an-old-hope.css"
+        },
+        "./androidstudio": {
+            "import": "./esm/hljs/styles/prefixed-androidstudio.css"
+        },
+        "./arduino-light": {
+            "import": "./esm/hljs/styles/prefixed-arduino-light.css"
+        },
+        "./arta": {
+            "import": "./esm/hljs/styles/prefixed-arta.css"
+        },
+        "./ascetic": {
+            "import": "./esm/hljs/styles/prefixed-ascetic.css"
+        },
+        "./atom-one-dark-reasonable": {
+            "import": "./esm/hljs/styles/prefixed-atom-one-dark-reasonable.css"
+        },
+        "./atom-one-dark": {
+            "import": "./esm/hljs/styles/prefixed-atom-one-dark.css"
+        },
+        "./atom-one-light": {
+            "import": "./esm/hljs/styles/prefixed-atom-one-light.css"
+        },
+        "./brown-paper": {
+            "import": "./esm/hljs/styles/prefixed-brown-paper.css"
+        },
+        "./codepen-embed": {
+            "import": "./esm/hljs/styles/prefixed-codepen-embed.css"
+        },
+        "./color-brewer": {
+            "import": "./esm/hljs/styles/prefixed-color-brewer.css"
+        },
+        "./dark": {
+            "import": "./esm/hljs/styles/prefixed-dark.css"
+        },
+        "./default": {
+            "import": "./esm/hljs/styles/prefixed-default.css"
+        },
+        "./devibeans": {
+            "import": "./esm/hljs/styles/prefixed-devibeans.css"
+        },
+        "./docco": {
+            "import": "./esm/hljs/styles/prefixed-docco.css"
+        },
+        "./far": {
+            "import": "./esm/hljs/styles/prefixed-far.css"
+        },
+        "./felipec": {
+            "import": "./esm/hljs/styles/prefixed-felipec.css"
+        },
+        "./foundation": {
+            "import": "./esm/hljs/styles/prefixed-foundation.css"
+        },
+        "./github-dark-dimmed": {
+            "import": "./esm/hljs/styles/prefixed-github-dark-dimmed.css"
+        },
+        "./github-dark": {
+            "import": "./esm/hljs/styles/prefixed-github-dark.css"
+        },
+        "./github": {
+            "import": "./esm/hljs/styles/prefixed-github.css"
+        },
+        "./gml": {
+            "import": "./esm/hljs/styles/prefixed-gml.css"
+        },
+        "./googlecode": {
+            "import": "./esm/hljs/styles/prefixed-googlecode.css"
+        },
+        "./gradient-dark": {
+            "import": "./esm/hljs/styles/prefixed-gradient-dark.css"
+        },
+        "./gradient-light": {
+            "import": "./esm/hljs/styles/prefixed-gradient-light.css"
+        },
+        "./grayscale": {
+            "import": "./esm/hljs/styles/prefixed-grayscale.css"
+        },
+        "./hybrid": {
+            "import": "./esm/hljs/styles/prefixed-hybrid.css"
+        },
+        "./idea": {
+            "import": "./esm/hljs/styles/prefixed-idea.css"
+        },
+        "./intellij-light": {
+            "import": "./esm/hljs/styles/prefixed-intellij-light.css"
+        },
+        "./ir-black": {
+            "import": "./esm/hljs/styles/prefixed-ir-black.css"
+        },
+        "./isbl-editor-dark": {
+            "import": "./esm/hljs/styles/prefixed-isbl-editor-dark.css"
+        },
+        "./isbl-editor-light": {
+            "import": "./esm/hljs/styles/prefixed-isbl-editor-light.css"
+        },
+        "./kimbie-dark": {
+            "import": "./esm/hljs/styles/prefixed-kimbie-dark.css"
+        },
+        "./kimbie-light": {
+            "import": "./esm/hljs/styles/prefixed-kimbie-light.css"
+        },
+        "./lightfair": {
+            "import": "./esm/hljs/styles/prefixed-lightfair.css"
+        },
+        "./lioshi": {
+            "import": "./esm/hljs/styles/prefixed-lioshi.css"
+        },
+        "./magula": {
+            "import": "./esm/hljs/styles/prefixed-magula.css"
+        },
+        "./mono-blue": {
+            "import": "./esm/hljs/styles/prefixed-mono-blue.css"
+        },
+        "./monokai-sublime": {
+            "import": "./esm/hljs/styles/prefixed-monokai-sublime.css"
+        },
+        "./monokai": {
+            "import": "./esm/hljs/styles/prefixed-monokai.css"
+        },
+        "./night-owl": {
+            "import": "./esm/hljs/styles/prefixed-night-owl.css"
+        },
+        "./nnfx-dark": {
+            "import": "./esm/hljs/styles/prefixed-nnfx-dark.css"
+        },
+        "./nnfx-light": {
+            "import": "./esm/hljs/styles/prefixed-nnfx-light.css"
+        },
+        "./nord": {
+            "import": "./esm/hljs/styles/prefixed-nord.css"
+        },
+        "./obsidian": {
+            "import": "./esm/hljs/styles/prefixed-obsidian.css"
+        },
+        "./panda-syntax-dark": {
+            "import": "./esm/hljs/styles/prefixed-panda-syntax-dark.css"
+        },
+        "./panda-syntax-light": {
+            "import": "./esm/hljs/styles/prefixed-panda-syntax-light.css"
+        },
+        "./paraiso-dark": {
+            "import": "./esm/hljs/styles/prefixed-paraiso-dark.css"
+        },
+        "./paraiso-light": {
+            "import": "./esm/hljs/styles/prefixed-paraiso-light.css"
+        },
+        "./pojoaque": {
+            "import": "./esm/hljs/styles/prefixed-pojoaque.css"
+        },
+        "./purebasic": {
+            "import": "./esm/hljs/styles/prefixed-purebasic.css"
+        },
+        "./qtcreator-dark": {
+            "import": "./esm/hljs/styles/prefixed-qtcreator-dark.css"
+        },
+        "./qtcreator-light": {
+            "import": "./esm/hljs/styles/prefixed-qtcreator-light.css"
+        },
+        "./rainbow": {
+            "import": "./esm/hljs/styles/prefixed-rainbow.css"
+        },
+        "./routeros": {
+            "import": "./esm/hljs/styles/prefixed-routeros.css"
+        },
+        "./school-book": {
+            "import": "./esm/hljs/styles/prefixed-school-book.css"
+        },
+        "./shades-of-purple": {
+            "import": "./esm/hljs/styles/prefixed-shades-of-purple.css"
+        },
+        "./srcery": {
+            "import": "./esm/hljs/styles/prefixed-srcery.css"
+        },
+        "./stackoverflow-dark": {
+            "import": "./esm/hljs/styles/prefixed-stackoverflow-dark.css"
+        },
+        "./stackoverflow-light": {
+            "import": "./esm/hljs/styles/prefixed-stackoverflow-light.css"
+        },
+        "./sunburst": {
+            "import": "./esm/hljs/styles/prefixed-sunburst.css"
+        },
+        "./tokyo-night-dark": {
+            "import": "./esm/hljs/styles/prefixed-tokyo-night-dark.css"
+        },
+        "./tokyo-night-light": {
+            "import": "./esm/hljs/styles/prefixed-tokyo-night-light.css"
+        },
+        "./tomorrow-night-blue": {
+            "import": "./esm/hljs/styles/prefixed-tomorrow-night-blue.css"
+        },
+        "./tomorrow-night-bright": {
+            "import": "./esm/hljs/styles/prefixed-tomorrow-night-bright.css"
+        },
+        "./vs": {
+            "import": "./esm/hljs/styles/prefixed-vs.css"
+        },
+        "./vs2015": {
+            "import": "./esm/hljs/styles/prefixed-vs2015.css"
+        },
+        "./xcode": {
+            "import": "./esm/hljs/styles/prefixed-xcode.css"
+        },
+        "./xt256": {
+            "import": "./esm/hljs/styles/prefixed-xt256.css"
+        },
+
+        "./package.json": "./package.json"
     },
-    "./package.json": "./package.json"
-  },
-  "module": "esm/index.js",
-  "types": "types/index.d.ts",
-  "type": "module",
-  "peerDependencies": {
-    "@types/node": "^20.12.11",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "eslint": "^8.56.0",
-    "highlight.js": "^11.10.0",
-    "next": "^15.0",
-    "node-html-parser": "^6.1.13",
-    "nodoku-core": "^0.2.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "typescript": "^5"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.3",
-    "eslint": "^8",
-    "postcss": "^8.4.38",
-    "postcss-selector-prefix": "^5.0.1",
-    "shx": "^0.3.4",
-    "tsx": "^4.19.0",
-    "typescript": "^5"
-  }
+    "module": "esm/index.js",
+    "types": "types/index.d.ts",
+    "type": "module",
+    "peerDependencies": {
+        "@types/node": "^20.12.11",
+        "@types/react": "^18.3.2",
+        "@types/react-dom": "18.3.0",
+        "@typescript-eslint/eslint-plugin": "^7.13.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "eslint": "^8.56.0",
+        "highlight.js": "^11.10.0",
+        "next": "^15.0",
+        "node-html-parser": "^6.1.13",
+        "nodoku-core": "^0.2.2",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "typescript": "^5"
+    },
+    "dependencies": {
+    }
 }
