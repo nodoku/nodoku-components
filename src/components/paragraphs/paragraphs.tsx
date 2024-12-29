@@ -14,11 +14,12 @@ import ListCompTheme = NodokuComponents.ListCompTheme;
 import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
 import {ts} from "nodoku-core";
 import {NdI18nextTrustedHtmlProvider} from "nodoku-core";
+import {NdParagraph} from "nodoku-core";
 
 
 export type ParagraphsPropsImpl = {
     lng: string;
-    blockParagraphs: (NdTranslatableText | NdList | NdCode)[];
+    blockParagraphs: NdParagraph[];
     paragraphTheme: ParagraphTheme;
     codeHighlightTheme: HighlightedCodeTheme;
     listTheme: ListCompTheme;
@@ -43,7 +44,7 @@ export async function ParagraphsImpl(props: ParagraphsPropsImpl): Promise<JSX.El
 
     return (
         <div className={`${ts(paragraphTheme, "paragraphContainer")} paragraphContainer`}>
-            {await Promise.all(blockParagraphs.map(async (p: NdTranslatableText | NdList | NdCode, ip: number): Promise<JSX.Element> => {
+            {await Promise.all(blockParagraphs.map(async (p: NdParagraph, ip: number): Promise<JSX.Element> => {
                 if (p instanceof NdTranslatableText) {
                     return (
                         <p key={`para-${ip}`}

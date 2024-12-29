@@ -1,11 +1,12 @@
-import {mergeTheme, NdList, NdTranslatableText} from "nodoku-core";
-import {NdI18nextProvider} from "nodoku-core";
+import {mergeTheme, NdList} from "nodoku-core";
 import {JSX} from "react";
 import {listCompDefaultThemeImpl} from "./list-comp-theme";
 import {NodokuComponents} from "../../index";
 import ListCompTheme = NodokuComponents.ListCompTheme;
 import {ts} from "nodoku-core";
 import {NdI18nextTrustedHtmlProvider} from "nodoku-core";
+import {NdListItem} from "nodoku-core";
+import {NdLink} from "nodoku-core";
 
 export type ListCompPropsImpl = {
     key: string;
@@ -24,9 +25,18 @@ export async function ListCompImpl(props: ListCompPropsImpl): Promise<JSX.Elemen
 
     const {t} = await i18nextProvider(lng);
 
-    const listItems: JSX.Element[] = list.items.map((item: NdTranslatableText) =>
-        <li key={item.key} className={`listItemStyle ${ts(effectiveTheme, "listItemStyle")}`}
-            dangerouslySetInnerHTML={t(item)}/>
+    const listItems: JSX.Element[] = list.items.map((item: NdListItem) =>{
+        if (item.text instanceof NdLink) {
+            return (
+                <li key={item.text.url.key} className={`listItemStyle ${ts(effectiveTheme, "listItemStyle")}`}>
+                    <a href={t(item.text.url).__html as string} dangerouslySetInnerHTML={t(item.text.urlText ? item.text.urlText : item.text.url)}/>
+                </li>
+            )
+        } else {
+            return (<li key={item.text.key} className={`listItemStyle ${ts(effectiveTheme, "listItemStyle")}`}
+                dangerouslySetInnerHTML={t(item.text)}/>)
+        }
+        }
     );
 
     if (list.ordered) {

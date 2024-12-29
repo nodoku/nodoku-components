@@ -18,6 +18,8 @@ import TypographyTheme = NodokuComponents.TypographyTheme;
 import {typographyDefaultTheme} from "./typography-theme";
 import {highlightedCodeDefaultThemeImpl} from "../highlighted-code/highlighted-code-theme";
 import {NdTrustedHtml} from "nodoku-core";
+import {NdListItem} from "nodoku-core";
+import {NdLink} from "nodoku-core";
 
 export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme, void>): Promise<JSX.Element> {
 
@@ -119,14 +121,14 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
             const listText: NdList = elem.translatedText as NdList;
             return (
                 <ol key={`typography-ol-${key}`} className={elem.htmlElem.classNames}>
-                    {listText.items.map(item => <li key={`${key}-${item.key}`} dangerouslySetInnerHTML={t(item)}/>)}
+                    {listText.items.map(i => drawListItem(key, i))}
                 </ol>
             )
         } else if (elem.htmlElem.rawTagName === "ul") {
             const listText: NdList = elem.translatedText as NdList;
             return (
                 <ul key={`typography-ul-${key}`} className={elem.htmlElem.classNames}>
-                    {listText.items.map(item => <li key={`${key}-${item.key}`} dangerouslySetInnerHTML={t(item)}/>)}
+                    {listText.items.map(i => drawListItem(key, i))}
                 </ul>
             )
         } else if (elem.htmlElem.rawTagName === "img") {
@@ -143,6 +145,19 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
 
         return <></>
 
+    }
+
+    function drawListItem(key: string, item: NdListItem): JSX.Element {
+        if (item.text instanceof NdLink) {
+            const link = item.text as NdLink
+            return (
+                <li key={`${key}-${link.url.key}`}>
+                    <a href={t(link.url).__html as string} dangerouslySetInnerHTML={t(link.urlText ? link.urlText : link.url)} />
+                </li>
+            )
+        } else {
+            return <li key={`${key}-${item.text.key}`} dangerouslySetInnerHTML={t(item.text)}/>
+        }
     }
 
 }

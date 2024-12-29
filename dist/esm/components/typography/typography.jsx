@@ -38,6 +38,7 @@ import { mergeTheme, ts, NdContentImage, NdCallToAction } from "nodoku-core";
 import { HighlightedCodeImpl } from "../highlighted-code/highlighted-code";
 import { typographyDefaultTheme } from "./typography-theme";
 import { highlightedCodeDefaultThemeImpl } from "../highlighted-code/highlighted-code-theme";
+import { NdLink } from "nodoku-core";
 export function TypographyImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         function renderElement(elem, i, t) {
@@ -117,13 +118,13 @@ export function TypographyImpl(props) {
                             else if (elem.htmlElem.rawTagName === "ol") {
                                 listText = elem.translatedText;
                                 return [2 /*return*/, (<ol key={"typography-ol-".concat(key)} className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (item) { return <li key={"".concat(key, "-").concat(item.key)} dangerouslySetInnerHTML={t(item)}/>; })}
+                    {listText.items.map(function (i) { return drawListItem(key, i); })}
                 </ol>)];
                             }
                             else if (elem.htmlElem.rawTagName === "ul") {
                                 listText = elem.translatedText;
                                 return [2 /*return*/, (<ul key={"typography-ul-".concat(key)} className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (item) { return <li key={"".concat(key, "-").concat(item.key)} dangerouslySetInnerHTML={t(item)}/>; })}
+                    {listText.items.map(function (i) { return drawListItem(key, i); })}
                 </ul>)];
                             }
                             else if (elem.htmlElem.rawTagName === "img") {
@@ -141,6 +142,17 @@ export function TypographyImpl(props) {
                     }
                 });
             });
+        }
+        function drawListItem(key, item) {
+            if (item.text instanceof NdLink) {
+                var link = item.text;
+                return (<li key={"".concat(key, "-").concat(link.url.key)}>
+                    <a href={t(link.url).__html} dangerouslySetInnerHTML={t(link.urlText ? link.urlText : link.url)}/>
+                </li>);
+            }
+            else {
+                return <li key={"".concat(key, "-").concat(item.text.key)} dangerouslySetInnerHTML={t(item.text)}/>;
+            }
         }
         var componentIndex, content, theme, themes, lng, imageProvider, i18nextTrustedHtmlProvider, defaultThemeName, effectiveTheme, block, t;
         return __generator(this, function (_a) {

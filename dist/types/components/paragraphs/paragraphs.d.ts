@@ -1,13 +1,14 @@
 import { JSX } from "react";
-import { NdCode, NdDefaultThemeName, NdList, NdTranslatableText } from "nodoku-core";
+import { NdDefaultThemeName } from "nodoku-core";
 import { NodokuComponents } from "../../index";
 import ParagraphTheme = NodokuComponents.ParagraphTheme;
 import ListCompTheme = NodokuComponents.ListCompTheme;
 import HighlightedCodeTheme = NodokuComponents.HighlightedCodeTheme;
 import { NdI18nextTrustedHtmlProvider } from "nodoku-core";
+import { NdParagraph } from "nodoku-core";
 export type ParagraphsPropsImpl = {
     lng: string;
-    blockParagraphs: (NdTranslatableText | NdList | NdCode)[];
+    blockParagraphs: NdParagraph[];
     paragraphTheme: ParagraphTheme;
     codeHighlightTheme: HighlightedCodeTheme;
     listTheme: ListCompTheme;
