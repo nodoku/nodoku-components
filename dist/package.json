@@ -1,10 +1,14 @@
 {
     "name": "nodoku-components",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "exports": {
         ".": {
             "types": "./types/index.d.ts",
             "import": "./esm/index.js"
+        },
+        "./tailwind": {
+            "types": "./types/tailwind/index.d.ts",
+            "require": "./esm/tailwind/index.js"
         },
 
         "./styles/hljs/1c-light": {
