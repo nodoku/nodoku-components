@@ -19,7 +19,7 @@ import {typographyDefaultTheme} from "./typography-theme";
 import {highlightedCodeDefaultThemeImpl} from "../highlighted-code/highlighted-code-theme";
 import {NdTrustedHtml} from "nodoku-core";
 import {NdListItem} from "nodoku-core";
-import {NdLink} from "nodoku-core";
+// import {NdLink} from "nodoku-core";
 
 export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme, void>): Promise<JSX.Element> {
 
@@ -121,22 +121,24 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
             const listText: NdList = elem.translatedText as NdList;
             return (
                 <ol key={`typography-ol-${key}`} className={elem.htmlElem.classNames}>
-                    {listText.items.map(i => drawListItem(key, i))}
+                    {await Promise.all(listText.items.map(async (i: NdListItem) => drawListItem(key, i)))}
                 </ol>
             )
         } else if (elem.htmlElem.rawTagName === "ul") {
             const listText: NdList = elem.translatedText as NdList;
             return (
                 <ul key={`typography-ul-${key}`} className={elem.htmlElem.classNames}>
-                    {listText.items.map(i => drawListItem(key, i))}
+                    {await Promise.all(listText.items.map(async (i: NdListItem) => drawListItem(key, i)))}
                 </ul>
             )
         } else if (elem.htmlElem.rawTagName === "img") {
             const imgText: NdContentImage = elem.translatedText as NdContentImage;
-            return <img key={`typography-img-${key}`} className={elem.htmlElem.classNames}
+            return <p key={`typography-img-${key}-container`} className={ts(effectiveTheme, "imageContainer")}>
+                <img key={`typography-img-${key}`} className={`${ts(effectiveTheme, "imageStyle")} ${elem.htmlElem.classNames}`}
                         src={t(imgText.url).__html as string}
                         alt={imgText.alt ? t(imgText.alt).__html as string : "N/A"}
                         title={imgText.title ? t(imgText.title).__html as string : ""} />
+            </p>
         } else if (elem.htmlElem.rawTagName === "table") {
             return <table key={`typography-table-${key}`} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{__html: elem.htmlElem.innerHTML}} />
         } else if (elem.htmlElem.rawTagName === "hr") {
@@ -147,16 +149,45 @@ export async function TypographyImpl(props: NdSkinComponentProps<TypographyTheme
 
     }
 
-    function drawListItem(key: string, item: NdListItem): JSX.Element {
-        if (item.text instanceof NdLink) {
-            const link = item.text as NdLink
-            return (
-                <li key={`${key}-${link.url.key}`}>
-                    <a href={t(link.url).__html as string} dangerouslySetInnerHTML={t(link.urlText ? link.urlText : link.url)} />
-                </li>
-            )
-        } else {
+    async function drawListItem(key: string, item: NdListItem): Promise<JSX.Element> {
+        // if (item.text instanceof NdLink) {
+        //     const link = item.text as NdLink
+        //     return (
+        //         <li key={`${key}-${link.url.key}`}>
+        //             <a href={t(link.url).__html as string} dangerouslySetInnerHTML={t(link.urlText ? link.urlText : link.url)} />
+        //         </li>
+        //     )
+        // } else {
+        // }
+        if (!item.subList) {
+
             return <li key={`${key}-${item.text.key}`} dangerouslySetInnerHTML={t(item.text)}/>
+        } else {
+
+            let inner: JSX.Element;
+            if (item.subList instanceof NdTranslatableText) {
+                const pText: NdTranslatableText = item.subList as NdTranslatableText;
+                inner = <p key={`typography-p-${key}`} dangerouslySetInnerHTML={t(pText)}/>
+            } else if (item.subList instanceof NdCode) {
+                const codeText: NdCode = item.subList as NdCode;
+                inner = <div key={`typography-h1-${key}`}
+                             className={`${effectiveTheme.preContainer?.base} ${effectiveTheme.preContainer?.decoration}`}>
+                            {await HighlightedCodeImpl({
+                                key: `${key}-code`,
+                                code: codeText as NdCode,
+                                theme: effectiveTheme.codeHighlightTheme || highlightedCodeDefaultThemeImpl,
+                                defaultThemeName: defaultThemeName
+                            })}
+                        </div>
+            } else {
+                const listText: NdList = item.subList as NdList;
+                inner = (
+                    <ul key={`typography-ul-${key}`}>
+                        {await Promise.all(listText.items.map(async (i: NdListItem) => drawListItem(key, i)))}
+                    </ul>
+                )
+            }
+            return <li key={`${key}-${item.text.key}`}><div dangerouslySetInnerHTML={t(item.text)}/>{inner}</li>
         }
     }
 

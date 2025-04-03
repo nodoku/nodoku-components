@@ -1,6 +1,7 @@
 {
   "name": "nodoku-components",
-  "version": "0.2.8",
+  "version": "0.3.0",
+  "license": "MIT for the use not related to website builders, commercial otherwise, contact for details",
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",

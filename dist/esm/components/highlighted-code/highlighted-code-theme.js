@@ -12,7 +12,7 @@ export var highlightedCodeDefaultThemeImpl = {
         decoration: "border-2 border-gray-200"
     },
     pre: {
-        base: "w-full overflow-scroll",
+        base: "",
         decoration: ""
     }
 };

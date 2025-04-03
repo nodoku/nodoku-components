@@ -1,6 +1,7 @@
 {
     "name": "nodoku-components",
-    "version": "0.2.8",
+    "version": "0.3.0",
+    "license": "MIT for the use not related to website builders, commercial otherwise, contact for details",
     "exports": {
         ".": {
             "types": "./types/index.d.ts",
@@ -246,7 +247,7 @@
         "highlight.js": "^11.10.0",
         "next": "^15.0",
         "node-html-parser": "^6.1.13",
-        "nodoku-core": "^0.2.5",
+        "nodoku-core": "^0.3",
         "react": "18.3.1",
         "react-dom": "18.3.1",
         "typescript": "^5"

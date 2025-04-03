@@ -44,6 +44,7 @@ type K2 = keyof typeof pjson.dependencies;
 
 const globalPackageJsonModel = {
     version: pjson.version,
+    license: pjson.license,
     peerDeps: Object.keys(pjson.peerDependencies).map((pk, i) => ({
         name: pk,
         ver: pjson.peerDependencies[pk as K1],

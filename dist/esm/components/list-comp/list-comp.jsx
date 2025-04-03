@@ -37,7 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 import { mergeTheme } from "nodoku-core";
 import { listCompDefaultThemeImpl } from "./list-comp-theme";
 import { ts } from "nodoku-core";
-import { NdLink } from "nodoku-core";
 export function ListCompImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         var key, list, i18nextProvider, lng, listTheme, effectiveTheme, t, listItems;
@@ -51,14 +50,16 @@ export function ListCompImpl(props) {
                 case 1:
                     t = (_e.sent()).t;
                     listItems = list.items.map(function (item) {
-                        if (item.text instanceof NdLink) {
-                            return (<li key={item.text.url.key} className={"listItemStyle ".concat(ts(effectiveTheme, "listItemStyle"))}>
-                    <a href={t(item.text.url).__html} dangerouslySetInnerHTML={t(item.text.urlText ? item.text.urlText : item.text.url)}/>
-                </li>);
-                        }
-                        else {
-                            return (<li key={item.text.key} className={"listItemStyle ".concat(ts(effectiveTheme, "listItemStyle"))} dangerouslySetInnerHTML={t(item.text)}/>);
-                        }
+                        // if (item.text instanceof NdLink) {
+                        //     return (
+                        //         <li key={item.text.url.key} className={`${ts(effectiveTheme, "listItemStyle")}`}>
+                        //             <a href={t(item.text.url).__html as string}
+                        //                dangerouslySetInnerHTML={t(item.text.urlText ? item.text.urlText : item.text.url)}/>
+                        //         </li>
+                        //     )
+                        // } else {
+                        return (<li key={item.text.key} className={"".concat(ts(effectiveTheme, "listItemStyle"))} dangerouslySetInnerHTML={t(item.text)}/>);
+                        // }
                     });
                     if (list.ordered) {
                         return [2 /*return*/, <ol key={key} className={"listStyle ".concat((_a = effectiveTheme.listStyle) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.listStyle) === null || _b === void 0 ? void 0 : _b.decoration)}>{listItems}</ol>];

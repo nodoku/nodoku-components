@@ -34,16 +34,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-import { mergeTheme, ts, NdContentImage, NdCallToAction } from "nodoku-core";
+import { mergeTheme, ts, NdCode, NdContentImage, NdTranslatableText, NdCallToAction } from "nodoku-core";
 import { HighlightedCodeImpl } from "../highlighted-code/highlighted-code";
 import { typographyDefaultTheme } from "./typography-theme";
 import { highlightedCodeDefaultThemeImpl } from "../highlighted-code/highlighted-code-theme";
-import { NdLink } from "nodoku-core";
+// import {NdLink} from "nodoku-core";
 export function TypographyImpl(props) {
     return __awaiter(this, void 0, void 0, function () {
         function renderElement(elem, i, t) {
             return __awaiter(this, void 0, void 0, function () {
                 var imgElem, imgText, key, pText, pText, pText, pText, pText, pText, pText, pText, pText, codeText, imgText, listText, listText, imgText;
+                var _this = this;
                 var _a, _b;
                 return __generator(this, function (_c) {
                     switch (_c.label) {
@@ -90,7 +91,7 @@ export function TypographyImpl(props) {
                                 pText = elem.translatedText;
                                 return [2 /*return*/, <p key={"typography-p-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={t(pText)}/>];
                             }
-                            return [3 /*break*/, 13];
+                            return [3 /*break*/, 18];
                         case 9:
                             if (!(elem.htmlElem.rawTagName === "blockquote")) return [3 /*break*/, 10];
                             pText = elem.translatedText;
@@ -108,28 +109,36 @@ export function TypographyImpl(props) {
                     {_c.sent()}
                 </div>)];
                         case 12:
-                            if (elem.htmlElem.rawTagName === "figure") {
-                                imgText = elem.translatedText;
-                                return [2 /*return*/, (<figure key={"typography-fig-".concat(key)} className={elem.htmlElem.classNames}>
+                            if (!(elem.htmlElem.rawTagName === "figure")) return [3 /*break*/, 13];
+                            imgText = elem.translatedText;
+                            return [2 /*return*/, (<figure key={"typography-fig-".concat(key)} className={elem.htmlElem.classNames}>
                     {imgElem}
                     {imgText.title && <figcaption dangerouslySetInnerHTML={t(imgText.title)}/>}
                 </figure>)];
-                            }
-                            else if (elem.htmlElem.rawTagName === "ol") {
-                                listText = elem.translatedText;
-                                return [2 /*return*/, (<ol key={"typography-ol-".concat(key)} className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (i) { return drawListItem(key, i); })}
+                        case 13:
+                            if (!(elem.htmlElem.rawTagName === "ol")) return [3 /*break*/, 15];
+                            listText = elem.translatedText;
+                            return [4 /*yield*/, Promise.all(listText.items.map(function (i) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                                    return [2 /*return*/, drawListItem(key, i)];
+                                }); }); }))];
+                        case 14: return [2 /*return*/, (<ol key={"typography-ol-".concat(key)} className={elem.htmlElem.classNames}>
+                    {_c.sent()}
                 </ol>)];
-                            }
-                            else if (elem.htmlElem.rawTagName === "ul") {
-                                listText = elem.translatedText;
-                                return [2 /*return*/, (<ul key={"typography-ul-".concat(key)} className={elem.htmlElem.classNames}>
-                    {listText.items.map(function (i) { return drawListItem(key, i); })}
+                        case 15:
+                            if (!(elem.htmlElem.rawTagName === "ul")) return [3 /*break*/, 17];
+                            listText = elem.translatedText;
+                            return [4 /*yield*/, Promise.all(listText.items.map(function (i) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                                    return [2 /*return*/, drawListItem(key, i)];
+                                }); }); }))];
+                        case 16: return [2 /*return*/, (<ul key={"typography-ul-".concat(key)} className={elem.htmlElem.classNames}>
+                    {_c.sent()}
                 </ul>)];
-                            }
-                            else if (elem.htmlElem.rawTagName === "img") {
+                        case 17:
+                            if (elem.htmlElem.rawTagName === "img") {
                                 imgText = elem.translatedText;
-                                return [2 /*return*/, <img key={"typography-img-".concat(key)} className={elem.htmlElem.classNames} src={t(imgText.url).__html} alt={imgText.alt ? t(imgText.alt).__html : "N/A"} title={imgText.title ? t(imgText.title).__html : ""}/>];
+                                return [2 /*return*/, <p key={"typography-img-".concat(key, "-container")} className={ts(effectiveTheme, "imageContainer")}>
+                <img key={"typography-img-".concat(key)} className={"".concat(ts(effectiveTheme, "imageStyle"), " ").concat(elem.htmlElem.classNames)} src={t(imgText.url).__html} alt={imgText.alt ? t(imgText.alt).__html : "N/A"} title={imgText.title ? t(imgText.title).__html : ""}/>
+            </p>];
                             }
                             else if (elem.htmlElem.rawTagName === "table") {
                                 return [2 /*return*/, <table key={"typography-table-".concat(key)} className={elem.htmlElem.classNames} dangerouslySetInnerHTML={{ __html: elem.htmlElem.innerHTML }}/>];
@@ -137,22 +146,56 @@ export function TypographyImpl(props) {
                             else if (elem.htmlElem.rawTagName === "hr") {
                                 return [2 /*return*/, <hr key={"typography-hr-".concat(key)}/>];
                             }
-                            _c.label = 13;
-                        case 13: return [2 /*return*/, <></>];
+                            _c.label = 18;
+                        case 18: return [2 /*return*/, <></>];
                     }
                 });
             });
         }
         function drawListItem(key, item) {
-            if (item.text instanceof NdLink) {
-                var link = item.text;
-                return (<li key={"".concat(key, "-").concat(link.url.key)}>
-                    <a href={t(link.url).__html} dangerouslySetInnerHTML={t(link.urlText ? link.urlText : link.url)}/>
-                </li>);
-            }
-            else {
-                return <li key={"".concat(key, "-").concat(item.text.key)} dangerouslySetInnerHTML={t(item.text)}/>;
-            }
+            return __awaiter(this, void 0, void 0, function () {
+                var inner, pText, codeText, listText;
+                var _this = this;
+                var _a, _b;
+                return __generator(this, function (_c) {
+                    switch (_c.label) {
+                        case 0:
+                            if (!!item.subList) return [3 /*break*/, 1];
+                            return [2 /*return*/, <li key={"".concat(key, "-").concat(item.text.key)} dangerouslySetInnerHTML={t(item.text)}/>];
+                        case 1:
+                            inner = void 0;
+                            if (!(item.subList instanceof NdTranslatableText)) return [3 /*break*/, 2];
+                            pText = item.subList;
+                            inner = <p key={"typography-p-".concat(key)} dangerouslySetInnerHTML={t(pText)}/>;
+                            return [3 /*break*/, 6];
+                        case 2:
+                            if (!(item.subList instanceof NdCode)) return [3 /*break*/, 4];
+                            codeText = item.subList;
+                            return [4 /*yield*/, HighlightedCodeImpl({
+                                    key: "".concat(key, "-code"),
+                                    code: codeText,
+                                    theme: effectiveTheme.codeHighlightTheme || highlightedCodeDefaultThemeImpl,
+                                    defaultThemeName: defaultThemeName
+                                })];
+                        case 3:
+                            inner = <div key={"typography-h1-".concat(key)} className={"".concat((_a = effectiveTheme.preContainer) === null || _a === void 0 ? void 0 : _a.base, " ").concat((_b = effectiveTheme.preContainer) === null || _b === void 0 ? void 0 : _b.decoration)}>
+                            {_c.sent()}
+                        </div>;
+                            return [3 /*break*/, 6];
+                        case 4:
+                            listText = item.subList;
+                            return [4 /*yield*/, Promise.all(listText.items.map(function (i) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                                    return [2 /*return*/, drawListItem(key, i)];
+                                }); }); }))];
+                        case 5:
+                            inner = (<ul key={"typography-ul-".concat(key)}>
+                        {_c.sent()}
+                    </ul>);
+                            _c.label = 6;
+                        case 6: return [2 /*return*/, <li key={"".concat(key, "-").concat(item.text.key)}><div dangerouslySetInnerHTML={t(item.text)}/>{inner}</li>];
+                    }
+                });
+            });
         }
         var componentIndex, content, theme, themes, lng, imageProvider, i18nextTrustedHtmlProvider, defaultThemeName, effectiveTheme, block, t;
         return __generator(this, function (_a) {

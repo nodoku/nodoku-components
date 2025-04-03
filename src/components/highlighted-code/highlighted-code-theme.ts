@@ -31,7 +31,7 @@ export const highlightedCodeDefaultThemeImpl: HighlightedCodeThemeImpl = {
     },
 
     pre: {
-        base: "w-full overflow-scroll",
+        base: "",
         decoration: ""
     }
 

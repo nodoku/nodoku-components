@@ -31,6 +31,7 @@ fs.readdirSync(dist).forEach(function (file) {
 });
 var globalPackageJsonModel = {
     version: pjson.version,
+    license: pjson.license,
     peerDeps: Object.keys(pjson.peerDependencies).map(function (pk, i) { return ({
         name: pk,
         ver: pjson.peerDependencies[pk],

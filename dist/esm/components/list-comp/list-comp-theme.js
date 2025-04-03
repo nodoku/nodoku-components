@@ -4,7 +4,7 @@ export var listCompDefaultThemeImpl = {
         decoration: ""
     },
     listItemStyle: {
-        base: "ml-4",
+        base: "ml-4 kkk",
         decoration: ""
     }
 };

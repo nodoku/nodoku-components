@@ -20,32 +20,6 @@
         }
       },
       "additionalProperties": false
-    },
-
-    "ExtendedThemeStyle": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/ThemeStyle"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "css": {
-              "type": "object",
-              "properties": {
-                "light": {
-                  "$ref": "#/definitions/CssProperties"
-                },
-                "dark": {
-                  "$ref": "#/definitions/CssProperties"
-                }
-              },
-              "additionalProperties": false
-            }
-          },
-          "additionalProperties": false
-        }
-      ]
     }
   },
   "properties": {
@@ -53,7 +27,7 @@
       "$ref": "#/definitions/ThemeStyle"
     },
     "listItemStyle": {
-      "$ref": "#/definitions/ExtendedThemeStyle"
+      "$ref": "#/definitions/ThemeStyle"
     },
     "additionalProperties": false
   }

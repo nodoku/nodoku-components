@@ -6,5 +6,7 @@ export type TypographyThemeImpl = {
     preContainer?: ThemeStyle;
     contentContainerStyle?: ThemeStyle;
     codeHighlightTheme?: HighlightedCodeTheme;
+    imageContainer?: ThemeStyle;
+    imageStyle?: ThemeStyle;
 };
 export declare const typographyDefaultTheme: TypographyThemeImpl;
