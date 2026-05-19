@@ -1,6 +1,6 @@
 {
   "name": "nodoku-components",
-  "version": "0.3.0",
+  "version": "0.0.0-dev",
   "license": "MIT for the use not related to website builders, commercial otherwise, contact for details",
   "exports": {
     ".": {
@@ -23,7 +23,6 @@
     "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.56.0",
     "highlight.js": "^11.10.0",
-    "next": "^15.0",
     "node-html-parser": "^6.1.13",
     "nodoku-core": "../nodoku-core/dist",
     "react": "18.3.1",
@@ -45,7 +44,7 @@
 
   },
   "scripts": {
-    "dist": "shx rm -rf dist && tsc && tsc --project tsconfig.tailwind.json && npm run highlight.js-prefix&& shx cp -r src/hljs ./dist/esm && npm run gen-package-json && shx cp -r schemas ./dist && shx cp nodoku.manifest.json dist  && shx cp ./README.md ./dist && shx cp -r ./docs ./dist",
+    "dist": "shx rm -rf dist && tsc && tsc --project tsconfig.tailwind.json && npm run highlight.js-prefix && shx cp -r src/hljs ./dist/esm && npm run gen-package-json && shx cp -r schemas ./dist && shx cp nodoku.manifest.json dist  && shx cp ./README.md ./dist && shx cp -r ./docs ./dist",
     "highlight.js-prefix": "tsx src/scripts/prefix-highlight-js-themes.ts",
     "gen-package-json": "tsx src/scripts/gen-package-json.ts"
   }
